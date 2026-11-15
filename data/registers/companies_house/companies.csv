@@ -1,0 +1,581 @@
+company_number,name,category,status,country_of_origin,incorporated_on,dissolved_on,post_town,postcode,sic,previous_names
+00003543,VINTERS ENGINEERING LIMITED,Private Limited Company,Active,United Kingdom,1867-04-17,,DERBY,DE24 8BJ,70100 - Activities of head offices,
+00014172,DIAGEO DV LIMITED,Private Limited Company,Active,United Kingdom,1880-06-09,,LONDON,W1F 7HS,64303 - Activities of venture and development capital companies,"[{""name"": ""DIAGEO CL3 LIMITED"", ""until"": ""2013-11-05""}, {""name"": ""EXPRESS FOODS GROUP (INTERNATIONAL) LIMITED"", ""until"": ""2011-01-05""}]"
+00014809,THE MARINE INSURANCE COMPANY LIMITED,Private Limited Company,Active,United Kingdom,1881-01-01,,LONDON,EC2N 4BQ,65120 - Non-life insurance,
+00023307,DIAGEO PLC,Public Limited Company,Active,United Kingdom,1886-10-21,,LONDON,W1F 7HS,70100 - Activities of head offices,
+00025932,LCH LIMITED,Private Limited Company,Active,United Kingdom,1888-02-22,,LONDON,EC4M 7LS,82990 - Other business support service activities n.e.c.,"[{""name"": ""LCH.CLEARNET LIMITED"", ""until"": ""2016-12-09""}]"
+00042133,THE NATIONAL INSURANCE AND GUARANTEE CORPORATION LIMITED,Private Limited Company,Active,United Kingdom,1894-10-08,,NORWICH,NR1 3NG,99999 - Dormant Company,
+00055603,TANQUERAY GORDON AND COMPANY LIMITED,Private Limited Company,Active,United Kingdom,1898-01-11,,LONDON,W1F 7HS,82990 - Other business support service activities n.e.c.,
+00068576,"JUSTERINI & BROOKS,LIMITED",Private Limited Company,Active,United Kingdom,1900-12-22,,,SW1A 1LZ,"11010 - Distilling, rectifying and blending of spirits",
+00073396,ALLIANCE ASSURANCE COMPANY LIMITED,Private Limited Company,Active,United Kingdom,1902-04-11,,LONDON,EC2N 4BQ,74990 - Non-trading company,
+00077536,RELX PLC,Public Limited Company,Active,United Kingdom,1903-05-28,,,WC2N 5JR,58110 - Book publishing,"[{""name"": ""REED ELSEVIER PLC"", ""until"": ""2015-07-01""}]"
+00079590,ABF GRAIN PRODUCTS LIMITED,Private Limited Company,Active,United Kingdom,1903-12-30,,LONDON,W1K 4QY,10611 - Grain milling,
+00084909,FORTNUM & MASON PUBLIC LIMITED COMPANY,Public Limited Company,Active,United Kingdom,1905-06-10,,,W1A 1ER,47190 - Other retail sale in non-specialised stores,
+00087946,SUN ALLIANCE INSURANCE OVERSEAS LIMITED,Private Limited Company,Active,United Kingdom,1906-03-12,,LONDON,EC2N 4BQ,64205 - Activities of financial services holding companies,
+00093792,INTACT INSURANCE UK LIMITED,Private Limited Company,Active,United Kingdom,1907-06-19,,LONDON,EC2N 4BQ,65120 - Non-life insurance,"[{""name"": ""ROYAL & SUN ALLIANCE INSURANCE LIMITED"", ""until"": ""2025-08-19""}]"
+00099025,ESKAYLAB LIMITED,Private Limited Company,Active,United Kingdom,1908-07-29,,LONDON,WC1A 1DG,82990 - Other business support service activities n.e.c.,
+00100097,ROYAL & SUN ALLIANCE REINSURANCE LIMITED,Private Limited Company,Active,United Kingdom,1908-10-31,,LONDON,EC2N 4BQ,65120 - Non-life insurance,
+00102498,BP P.L.C.,Public Limited Company,Active,United Kingdom,1909-04-14,,,SW1Y 4PD,70100 - Activities of head offices,
+00111478,ROYAL INTERNATIONAL INSURANCE HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1910-08-26,,LONDON,EC2N 4BQ,64205 - Activities of financial services holding companies,
+00117413,YORKSHIRE BANK LIMITED,Private Limited Company,Active,United Kingdom,1911-08-25,,GOSFORTH,NE3 4PL,74990 - Non-trading company,
+00140132,BP SHIPPING LIMITED,Private Limited Company,Active,United Kingdom,1915-04-30,,MIDDLESEX,TW16 7BP,50200 - Sea and coastal freight water transport,
+00144900,TWINING CROSFIELD & CO LIMITED,Private Limited Company,Active,United Kingdom,1916-09-21,,LONDON,W1K 4QY,70100 - Activities of head offices,
+00145516,REFINITIV LIMITED,Private Limited Company,Active,United Kingdom,1916-12-11,,LONDON,E14 5AQ,82990 - Other business support service activities n.e.c.,"[{""name"": ""REUTERS LIMITED"", ""until"": ""2019-02-28""}]"
+00149435,CASTROL LIMITED,Private Limited Company,Active,United Kingdom,1918-01-23,,PANGBOURNE,RG8 7QR,70100 - Activities of head offices,
+00170463,ICAP EUROPE LIMITED,Private Limited Company,Active,United Kingdom,1920-09-27,,LONDON,EC2M 3TP,66120 - Security and commodity contracts dealing activities,
+00193800,AB AGRI LIMITED,Private Limited Company,Active,United Kingdom,1923-11-16,,LONDON,W1K 4QY,10910 - Manufacture of prepared feeds for farm animals,"[{""name"": ""ABNA LIMITED"", ""until"": ""2007-03-12""}]"
+00194814,WELLCOME FOUNDATION LIMITED(THE),Private Limited Company,Active,United Kingdom,1924-01-01,,LONDON,WC1A 1DG,70100 - Activities of head offices,
+00194971,BP CHEMICALS LIMITED,Private Limited Company,Active,United Kingdom,1924-01-09,,MIDDLESEX,TW16 7BP,20130 - Manufacture of other inorganic basic chemicals,
+00210281,SMITHKLINE BEECHAM LEGACY H LIMITED,Private Limited Company,Active,United Kingdom,1925-12-11,,LONDON,WC1A 1DG,82990 - Other business support service activities n.e.c.,"[{""name"": ""HORLICKS LIMITED"", ""until"": ""2021-06-29""}]"
+00213393,DIAGEO FINANCE PLC,Public Limited Company,Active,United Kingdom,1926-04-23,,LONDON,W1F 7HS,82990 - Other business support service activities n.e.c.,
+00214387,SUN INSURANCE OFFICE LIMITED,Private Limited Company,Active,United Kingdom,1926-06-15,,LONDON,EC2N 4BQ,65120 - Non-life insurance,
+00224677,WESTGATE PROPERTIES LIMITED,Private Limited Company,Active,United Kingdom,1927-09-26,,LONDON,EC2N 4BQ,41100 - Development of building projects,
+00230748,BP PENSION TRUSTEES LIMITED,Private Limited Company,Active,United Kingdom,1928-05-25,,MIDDLESEX,TW16 7BP,65300 - Pension funding,
+00233654,ROYSUN LIMITED,Private Limited Company,Active,United Kingdom,1928-09-28,,LONDON,EC2N 4BQ,74990 - Non-trading company,
+00242686,GLAXOSMITHKLINE FINANCE PLC,Public Limited Company,Active,United Kingdom,1929-10-02,,LONDON,WC1A 1DG,64999 - Financial intermediation not elsewhere classified,
+00245345,THE JORDANS & RYVITA COMPANY LIMITED,Private Limited Company,Active,United Kingdom,1930-01-25,,LONDON,W1K 4QY,74990 - Non-trading company,"[{""name"": ""RYVITA COMPANY,LIMITED(THE)"", ""until"": ""2009-03-24""}]"
+00261312,RECKITT BENCKISER HEALTHCARE (UK) LIMITED,Private Limited Company,Active,United Kingdom,1931-12-22,,BERKSHIRE,SL1 3UH,17220 - Manufacture of household and sanitary goods and of toilet requisites,
+00263054,WELLCOME CONSUMER HEALTHCARE LIMITED,Private Limited Company,Active,United Kingdom,1932-02-29,,LONDON,WC1A 1DG,99999 - Dormant Company,
+00263889,BP GLOBAL INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,1932-03-24,,MIDDLESEX,TW16 7BP,70100 - Activities of head offices,
+00291848,GRAND METROPOLITAN LIMITED,Private Limited Company,Active,United Kingdom,1934-09-06,,LONDON,W1F 7HS,70100 - Activities of head offices,
+00293262,ASSOCIATED BRITISH FOODS PLC,Public Limited Company,Active,United Kingdom,1934-10-20,,LONDON,W1K 4QY,70100 - Activities of head offices,
+00301317,ENI ULT LIMITED,Private Limited Company,Active,United Kingdom,1935-05-03,,LONDON,SW1W 8PZ,64209 - Activities of other holding companies n.e.c.,
+00304682,INEOS ACETYLS INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,1935-09-02,,LYNDHURST,SO43 7FG,70100 - Activities of head offices,"[{""name"": ""BP CHEMICALS INVESTMENTS LIMITED"", ""until"": ""2021-01-14""}]"
+00305979,GLAXO GROUP LIMITED,Private Limited Company,Active,United Kingdom,1935-10-14,,STEVENAGE,SG1 2NY,70100 - Activities of head offices,
+00306672,ABF INVESTMENTS PLC,Public Limited Company,Active,United Kingdom,1935-11-02,,LONDON,W1K 4QY,70100 - Activities of head offices,
+00307812,PRIME AEP LIMITED,Private Limited Company,Active,United Kingdom,1935-12-05,,BRISTOL,BS1 6AJ,06100 - Extraction of crude petroleum,"[{""name"": ""PRIME ENERGY PAKISTAN LIMITED"", ""until"": ""2023-04-14""}, {""name"": ""ENI AEP LIMITED"", ""until"": ""2022-12-30""}]"
+00313307,A.B.F.HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1936-04-22,,LONDON,W1K 4QY,70100 - Activities of head offices,
+00314913,AB FOODS AUSTRALIA LIMITED,Private Limited Company,Active,United Kingdom,1936-06-05,,LONDON,W1K 4QY,74990 - Non-trading company,"[{""name"": ""ABF AUSTRALIA LIMITED"", ""until"": ""2015-06-05""}, {""name"": ""ABF (UK) LIMITED"", ""until"": ""2015-04-19""}]"
+00315158,BRITISH SUGAR PLC,Public Limited Company,Active,United Kingdom,1936-06-12,,LONDON,W1K 4QY,10810 - Manufacture of sugar,
+00322365,BP OIL INTERNATIONAL LIMITED,Private Limited Company,Active,United Kingdom,1936-12-28,,MIDDLESEX,TW16 7BP,46719 - Wholesale of other fuels and related products,
+00329102,ABBOTT LABORATORIES LIMITED,Private Limited Company,Active,United Kingdom,1937-06-23,,MAIDENHEAD,SL6 4XE,46460 - Wholesale of pharmaceutical goods,
+00346958,CEREFORM LIMITED,Private Limited Company,Active,United Kingdom,1938-12-05,,LONDON,W1K 4QY,10390 - Other processing and preserving of fruit and vegetables,
+00358718,SUNBLEST BAKERIES LIMITED,Private Limited Company,Active,United Kingdom,1940-01-09,,LONDON,W1K 4QY,70100 - Activities of head offices,
+00366054,WITTINGTON INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,1941-03-22,,LONDON,W1K 4QY,70100 - Activities of head offices,
+00371601,ROTHSCHILD & CO CONTINUATION LIMITED,Private Limited Company,Active,United Kingdom,1941-12-31,,LONDON,EC4N 8AL,64999 - Financial intermediation not elsewhere classified,"[{""name"": ""ROTHSCHILDS CONTINUATION LIMITED"", ""until"": ""2018-10-31""}]"
+00371996,FOOD INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,1942-01-21,,LONDON,W1K 4QY,70100 - Activities of head offices,
+00417198,UNIPATH LIMITED,Private Limited Company,Active,United Kingdom,1946-08-14,,BERKSHIRE,SL6 4XE,82990 - Other business support service activities n.e.c.,
+00433398,REUTERS PENSION FUND LIMITED,"PRI/LTD BY GUAR/NSC (Private, limited by guarantee, no share capital)",Active,United Kingdom,1947-04-17,,LONDON,E14 5AQ,74990 - Non-trading company,
+00446915,BP OIL UK LIMITED,Private Limited Company,Active,United Kingdom,1947-12-20,,MIDDLESEX,TW16 7BP,19201 - Mineral oil refining,
+00450650,WOLTERS KLUWER (UK) LIMITED,Private Limited Company,Active,United Kingdom,1948-03-09,,SURREY,KT2 6SR,58290 - Other software publishing,
+00453448,PRIMARK STORES LIMITED,Private Limited Company,Active,United Kingdom,1948-04-30,,LONDON,W1K 4QY,47710 - Retail sale of clothing in specialised stores,
+00480080,GLAXO WELLCOME UK LIMITED,Private Limited Company,Active,United Kingdom,1950-03-25,,STEVENAGE,SG1 2NY,46460 - Wholesale of pharmaceutical goods,
+00482099,ABF INGREDIENTS LIMITED,Private Limited Company,Active,United Kingdom,1950-05-12,,LONDON,W1K 4QY,82990 - Other business support service activities n.e.c.,
+00500777,TP ICAP MARKETS LIMITED,Private Limited Company,Active,United Kingdom,1951-10-27,,LONDON,EC2M 3TP,66120 - Security and commodity contracts dealing activities,"[{""name"": ""ICAP SECURITIES LIMITED"", ""until"": ""2021-04-30""}]"
+00507652,DIAGEO GREAT BRITAIN LIMITED,Private Limited Company,Active,United Kingdom,1952-05-05,,LONDON,W1F 7HS,"11010 - Distilling, rectifying and blending of spirits",
+00525071,R.TWINING AND COMPANY LIMITED,Private Limited Company,Active,United Kingdom,1953-10-27,,LONDON,W1K 4QY,"46370 - Wholesale of coffee, tea, cocoa and spices",
+00527217,RECKITT BENCKISER LIMITED,Private Limited Company,Active,United Kingdom,1953-12-23,,BERKSHIRE,SL1 3UH,64209 - Activities of other holding companies n.e.c.,
+00542021,VINTERS INTERNATIONAL LIMITED,Private Limited Company,Active,United Kingdom,1954-12-16,,DERBY,DE24 8BJ,70100 - Activities of head offices,
+00542515,BP INTERNATIONAL LIMITED,Private Limited Company,Active,United Kingdom,1954-12-29,,MIDDLESEX,TW16 7BP,46719 - Wholesale of other fuels and related products,
+00543757,BURROUGHS WELLCOME INTERNATIONAL LIMITED,Private Limited Company,Active,United Kingdom,1955-01-26,,LONDON,WC1A 1DG,70100 - Activities of head offices,
+00557780,VERSALIS UK LTD,Private Limited Company,Active,United Kingdom,1955-11-25,,LONDON,SW1W 8PZ,22190 - Manufacture of other rubber products,"[{""name"": ""POLIMERI EUROPA UK LIMITED"", ""until"": ""2014-03-03""}]"
+00593046,RECKITT COLMAN CHISWICK (OTC) LIMITED,Private Limited Company,Active,United Kingdom,1957-11-04,,BERKSHIRE,SL1 3UH,64205 - Activities of financial services holding companies,
+00620485,ROLLS-ROYCE SUBMARINES LIMITED,Private Limited Company,Active,United Kingdom,1959-02-06,,DERBY,DE21 7BE,"25300 - Manufacture of steam generators, except central heating hot water boilers","[{""name"": ""ROLLS-ROYCE MARINE POWER OPERATIONS LIMITED"", ""until"": ""2018-07-31""}]"
+00628939,ASSOCIATED BRITISH FOODS PENSION TRUSTEES LIMITED,Private Limited Company,Active,United Kingdom,1959-05-27,,LONDON,W1K 4QY,74990 - Non-trading company,
+00633480,M & G GROUP LIMITED,Private Limited Company,Active,United Kingdom,1959-07-24,,LONDON,EC3M 5AG,64999 - Financial intermediation not elsewhere classified,
+00638918,SUN ALLIANCE AND LONDON INSURANCE LIMITED,Private Limited Company,Active,United Kingdom,1959-10-06,,LONDON,EC2N 4BQ,64205 - Activities of financial services holding companies,
+00678540,REED EXHIBITIONS LIMITED,Private Limited Company,Active,United Kingdom,1960-12-21,,RICHMOND,TW9 1DN,82301 - Activities of exhibition and fair organisers,
+00711851,GLAXO OPERATIONS UK LIMITED,Private Limited Company,Active,United Kingdom,1962-01-01,,LONDON,WC1A 1DG,21200 - Manufacture of pharmaceutical preparations,
+00718903,CO-OPERATIVE BANK FINANCIAL ADVISERS LIMITED,Private Limited Company,Liquidation,United Kingdom,1962-03-23,,BIRMINGHAM,B4 6AT,82990 - Other business support service activities n.e.c.,
+00734314,RSA ACCIDENT REPAIRS LIMITED,Private Limited Company,Active,United Kingdom,1962-09-03,,LONDON,EC2N 4BQ,45111 - Sale of new cars and light motor vehicles,
+00745710,"GREEN,YOUNG & COMPANY LIMITED",Private Limited Company,Active,United Kingdom,1963-01-01,,BERKSHIRE,SL1 3UH,74990 - Non-trading company,
+00769666,ROLLS-ROYCE INTERNATIONAL LIMITED,Private Limited Company,Active,United Kingdom,1963-08-01,,DERBYSHIRE,DE24 8BJ,70100 - Activities of head offices,
+00835139,GLAXOSMITHKLINE RESEARCH & DEVELOPMENT LIMITED,Private Limited Company,Active,United Kingdom,1965-01-22,,LONDON,WC1A 1DG,72190 - Other research and experimental development on natural sciences and engineering,
+00843822,PRUDENTIAL GROUP HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1965-03-31,,LONDON,EC4M 7NG,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""PARK AVENUE INVESTMENTS (1965) LIMITED"", ""until"": ""2008-01-21""}]"
+00862823,ENI UK LIMITED,Private Limited Company,Active,United Kingdom,1965-10-29,,LONDON,SW1W 8PZ,06100 - Extraction of crude petroleum,
+00871912,BRITANNIC TRADING LIMITED,Private Limited Company,Active,United Kingdom,1966-02-21,,MIDDLESEX,TW16 7BP,82990 - Other business support service activities n.e.c.,
+00894567,THIRD ROODHILL LEASING LIMITED,Private Limited Company,Liquidation,United Kingdom,1966-12-22,,BIRMINGHAM,B4 6AT,82990 - Other business support service activities n.e.c.,
+00912624,TNS GROUP HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1967-08-07,,LONDON,SE1 9LQ,70100 - Activities of head offices,
+00922303,WHO GROUP LIMITED(THE),Private Limited Company,Active,United Kingdom,1967-11-14,,LONDON,W1W 8BE,90030 - Artistic creation,
+00925279,N. M. ROTHSCHILD & SONS LIMITED,Private Limited Company,Active,United Kingdom,1968-01-01,,LONDON,EC4N 8AL,66190 - Activities auxiliary to financial intermediation n.e.c.,
+00926722,HEAL & SON LIMITED,Private Limited Company,Active,United Kingdom,1968-02-01,,,W1T 7LQ,64209 - Activities of other holding companies n.e.c.,
+00936223,ENI ULX LIMITED,Private Limited Company,Active,United Kingdom,1968-07-29,,LONDON,SW1W 8PZ,06100 - Extraction of crude petroleum,
+00936683,M&G INVESTMENT MANAGEMENT LIMITED,Private Limited Company,Active,United Kingdom,1968-08-05,,LONDON,EC3M 5AG,66120 - Security and commodity contracts dealing activities,
+00964925,SECOND ROODHILL LEASING LIMITED,Private Limited Company,Liquidation,United Kingdom,1969-10-28,,BIRMINGHAM,B4 6AT,82990 - Other business support service activities n.e.c.,
+00966604,TP ICAP E&C LIMITED,Private Limited Company,Active,United Kingdom,1969-11-19,,LONDON,EC2M 3TP,64991 - Security dealing on own account,"[{""name"": ""TULLETT PREBON (EUROPE) LIMITED"", ""until"": ""2023-04-28""}, {""name"": ""TULLETT PREBON (TREASURY & DERIVATIVES) LIMITED"", ""until"": ""2007-10-01""}]"
+00967560,MACK-BROOKS EXHIBITIONS LIMITED,Private Limited Company,Active,United Kingdom,1969-12-03,,RICHMOND,TW9 1DN,82301 - Activities of exhibition and fair organisers,
+00971349,CHROMALLOY UNITED KINGDOM LIMITED,Private Limited Company,Active,United Kingdom,1970-01-30,,IPSWICH,IP1 1QJ,25990 - Manufacture of other fabricated metal products n.e.c.,
+00990937,THE CO-OPERATIVE BANK P.L.C.,Public Limited Company,Active,United Kingdom,1970-10-05,,MANCHESTER,M4 4BE,64191 - Banks,
+01003081,GREEN FLAG LIMITED,Private Limited Company,Active,United Kingdom,1971-02-23,,LEEDS,LS1 4AZ,45200 - Maintenance and repair of motor vehicles,
+01003142,ROLLS-ROYCE PLC,Public Limited Company,Active,United Kingdom,1971-02-23,,LONDON,N1 9FX,"25300 - Manufacture of steam generators, except central heating hot water boilers",
+01003653,WPP 2005 LIMITED,Private Limited Company,Active,United Kingdom,1971-03-01,,LONDON,SE1 9GL,70100 - Activities of head offices,
+01008965,ENI LASMO PLC,Public Limited Company,Active,United Kingdom,1971-04-23,,LONDON,SW1W 8PZ,06100 - Extraction of crude petroleum,
+01019748,ITHACA UKCS LIMITED,Private Limited Company,Active,United Kingdom,1971-08-04,,LEEDS,LS1 5AB,06100 - Extraction of crude petroleum,"[{""name"": ""ENI UKCS LIMITED"", ""until"": ""2024-12-18""}]"
+01020949,ENI AUSTRALIA LIMITED,Private Limited Company,Active,United Kingdom,1971-08-13,,LONDON,SW1W 8PZ,06100 - Extraction of crude petroleum,
+01040079,MCHALE KOMATSU LIMITED,Private Limited Company,Active,United Kingdom,1972-01-27,,WORCS,B98 0RT,"46630 - Wholesale of mining, construction and civil engineering machinery","[{""name"": ""MARUBENI - KOMATSU LIMITED"", ""until"": ""2026-01-13""}]"
+01047315,GLAXOSMITHKLINE SERVICES UNLIMITED,Private Unlimited Company,Active,United Kingdom,1972-03-23,,LONDON,WC1A 1DG,70100 - Activities of head offices,
+01048359,M&G FA LIMITED,Private Limited Company,Active,United Kingdom,1972-04-04,,LONDON,EC3M 5AG,70100 - Activities of head offices,"[{""name"": ""M&G PRUDENTIAL LIMITED"", ""until"": ""2019-09-16""}, {""name"": ""M & G LIMITED"", ""until"": ""2019-09-16""}]"
+01060355,NATIONWIDE TRUST LIMITED,Private Limited Company,Active,United Kingdom,1972-07-04,,SWINDON,SN38 1NW,64999 - Financial intermediation not elsewhere classified,
+01063539,U C B HOME LOANS CORPORATION LIMITED,Private Limited Company,Active,United Kingdom,1972-07-31,,SWINDON,SN38 1NW,64999 - Financial intermediation not elsewhere classified,
+01080144,EXETER TRUST LIMITED,Private Limited Company,Active,United Kingdom,1972-11-03,,SWINDON,SN38 1NW,64192 - Building societies,
+01105245,TP ICAP GROUP SERVICES LIMITED,Private Limited Company,Active,United Kingdom,1973-03-30,,LONDON,EC2M 3TP,64205 - Activities of financial services holding companies,"[{""name"": ""TULLETT PREBON GROUP LIMITED"", ""until"": ""2019-11-19""}, {""name"": ""TULLETT PREBON LIMITED"", ""until"": ""2006-12-15""}]"
+01150609,AIR BP LIMITED,Private Limited Company,Active,United Kingdom,1973-12-11,,MIDDLESEX,TW16 7BP,46719 - Wholesale of other fuels and related products,
+01172051,VODAFONE NOMINEES LIMITED,Private Limited Company,Active,United Kingdom,1974-05-29,,NEWBURY,RG14 2FN,74990 - Non-trading company,
+01179980,U K INSURANCE LIMITED,Private Limited Company,Active,United Kingdom,1974-08-06,,LEEDS,LS1 4AZ,65120 - Non-life insurance,
+01214291,CASTROL MARINE LIMITED,Private Limited Company,Active,United Kingdom,1975-05-29,,READING,RG8 7QR,46719 - Wholesale of other fuels and related products,"[{""name"": ""BP MARINE LIMITED"", ""until"": ""2026-10-29""}]"
+01222910,SAL PENSION FUND LIMITED,Private Limited Company,Active,United Kingdom,1975-08-13,,LONDON,EC2N 4BQ,74990 - Non-trading company,
+01290444,BP CAPITAL MARKETS P.L.C.,Public Limited Company,Active,United Kingdom,1976-12-14,,MIDDLESEX,TW16 7BP,64999 - Financial intermediation not elsewhere classified,
+01297780,CONTINUATION COMPUTERS LIMITED,Private Limited Company,Active,United Kingdom,1977-02-09,,LONDON,EC4N 8AL,62030 - Computer facilities management activities,
+01305027,ROLLS-ROYCE POWER ENGINEERING LIMITED,Private Limited Company,Active,United Kingdom,1977-03-25,,DERBYSHIRE,DE24 8BJ,25620 - Machining,
+01329311,WOLTERS KLUWER HOLDINGS (UK) LIMITED,Private Limited Company,Active,United Kingdom,1977-09-08,,SURREY,KT2 6SR,64209 - Activities of other holding companies n.e.c.,
+01378710,BRITANNIC ENERGY TRADING LIMITED,Private Limited Company,Active,United Kingdom,1978-07-14,,MIDDLESEX,TW16 7BP,82990 - Other business support service activities n.e.c.,
+01397169,PRUDENTIAL PUBLIC LIMITED COMPANY,Public Limited Company,Active,United Kingdom,1978-11-01,,LONDON,EC4M 7NG,70100 - Activities of head offices,
+01400901,AB WORLD FOODS LIMITED,Private Limited Company,Active,United Kingdom,1978-11-21,,LONDON,W1K 4QY,10890 - Manufacture of other food products n.e.c.,"[{""name"": ""PATAK'S FOODS LIMITED"", ""until"": ""2008-03-31""}]"
+01404713,PRUDENTIAL CORPORATION HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1978-12-11,,LONDON,EC4M 7NG,64209 - Activities of other holding companies n.e.c.,
+01413180,MAURI PRODUCTS LIMITED,Private Limited Company,Active,United Kingdom,1979-02-06,,LONDON,W1K 4QY,10890 - Manufacture of other food products n.e.c.,
+01420028,BBC STUDIOS DISTRIBUTION LIMITED,Private Limited Company,Active,United Kingdom,1979-05-15,,LONDON,W12 7FA,59113 - Television programme production activities,"[{""name"": ""BBC WORLDWIDE LIMITED"", ""until"": ""2018-10-01""}]"
+01471587,VODAFONE LIMITED,Private Limited Company,Active,United Kingdom,1980-01-07,,NEWBURY,RG14 2FN,33200 - Installation of industrial machinery and equipment,
+01488969,GUINNESS OVERSEAS HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1980-04-01,,LONDON,W1F 7HS,70100 - Activities of head offices,
+01516396,ROYAL INSURANCE (U.K.) LIMITED,Private Limited Company,Liquidation,United Kingdom,1980-09-08,,BIRMINGHAM,B4 6AT,74990 - Non-trading company,
+01519807,CHROMALLOY METAL TECTONICS LIMITED,Private Limited Company,Active,United Kingdom,1980-10-01,,IPSWICH,IP1 1QJ,70100 - Activities of head offices,
+01553681,BP TECHNOLOGY VENTURES LIMITED,Private Limited Company,Active,United Kingdom,1981-03-27,,MIDDLESEX,TW16 7BP,70100 - Activities of head offices,"[{""name"": ""BP ALTERNATIVE ENERGY INTERNATIONAL LIMITED"", ""until"": ""2016-02-01""}]"
+01555746,AVIVA GROUP HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1981-04-10,,LONDON,EC3M 4AE,70100 - Activities of head offices,
+01670887,FINSURE PREMIUM FINANCE LIMITED,Private Limited Company,Active,United Kingdom,1982-10-11,,NORWICH,NR1 3NG,64921 - Credit granting by non-deposit taking finance houses and other specialist consumer credit grantors,
+01698498,MUFG SECURITIES EMEA PLC,Public Limited Company,Active,United Kingdom,1983-02-11,,LONDON,EC2Y 9AJ,64991 - Security dealing on own account,"[{""name"": ""MITSUBISHI UFJ SECURITIES INTERNATIONAL PLC"", ""until"": ""2016-07-01""}]"
+01716581,ABBOTT RAPID DIAGNOSTICS LIMITED,Private Limited Company,Active,United Kingdom,1983-04-20,,MAIDENHEAD,SL6 4XE,32500 - Manufacture of medical and dental instruments and supplies,"[{""name"": ""ALERE LIMITED"", ""until"": ""2019-11-18""}, {""name"": ""INVERNESS MEDICAL UK LIMITED"", ""until"": ""2010-03-26""}, {""name"": ""BIO STAT LIMITED"", ""until"": ""2008-04-01""}]"
+01765982,FOURTH ROODHILL LEASING LIMITED,Private Limited Company,Liquidation,United Kingdom,1983-10-31,,BIRMINGHAM,B4 6AT,82990 - Other business support service activities n.e.c.,
+01796065,REFINITIV UK HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1984-02-29,,LONDON,E14 5AQ,70100 - Activities of head offices,"[{""name"": ""REUTERS HOLDINGS LIMITED"", ""until"": ""2019-02-27""}]"
+01802574,MACQUARIE INTERNATIONAL LIMITED,Private Limited Company,Active,United Kingdom,1984-03-23,,LONDON,EC2Y 9HD,64999 - Financial intermediation not elsewhere classified,
+01810801,DIRECT LINE INSURANCE LIMITED,Private Limited Company,Active,United Kingdom,1984-04-24,,NORWICH,NR1 3NG,65120 - Non-life insurance,
+01825671,SANLAM SECURITIES UK LIMITED,Private Limited Company,Active,United Kingdom,1984-06-18,,LONDON,EC4N 6AF,64999 - Financial intermediation not elsewhere classified,"[{""name"": ""MERCHANT SECURITIES LIMITED"", ""until"": ""2013-03-18""}, {""name"": ""MERCHANT JOHN EAST SECURITIES LIMITED"", ""until"": ""2010-07-09""}, {""name"": ""JOHN EAST & PARTNERS LIMITED"", ""until"": ""2009-10-14""}]"
+01827371,CONFEDERATION MORTGAGE SERVICES LIMITED,Private Limited Company,Active,United Kingdom,1984-06-25,,SWINDON,SN38 1NW,64999 - Financial intermediation not elsewhere classified,
+01833679,VODAFONE GROUP PUBLIC LIMITED COMPANY,Public Limited Company,Active,United Kingdom,1984-07-17,,NEWBURY,RG14 2FN,61900 - Other telecommunications activities,
+01842259,MITSUBISHI UFJ ASSET MANAGEMENT (UK) LTD.,Private Limited Company,Active,United Kingdom,1984-08-20,,LONDON,EC3V 9AJ,66300 - Fund management activities,
+01852009,TP ICAP MTF LIMITED,Private Limited Company,Active,United Kingdom,1984-10-02,,LONDON,EC2M 3TP,66120 - Security and commodity contracts dealing activities,"[{""name"": ""ICAP WCLK LIMITED"", ""until"": ""2023-04-28""}]"
+01855020,YORKSHIRE BANK HOME LOANS LIMITED,Private Limited Company,Active,United Kingdom,1984-10-12,,NEWCASTLE UPON TYNE,NE3 4PL,64922 - Activities of mortgage finance companies,
+01885084,MARUBENI EUROPE PLC,Public Limited Company,Active,United Kingdom,1985-02-11,,LONDON,EC2V 7AB,46900 - Non-specialised wholesale trade,
+01895476,GARBAN INTERNATIONAL,Private Unlimited Company,Active,United Kingdom,1985-03-14,,LONDON,EC2M 3TP,64205 - Activities of financial services holding companies,
+01913411,THE CO-OPERATIVE BANK PENSION TRUST LIMITED,Private Limited Company,Liquidation,United Kingdom,1985-05-14,,BIRMINGHAM,B4 6AT,65300 - Pension funding,
+01953112,TAYLOR NELSON SOFRES INTERNATIONAL LIMITED,Private Limited Company,Active,United Kingdom,1985-10-07,,LONDON,SE1 9LQ,70100 - Activities of head offices,
+01955498,WELLCOME LIMITED,Private Limited Company,Active,United Kingdom,1985-11-06,,LONDON,WC1A 1DG,70100 - Activities of head offices,
+01961948,"PANFOODS CO., LIMITED",Private Limited Company,Active,United Kingdom,1985-11-20,,LONDON,EC2V 7AB,"46370 - Wholesale of coffee, tea, cocoa and spices",
+01982084,ELSEVIER LIMITED,Private Limited Company,Active,United Kingdom,1986-01-24,,LONDON,EC2Y 5AS,62090 - Other information technology service activities,
+02021944,CHOUGHS NOMINEES LIMITED,Private Limited Company,Active,United Kingdom,1986-05-21,,,SW1E 6LA,68100 - Buying and selling of own real estate,
+02042906,NATIONWIDE HOME LOANS LIMITED,Private Limited Company,Active,United Kingdom,1986-08-01,,SWINDON,SN38 1NW,64999 - Financial intermediation not elsewhere classified,
+02075721,LONDON STOCK EXCHANGE PLC,Public Limited Company,Active,United Kingdom,1986-11-19,,,EC4M 7LS,66110 - Administration of financial markets,
+02081330,CAPITA PLC,Public Limited Company,Active,United Kingdom,1986-12-08,,LONDON,W2 6BD,58290 - Other software publishing,"[{""name"": ""THE CAPITA GROUP PLC"", ""until"": ""2012-01-03""}]"
+02089076,REFINITIV TRANSACTION SERVICES LIMITED,Private Limited Company,Active,United Kingdom,1987-01-13,,LONDON,E14 5AQ,64999 - Financial intermediation not elsewhere classified,"[{""name"": ""REUTERS TRANSACTION SERVICES LIMITED"", ""until"": ""2019-03-29""}]"
+02100688,NATIONWIDE HOUSING TRUST LIMITED,Private Limited Company,Active,United Kingdom,1987-02-17,,SWINDON,SN38 1NW,64999 - Financial intermediation not elsewhere classified,
+02108635,CYB INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,1987-03-10,,GOSFORTH,NE3 4PL,64191 - Banks,"[{""name"": ""NATIONAL AUSTRALIA GROUP EUROPE LIMITED"", ""until"": ""2015-10-29""}]"
+02124900,E-MEX HOME FUNDING LIMITED,Private Limited Company,Active,United Kingdom,1987-04-22,,SWINDON,SN38 1NW,64999 - Financial intermediation not elsewhere classified,
+02133489,NOK1 LIMITED,Private Limited Company,Active,United Kingdom,1987-05-21,,SWINDON,SN38 1NW,74990 - Non-trading company,"[{""name"": ""NATIONWIDE OVERSEAS (UK) LIMITED"", ""until"": ""2022-01-05""}]"
+02134749,AB MAURI (UK) LIMITED,Private Limited Company,Active,United Kingdom,1987-05-27,,LONDON,W1K 4QY,70100 - Activities of head offices,
+02145778,R&SA MARKETING SERVICES LIMITED,Private Limited Company,Liquidation,United Kingdom,1987-07-08,,BIRMINGHAM,B4 6AT,66220 - Activities of insurance agents and brokers,
+02189561,TP ICAP MANAGEMENT SERVICES LIMITED,Private Limited Company,Active,United Kingdom,1987-11-06,,LONDON,EC2M 3TP,70100 - Activities of head offices,"[{""name"": ""ICAP MANAGEMENT SERVICES LIMITED"", ""until"": ""2025-05-30""}]"
+02220030,ROSS CERAMICS LIMITED,Private Limited Company,Active,United Kingdom,1988-02-10,,DERBYSHIRE,DE24 8BJ,23490 - Manufacture of other ceramic products n.e.c.,
+02221553,MORTGAGE AGENCY SERVICES NUMBER TWO LIMITED,Private Limited Company,Active,United Kingdom,1988-02-16,,MANCHESTER,M4 4BE,64999 - Financial intermediation not elsewhere classified,
+02221960,ROYAL INSURANCE HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1988-02-16,,LONDON,EC2N 4BQ,64205 - Activities of financial services holding companies,
+02222856,THE MORTGAGE WORKS (UK) PLC,Public Limited Company,Active,United Kingdom,1988-02-19,,SWINDON,SN38 1NW,64999 - Financial intermediation not elsewhere classified,
+02227940,VODAFONE UK INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,1988-03-07,,NEWBURY,RG14 2FN,70100 - Activities of head offices,"[{""name"": ""VODAFONE UK LIMITED"", ""until"": ""2024-08-21""}]"
+02230419,NORTON ROSE LIMITED,Private Limited Company,Active,United Kingdom,1988-03-15,,,SE1 2AQ,70229 - Management consultancy activities other than financial management,"[{""name"": ""HOUNDSDITCH LIMITED"", ""until"": ""2007-05-30""}, {""name"": ""NORTON ROSE LIMITED"", ""until"": ""2007-05-30""}]"
+02239062,BP EASTERN MEDITERRANEAN LIMITED,Private Limited Company,Active,United Kingdom,1988-04-04,,MIDDLESEX,TW16 7BP,46719 - Wholesale of other fuels and related products,
+02258699,GLAXOSMITHKLINE CAPITAL PLC,Public Limited Company,Active,United Kingdom,1988-05-16,,LONDON,WC1A 1DG,64999 - Financial intermediation not elsewhere classified,
+02258947,CHURCHILL INSURANCE COMPANY LIMITED,Private Limited Company,Active,United Kingdom,1988-05-17,,NORWICH,NR1 3NG,65120 - Non-life insurance,
+02280426,DIRECT LINE INSURANCE GROUP LIMITED,Private Limited Company,Active,United Kingdom,1988-07-26,,NORWICH,NR1 3NG,70100 - Activities of head offices,"[{""name"": ""DIRECT LINE INSURANCE GROUP LIMITED"", ""until"": ""2012-02-03""}, {""name"": ""RBS INSURANCE GROUP LIMITED"", ""until"": ""2012-02-03""}]"
+02288254,VODAFONE GROUP PENSION TRUSTEE LIMITED,Private Limited Company,Active,United Kingdom,1988-08-19,,NEWBURY,RG14 2FN,99999 - Dormant Company,
+02313235,PRUDENTIAL SERVICES LIMITED,Private Limited Company,Active,United Kingdom,1988-11-04,,LONDON,EC4M 7NG,82990 - Other business support service activities n.e.c.,
+02317853,MORTGAGE AGENCY SERVICES NUMBER ONE LIMITED,Private Limited Company,Active,United Kingdom,1988-11-16,,MANCHESTER,M4 4BE,64999 - Financial intermediation not elsewhere classified,
+02332323,SETFIRST LIMITED,Private Limited Company,Active,United Kingdom,1989-01-03,,LONDON,WC1A 1DG,70100 - Activities of head offices,
+02337959,SMITHKLINE BEECHAM LIMITED,Private Limited Company,Active,United Kingdom,1989-01-24,,LONDON,WC1A 1DG,21100 - Manufacture of basic pharmaceutical products,
+02339826,RSA INSURANCE GROUP LIMITED,Private Limited Company,Active,United Kingdom,1989-01-26,,LONDON,EC2N 4BQ,70100 - Activities of head offices,"[{""name"": ""ROYAL & SUN ALLIANCE INSURANCE GROUP PLC"", ""until"": ""2008-05-20""}]"
+02366894,NATIONAL GRID ELECTRICITY DISTRIBUTION (SOUTH WEST) PLC,Public Limited Company,Active,United Kingdom,1989-04-01,,BRISTOL,BS2 0TB,35130 - Distribution of electricity,"[{""name"": ""WESTERN POWER DISTRIBUTION (SOUTH WEST) PLC"", ""until"": ""2022-09-20""}]"
+02366923,NATIONAL GRID ELECTRICITY DISTRIBUTION (EAST MIDLANDS) PLC,Public Limited Company,Active,United Kingdom,1989-04-01,,BRISTOL,BS2 0TB,35130 - Distribution of electricity,"[{""name"": ""WESTERN POWER DISTRIBUTION (EAST MIDLANDS) PLC"", ""until"": ""2022-09-20""}, {""name"": ""CENTRAL NETWORKS EAST PLC"", ""until"": ""2011-04-01""}]"
+02366985,NATIONAL GRID ELECTRICITY DISTRIBUTION (SOUTH WALES) PLC,Public Limited Company,Active,United Kingdom,1989-04-01,,BRISTOL,BS2 0TB,35130 - Distribution of electricity,"[{""name"": ""WESTERN POWER DISTRIBUTION (SOUTH WALES) PLC"", ""until"": ""2022-09-21""}]"
+02367004,NATIONAL GRID HOLDINGS ONE PLC,Public Limited Company,Active,United Kingdom,1989-04-01,,,WC2N 5EH,70100 - Activities of head offices,
+02400085,BRITISH SUGAR (OVERSEAS) LIMITED,Private Limited Company,Active,United Kingdom,1989-07-03,,LONDON,W1K 4QY,70100 - Activities of head offices,
+02427527,NON-DESTRUCTIVE TESTERS LIMITED,Private Limited Company,Liquidation,United Kingdom,1989-09-28,,BIRMINGHAM,B4 6AT,74990 - Non-trading company,
+02433585,GLAXOSMITHKLINE EXPORT LIMITED,Private Limited Company,Active,United Kingdom,1989-10-18,,LONDON,WC1A 1DG,46460 - Wholesale of pharmaceutical goods,
+02448482,MARNIX EUROPE LIMITED,Private Limited Company,Active,United Kingdom,1989-12-01,,LONDON,EC2V 7AB,65120 - Non-life insurance,
+02468686,AVIVA PLC,Public Limited Company,Active,United Kingdom,1990-02-09,,LONDON,EC3M 4AE,70100 - Activities of head offices,
+02533369,TP ICAP COMMODITIES LIMITED,Private Limited Company,Active,United Kingdom,1990-08-22,,LONDON,EC2M 3TP,66190 - Activities auxiliary to financial intermediation n.e.c.,"[{""name"": ""TULLETT PREBON (EQUITIES) LIMITED"", ""until"": ""2024-12-18""}]"
+02537970,NATIONWIDE SYNDICATIONS LIMITED,Private Limited Company,Active,United Kingdom,1990-09-07,,SWINDON,SN38 1NW,64999 - Financial intermediation not elsewhere classified,
+02540915,LIVENOTE TECHNOLOGIES LIMITED,Private Limited Company,Active,United Kingdom,1990-09-18,,LONDON,E14 5AQ,62020 - Information technology consultancy activities,
+02548046,ABBOTT DIABETES CARE LIMITED,Private Limited Company,Active,United Kingdom,1990-10-12,,WITNEY,OX29 0YL,32500 - Manufacture of medical and dental instruments and supplies,
+02548079,WILMINGTON TRUST SP SERVICES (LONDON) LIMITED,Private Limited Company,Active,United Kingdom,1990-10-12,,LONDON,EC2R 7AF,82990 - Other business support service activities n.e.c.,
+02548782,SVF HOLDCO (UK) LIMITED,Private Limited Company,Active,United Kingdom,1990-10-16,,LONDON,W1K 3JR,62090 - Other information technology service activities,"[{""name"": ""SVF HOLDCO (UK) PLC"", ""until"": ""2018-03-19""}, {""name"": ""ARM HOLDINGS PLC"", ""until"": ""2018-03-19""}]"
+02552828,SMITHKLINE BEECHAM OVERSEAS LIMITED,Private Limited Company,Active,United Kingdom,1990-10-29,,LONDON,WC1A 1DG,70100 - Activities of head offices,
+02553782,ICAP ENERGY LIMITED,Private Limited Company,Active,United Kingdom,1990-10-31,,LONDON,EC2M 3TP,66120 - Security and commodity contracts dealing activities,
+02557590,ARM LIMITED,Private Limited Company,Active,United Kingdom,1990-11-12,,CAMBRIDGESHIRE,CB1 9NJ,82990 - Other business support service activities n.e.c.,
+02568507,UK ASSISTANCE ACCIDENT REPAIR CENTRES LIMITED,Private Limited Company,Active,United Kingdom,1990-12-13,,NORWICH,NR1 3NG,45200 - Maintenance and repair of motor vehicles,
+02571241,TTEP SHB LTD,Private Limited Company,Active,United Kingdom,1991-01-02,,LONDON,SW1A 1EE,35110 - Production of electricity,"[{""name"": ""EP SHB LIMITED"", ""until"": ""2026-06-22""}, {""name"": ""CENTRICA SHB LIMITED"", ""until"": ""2017-09-01""}]"
+02605568,MUFG CORPORATE MARKETS (UK) LIMITED,Private Limited Company,Active,United Kingdom,1991-04-26,,LEEDS,LS1 4DL,82990 - Other business support service activities n.e.c.,"[{""name"": ""LINK MARKET SERVICES LIMITED"", ""until"": ""2025-01-20""}, {""name"": ""CAPITA REGISTRARS LIMITED"", ""until"": ""2017-11-06""}]"
+02622895,GREEN FLAG GROUP LIMITED,Private Limited Company,Active,United Kingdom,1991-06-21,,LEEDS,LS1 4AZ,70100 - Activities of head offices,
+02628265,DERBYSHIRE HOME LOANS LIMITED,Private Limited Company,Active,United Kingdom,1991-07-10,,SWINDON,SN38 1NW,82990 - Other business support service activities n.e.c.,
+02630496,NATIONAL GRID (US) HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1991-07-18,,,WC2N 5EH,82990 - Other business support service activities n.e.c.,
+02658963,ROLLS-ROYCE OVERSEAS HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1991-10-30,,DERBYSHIRE,DE24 8BJ,64999 - Financial intermediation not elsewhere classified,
+02670499,TP ICAP BROKING LIMITED,Private Limited Company,Active,United Kingdom,1991-12-12,,LONDON,EC2M 3TP,64999 - Financial intermediation not elsewhere classified,"[{""name"": ""TULLETT PREBON (SECURITIES) LIMITED"", ""until"": ""2022-04-29""}]"
+02670617,WPP GROUP (UK) LTD,Private Limited Company,Active,United Kingdom,1991-12-12,,LONDON,SE1 9GL,74990 - Non-trading company,"[{""name"": ""W P P DISTRIBUTIONS (UK) LTD"", ""until"": ""2008-05-28""}, {""name"": ""WPP GROUP (UK) LTD"", ""until"": ""2008-05-22""}]"
+02729260,MUFG CORPORATE MARKETS TRUSTEES (UK) LIMITED,Private Limited Company,Active,United Kingdom,1992-07-07,,LEEDS,LS1 4DL,96090 - Other service activities n.e.c.,"[{""name"": ""LINK MARKET SERVICES TRUSTEES LIMITED"", ""until"": ""2025-01-20""}, {""name"": ""CAPITA IRG TRUSTEES LIMITED"", ""until"": ""2017-11-06""}]"
+02733492,VIRGIN MONEY GIVING LIMITED,Private Limited Company,Active,United Kingdom,1992-07-22,,GOSFORTH,NE3 4PL,74990 - Non-trading company,"[{""name"": ""VIRGIN COMPUTERS LIMITED"", ""until"": ""2009-02-09""}, {""name"": ""VIRGIN FLYER LIMITED"", ""until"": ""2007-07-02""}]"
+02735371,ENI INDIA LIMITED,Private Limited Company,Active,United Kingdom,1992-07-29,,LONDON,SW1W 8PZ,06100 - Extraction of crude petroleum,
+02746616,RELX GROUP PLC,Public Limited Company,Active,United Kingdom,1992-09-11,,,WC2N 5JR,70100 - Activities of head offices,"[{""name"": ""REED ELSEVIER GROUP PLC"", ""until"": ""2015-02-25""}]"
+02746621,RELX (UK) LIMITED,Private Limited Company,Active,United Kingdom,1992-09-11,,,WC2N 5JR,70100 - Activities of head offices,"[{""name"": ""REED ELSEVIER (UK) LIMITED"", ""until"": ""2015-11-02""}]"
+02762848,INTER GROUP INSURANCE SERVICES LIMITED,Private Limited Company,Active,United Kingdom,1992-11-09,,NORWICH,NR1 3NG,99999 - Dormant Company,
+02778854,WORLDWING INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,1993-01-12,,LONDON,W1K 4QY,70100 - Activities of head offices,
+02797438,VODAFONE INTERNATIONAL OPERATIONS LIMITED,Private Limited Company,Active,United Kingdom,1993-03-09,,NEWBURY,RG14 2FN,70100 - Activities of head offices,
+02805658,THE GLOBE INSURANCE COMPANY LIMITED,Private Limited Company,Active,United Kingdom,1993-03-26,,LONDON,EC2N 4BQ,64205 - Activities of financial services holding companies,
+02811437,DIRECT LINE GROUP LIMITED,Private Limited Company,Active,United Kingdom,1993-04-21,,NORWICH,NR1 3NG,70100 - Activities of head offices,
+02826955,BUTTERWORTHS LIMITED,Private Limited Company,Active,United Kingdom,1993-06-15,,LONDON,EC4A 4HH,62090 - Other information technology service activities,
+02829935,P V M OIL FUTURES LTD,Private Limited Company,Active,United Kingdom,1993-06-18,,LONDON,EC2M 3TP,64999 - Financial intermediation not elsewhere classified,
+02844851,VODAFONE GLOBAL ENTERPRISE LIMITED,Private Limited Company,Active,United Kingdom,1993-08-16,,NEWBURY,RG14 2FN,61900 - Other telecommunications activities,"[{""name"": ""VODAFONE ASIA PACIFIC LIMITED"", ""until"": ""2008-03-10""}]"
+02862777,YCBPS PROPERTY NOMINEE COMPANY LIMITED,Private Limited Company,Active,United Kingdom,1993-10-15,,GOSFORTH,NE3 4PL,82990 - Other business support service activities n.e.c.,"[{""name"": ""NATIONAL AUSTRALIA GROUP CIF TRUSTEE LIMITED"", ""until"": ""2012-12-14""}]"
+02981016,CYB SSP TRUSTEE LIMITED,Private Limited Company,Active,United Kingdom,1994-10-19,,GOSFORTH,NE3 4PL,74990 - Non-trading company,"[{""name"": ""NATIONAL AUSTRALIA GROUP SSP TRUSTEE LIMITED"", ""until"": ""2015-11-05""}]"
+03000482,OCTOPUS MONEY UNIT TRUST MANAGERS LIMITED,Private Limited Company,Active,United Kingdom,1994-12-12,,LONDON,EC1N 2HT,64302 - Activities of unit trusts,"[{""name"": ""VIRGIN MONEY UNIT TRUST MANAGERS LIMITED"", ""until"": ""2025-11-18""}]"
+03001989,DL INSURANCE SERVICES LIMITED,Private Limited Company,Active,United Kingdom,1994-12-15,,NORWICH,NR1 3NG,65120 - Non-life insurance,"[{""name"": ""RBS INSURANCE SERVICES LIMITED"", ""until"": ""2012-09-10""}]"
+03032761,VODAFONE FINANCE LIMITED,Private Limited Company,Active,United Kingdom,1995-03-14,,NEWBURY,RG14 2FN,64191 - Banks,
+03033654,CENTRICA PLC,Public Limited Company,Active,United Kingdom,1995-03-16,,BERKSHIRE,SL4 5GD,35110 - Production of electricity,
+03072766,VIRGIN MONEY PERSONAL FINANCIAL SERVICE LIMITED,Private Limited Company,Active,United Kingdom,1995-06-27,,GOSFORTH,NE3 4PL,74990 - Non-trading company,
+03082616,WOLTERS KLUWER TAX AND ACCOUNTING LIMITED,Private Limited Company,Active,United Kingdom,1995-07-21,,SURREY,KT2 6SR,62012 - Business and domestic software development,"[{""name"": ""WK TAX AND ACCOUNTING LIMITED"", ""until"": ""2008-09-09""}, {""name"": ""CRONER REWARD LIMITED"", ""until"": ""2007-09-25""}]"
+03087587,VIRGIN MONEY HOLDINGS (UK) LIMITED,Private Limited Company,Active,United Kingdom,1995-08-04,,GOSFORTH,NE3 4PL,64205 - Activities of financial services holding companies,
+03108236,FTSE INTERNATIONAL LIMITED,Private Limited Company,Active,United Kingdom,1995-09-25,,LONDON,EC4M 7LS,63990 - Other information service activities n.e.c.,
+03186121,GB GAS HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1996-04-15,,BERKSHIRE,SL4 5GD,70100 - Activities of head offices,
+03207393,FARMWEB LIMITED,Private Limited Company,Active,United Kingdom,1996-05-30,,NORWICH,NR1 3NG,65120 - Non-life insurance,
+03296375,THOMSON REUTERS GROUP LIMITED,Private Limited Company,Active,United Kingdom,1996-12-24,,LONDON,E14 5AQ,70100 - Activities of head offices,"[{""name"": ""REUTERS GROUP LIMITED"", ""until"": ""2009-01-15""}]"
+03313345,ABF OVERSEAS LIMITED,Private Limited Company,Active,United Kingdom,1997-02-05,,LONDON,W1K 4QY,70100 - Activities of head offices,
+03315786,INTERGROUP ASSISTANCE SERVICES LIMITED,Private Limited Company,Active,United Kingdom,1997-02-10,,NORWICH,NR1 3NG,99999 - Dormant Company,
+03369799,ABF (NO.2) LIMITED,Private Limited Company,Active,United Kingdom,1997-05-13,,LONDON,W1K 4QY,64209 - Activities of other holding companies n.e.c.,
+03454743,THE LINK ASSET AND SECURITIES COMPANY LIMITED,Private Limited Company,Active,United Kingdom,1997-10-23,,LONDON,EC2M 3TP,66120 - Security and commodity contracts dealing activities,
+03456337,PLATFORM FUNDING LIMITED,Private Limited Company,Active,United Kingdom,1997-10-28,,MANCHESTER,M4 4BE,74990 - Non-trading company,
+03462783,TTEP LANGAGE POWER LTD,Private Limited Company,Active,United Kingdom,1997-11-10,,LONDON,SW1A 1EE,35110 - Production of electricity,"[{""name"": ""EP LANGAGE LIMITED"", ""until"": ""2026-06-22""}, {""name"": ""CENTRICA LANGAGE LIMITED"", ""until"": ""2017-09-01""}]"
+03517200,VINTERS LIMITED,Private Limited Company,Active,United Kingdom,1998-02-25,,DERBY,DE24 8BJ,70100 - Activities of head offices,
+03521587,BBC MEDIA ACTION,"PRI/LBG/NSC (Private, Limited by guarantee, no share capital, use of 'Limited' exemption)",Active,United Kingdom,1998-02-26,,LONDON,W1A 1AA,85590 - Other education n.e.c.,"[{""name"": ""THE BBC WORLD SERVICE TRUST"", ""until"": ""2011-12-16""}]"
+03525529,AGROVISTA UK LIMITED,Private Limited Company,Active,United Kingdom,1998-03-11,,NOTTINGHAM,NG7 2PZ,01610 - Support activities for crop production,
+03577191,GREEN FLAG HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1998-06-08,,NORWICH,NR1 3NG,64209 - Activities of other holding companies n.e.c.,
+03593793,BBC STUDIOWORKS LIMITED,Private Limited Company,Active,United Kingdom,1998-07-01,,LONDON,W12 7FA,59113 - Television programme production activities,"[{""name"": ""BBC STUDIOS AND POST PRODUCTION LIMITED"", ""until"": ""2016-04-07""}, {""name"": ""BBC RESOURCES LIMITED"", ""until"": ""2009-03-30""}]"
+03600574,NATIONAL GRID ELECTRICITY DISTRIBUTION (WEST MIDLANDS) PLC,Public Limited Company,Active,United Kingdom,1998-07-20,,BRISTOL,BS2 0TB,35130 - Distribution of electricity,"[{""name"": ""WESTERN POWER DISTRIBUTION (WEST MIDLANDS) PLC"", ""until"": ""2022-09-20""}, {""name"": ""CENTRAL NETWORKS WEST PLC"", ""until"": ""2011-04-01""}]"
+03604417,GARBAN GROUP HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1998-07-21,,LONDON,EC2M 3TP,64205 - Activities of financial services holding companies,
+03611426,NEX INTERNATIONAL LIMITED,Private Limited Company,Active,United Kingdom,1998-08-03,,LONDON,E1   6PW,70100 - Activities of head offices,"[{""name"": ""NEX INTERNATIONAL PLC"", ""until"": ""2018-11-01""}, {""name"": ""ICAP PLC"", ""until"": ""2018-11-01""}]"
+03623314,DIAGEO HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1998-08-24,,LONDON,W1F 7HS,70100 - Activities of head offices,
+03635229,ICAP GLOBAL DERIVATIVES LIMITED,Private Limited Company,Active,United Kingdom,1998-09-21,,LONDON,EC2M 3TP,66190 - Activities auxiliary to financial intermediation n.e.c.,"[{""name"": ""ICAP ELECTRONIC BROKING LIMITED"", ""until"": ""2014-01-08""}]"
+03646806,RECKITT & COLMAN HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1998-10-08,,BERKSHIRE,SL1 3UH,64205 - Activities of financial services holding companies,
+03666164,PUNCHBOWL PARK MANAGEMENT LIMITED,Private Limited Company,Active,United Kingdom,1998-11-12,,,SW1E 6LA,68209 - Other letting and operating of own or leased real estate,
+03679738,G. COSTA (HOLDINGS) LIMITED,Private Limited Company,Active,United Kingdom,1998-12-07,,LONDON,W1K 4QY,70100 - Activities of head offices,"[{""name"": ""G. COSTA HOLDINGS LIMITED"", ""until"": ""2008-07-18""}, {""name"": ""COSTA HOLDINGS LIMITED"", ""until"": ""2008-07-17""}, {""name"": ""G. COSTA (HOLDINGS) LIMITED"", ""until"": ""2008-07-01""}]"
+03704031,MACQUARIE CAPITAL (EUROPE) LIMITED,Private Limited Company,Active,United Kingdom,1999-01-28,,LONDON,EC2Y 9HD,64999 - Financial intermediation not elsewhere classified,"[{""name"": ""MACQUARIE EUROPE LIMITED"", ""until"": ""2007-10-30""}]"
+03705740,UTILITY METERING SERVICES LIMITED,Private Limited Company,Active,United Kingdom,1999-02-02,,LONDON,EC2Y 9HD,"77390 - Renting and leasing of other machinery, equipment and tangible goods n.e.c.",
+03729125,HOWARD INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,1999-03-09,,LONDON,W1K 4QY,64999 - Financial intermediation not elsewhere classified,
+03738674,ABBOTT (UK) HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1999-03-23,,MAIDENHEAD,SL6 4XE,64209 - Activities of other holding companies n.e.c.,
+03772746,ITHACA EF LIMITED,Private Limited Company,Active,United Kingdom,1999-05-18,,LEEDS,LS1 5AB,06100 - Extraction of crude petroleum,"[{""name"": ""ENI ELGIN/FRANKLIN LIMITED"", ""until"": ""2024-12-18""}]"
+03782700,TTEP EGGBOROUGH POWER LTD,Private Limited Company,Active,United Kingdom,1999-06-04,,LEEDS,LS15 8ZB,35110 - Production of electricity,"[{""name"": ""EGGBOROUGH POWER LIMITED"", ""until"": ""2026-06-22""}]"
+03802001,VODAFONE GROUP SERVICES LIMITED,Private Limited Company,Active,United Kingdom,1999-07-07,,NEWBURY,RG14 2FN,61900 - Other telecommunications activities,
+03853947,CSC MANAGEMENT SERVICES (UK) LIMITED,Private Limited Company,Active,United Kingdom,1999-10-01,,LONDON,E14 5HU,70100 - Activities of head offices,"[{""name"": ""INTERTRUST MANAGEMENT LIMITED"", ""until"": ""2024-12-09""}, {""name"": ""STRUCTURED FINANCE MANAGEMENT LIMITED"", ""until"": ""2016-12-09""}]"
+03867128,NATIONAL GRID (US) INVESTMENTS 4 LIMITED,Private Limited Company,Active,United Kingdom,1999-10-22,,,WC2N 5EH,82990 - Other business support service activities n.e.c.,
+03882013,ATOMOS FINANCIAL PLANNING HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1999-11-24,,LONDON,SE1 9PG,64205 - Activities of financial services holding companies,"[{""name"": ""SANLAM WEALTH PLANNING HOLDINGS UK LIMITED"", ""until"": ""2022-09-21""}, {""name"": ""SANLAM PRIVATE WEALTH HOLDINGS UK LIMITED"", ""until"": ""2014-07-14""}, {""name"": ""BUCKLES HOLDINGS LIMITED"", ""until"": ""2011-04-18""}]"
+03888792,GSK PLC,Public Limited Company,Active,United Kingdom,1999-12-06,,LONDON,WC1A 1DG,70100 - Activities of head offices,"[{""name"": ""GLAXOSMITHKLINE PLC"", ""until"": ""2022-05-16""}]"
+03915424,MUFG CORPORATE MARKETS TRUSTEES (NOMINEES) LIMITED,Private Limited Company,Active,United Kingdom,2000-01-28,,LEEDS,LS1 4DL,96090 - Other service activities n.e.c.,"[{""name"": ""LINK MARKET SERVICES TRUSTEES (NOMINEES) LIMITED"", ""until"": ""2025-01-20""}, {""name"": ""CAPITA IRG TRUSTEES (NOMINEES) LIMITED"", ""until"": ""2017-11-06""}]"
+03920255,CSC CORPORATE SERVICES (LONDON) LIMITED,Private Limited Company,Active,United Kingdom,2000-02-07,,LONDON,E14 5HU,74990 - Non-trading company,"[{""name"": ""INTERTRUST CORPORATE SERVICES LIMITED"", ""until"": ""2024-12-09""}, {""name"": ""SFM CORPORATE SERVICES LIMITED"", ""until"": ""2016-12-09""}]"
+03924148,TRT LIMITED,Private Limited Company,Active,United Kingdom,2000-02-11,,DERBYSHIRE,DE55 4RH,33160 - Repair and maintenance of aircraft and spacecraft,
+03932833,NATIONAL GRID CARBON LIMITED,Private Limited Company,Active,United Kingdom,2000-02-24,,,WC2N 5EH,99999 - Dormant Company,"[{""name"": ""NETMAP LIMITED"", ""until"": ""2009-02-20""}]"
+03947050,ITHACA MA LIMITED,Private Limited Company,Active,United Kingdom,2000-03-09,,LEEDS,LS1 5AB,06100 - Extraction of crude petroleum,"[{""name"": ""ITHACA OIL & GAS (U.K.) LIMITED"", ""until"": ""2022-03-15""}, {""name"": ""MARUBENI OIL & GAS (U.K.) LIMITED"", ""until"": ""2022-02-07""}]"
+03953038,WPP FINANCE CO. LIMITED,Private Limited Company,Active,United Kingdom,2000-03-16,,LONDON,SE1 9GL,82990 - Other business support service activities n.e.c.,
+03961390,VODAPHONE LIMITED,Private Limited Company,Active,United Kingdom,2000-03-31,,NEWBURY,RG14 2FN,70100 - Activities of head offices,"[{""name"": ""VODAFONE MOBILE ENTERPRISES LIMITED"", ""until"": ""2023-01-12""}]"
+03961482,VODAFONE MOBILE NETWORK LIMITED,Private Limited Company,Active,United Kingdom,2000-03-31,,NEWBURY,RG14 2FN,70100 - Activities of head offices,
+03961908,VODAFONE EUROPEAN INVESTMENTS,Private Unlimited Company,Active,United Kingdom,2000-03-31,,NEWBURY,RG14 2FN,82990 - Other business support service activities n.e.c.,
+03981143,OCTOPUS CAPITAL LIMITED,Private Limited Company,Active,United Kingdom,2000-04-19,,LONDON,EC1N 2HT,64205 - Activities of financial services holding companies,
+03982446,VEH MFG UK LIMITED,Private Limited Company,Active,United Kingdom,2000-04-28,,BERKSHIRE,SL6 2SL,17220 - Manufacture of household and sanitary goods and of toilet requisites,"[{""name"": ""RECKITT BENCKISER (UK) LIMITED"", ""until"": ""2026-07-20""}]"
+03994598,SMARTESTENERGY LIMITED,Private Limited Company,Active,United Kingdom,2000-05-16,,LONDON,E14 4HD,35110 - Production of electricity,
+04010406,VODAFONE VENTURES LIMITED,Private Limited Company,Active,United Kingdom,2000-06-08,,NEWBURY,RG14 2FN,61900 - Other telecommunications activities,
+04016745,NOROSE COMPANY SECRETARIAL SERVICES LIMITED,Private Limited Company,Active,United Kingdom,2000-06-13,,,SE1 2AQ,96090 - Other service activities n.e.c.,
+04027682,RECKITT BENCKISER CORPORATE SERVICES LIMITED,Private Limited Company,Active,United Kingdom,2000-07-05,,BERKSHIRE,SL1 3UH,70229 - Management consultancy activities other than financial management,
+04031152,NATIONAL GRID PLC,Public Limited Company,Active,United Kingdom,2000-07-11,,LONDON,WC2N 5EH,70100 - Activities of head offices,
+04040105,TURBINE SURFACE TECHNOLOGIES LIMITED,Private Limited Company,Active,United Kingdom,2000-07-25,,NOTTINGHAMSHIRE,NG15 0DR,25610 - Treatment and coating of metals,
+04056283,CYB INTERMEDIARIES LIMITED,Private Limited Company,Active,United Kingdom,2000-08-21,,GOSFORTH,NE3 4PL,65110 - Life insurance,"[{""name"": ""NATIONAL AUSTRALIA INSURANCE SERVICES LIMITED"", ""until"": ""2015-11-05""}]"
+04064727,ROTHSCHILD & CO CONTINUATION FINANCE PLC,Public Limited Company,Active,United Kingdom,2000-08-30,,LONDON,EC4N 8AL,64999 - Financial intermediation not elsewhere classified,"[{""name"": ""ROTHSCHILDS CONTINUATION FINANCE PLC"", ""until"": ""2018-10-31""}]"
+04066211,WPD WEM LIMITED,Private Limited Company,Active,United Kingdom,2000-09-06,,BRISTOL,BS2 0TB,70100 - Activities of head offices,"[{""name"": ""PPL WEM LIMITED"", ""until"": ""2021-06-16""}, {""name"": ""PPL WEM HOLDINGS LIMITED"", ""until"": ""2014-11-25""}, {""name"": ""PPL WEM HOLDINGS LIMITED"", ""until"": ""2011-03-24""}, {""name"": ""WPD INVESTMENT HOLDINGS LIMITED"", ""until"": ""2011-03-24""}]"
+04083193,VODAFONE 2.,Private Unlimited Company,Active,United Kingdom,2000-10-04,,NEWBURY,RG14 2FN,96090 - Other service activities n.e.c.,
+04104671,MACQUARIE INVESTMENTS (UK) LIMITED,Private Limited Company,Active,United Kingdom,2000-11-09,,LONDON,EC2Y 9HD,64209 - Activities of other holding companies n.e.c.,
+04125302,MACQUARIE INTERNATIONAL HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2000-12-14,,LONDON,EC2Y 9HD,70100 - Activities of head offices,
+04126448,ENI INVESTMENTS PLC,Public Limited Company,Active,United Kingdom,2000-12-12,,LONDON,SW1W 8PZ,64209 - Activities of other holding companies n.e.c.,
+04161108,ABBOTT EQUITY HOLDINGS UNLIMITED,Private Unlimited Company,Active,United Kingdom,2001-02-15,,MAIDENHEAD,SL6 4XE,64209 - Activities of other holding companies n.e.c.,
+04171115,VODAFONE OVERSEAS FINANCE LIMITED,Private Limited Company,Active,United Kingdom,2001-03-02,,NEWBURY,RG14 2FN,64191 - Banks,
+04177804,WPP MR OVERSEAS MEDIA HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2001-03-12,,LONDON,SE1 9GL,70100 - Activities of head offices,"[{""name"": ""TNS OVERSEAS MEDIA HOLDINGS LIMITED"", ""until"": ""2020-01-30""}, {""name"": ""TNS OVERSEAS HOLDINGS (ZETA) LIMITED"", ""until"": ""2007-03-16""}]"
+04232799,LIQUIDNET EUROPE LIMITED,Private Limited Company,Active,United Kingdom,2001-06-12,,LONDON,EC2M 3TP,64999 - Financial intermediation not elsewhere classified,
+04243136,BBC PROPERTY DEVELOPMENT LIMITED,Private Limited Company,Active,United Kingdom,2001-06-28,,LONDON,W1A 1AA,68100 - Buying and selling of own real estate,
+04267530,ALERE UK HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2001-08-09,,BERKSHIRE,SL6 4XE,70100 - Activities of head offices,"[{""name"": ""INVERNESS MEDICAL (UK) HOLDINGS LIMITED"", ""until"": ""2010-04-22""}]"
+04314432,NATIONAL GRID (US) PARTNER 1 LIMITED,Private Limited Company,Active,United Kingdom,2001-10-31,,LONDON,WC2N 5EH,82990 - Other business support service activities n.e.c.,
+04320660,ROYAL & SUN ALLIANCE PENSION TRUSTEE LIMITED,Private Limited Company,Active,United Kingdom,2001-11-12,,LONDON,EC2N 4BQ,74990 - Non-trading company,
+04330127,WILMINGTON TRUST (UK) LIMITED,Private Limited Company,Active,United Kingdom,2001-11-28,,LONDON,EC2R 7AF,82990 - Other business support service activities n.e.c.,
+04397736,NLF1 LIMITED,Private Limited Company,Active,United Kingdom,2002-03-19,,SWINDON,SN38 1NW,64910 - Financial leasing,"[{""name"": ""NATIONWIDE LEASE FINANCE LIMITED"", ""until"": ""2022-01-05""}]"
+04416252,ROTHSCHILD & CO WEALTH MANAGEMENT UK LIMITED,Private Limited Company,Active,United Kingdom,2002-04-15,,LONDON,EC4N 8AL,64999 - Financial intermediation not elsewhere classified,"[{""name"": ""ROTHSCHILD WEALTH MANAGEMENT (UK) LIMITED"", ""until"": ""2018-10-31""}, {""name"": ""ROTHSCHILD PRIVATE MANAGEMENT LIMITED"", ""until"": ""2011-08-01""}]"
+04420522,MORTGAGE AGENCY SERVICES NUMBER FIVE LIMITED,Private Limited Company,Active,United Kingdom,2002-04-19,,MANCHESTER,M4 4BE,64999 - Financial intermediation not elsewhere classified,
+04420580,MORTGAGE AGENCY SERVICES NUMBER FOUR LIMITED,Private Limited Company,Active,United Kingdom,2002-04-19,,MANCHESTER,M4 4BE,64999 - Financial intermediation not elsewhere classified,
+04433075,ROLLS-ROYCE FUEL CELL SYSTEMS LIMITED,Private Limited Company,Liquidation,United Kingdom,2002-05-08,,LONDON,EC4A 3HQ,32990 - Other manufacturing n.e.c.,
+04463534,BBC COMMERCIAL LIMITED,Private Limited Company,Active,United Kingdom,2002-06-18,,LONDON,W12 7FA,70100 - Activities of head offices,"[{""name"": ""BBC COMMERCIAL HOLDINGS LIMITED"", ""until"": ""2022-04-01""}]"
+04463546,BBC STUDIOS LIMITED,Private Limited Company,Active,United Kingdom,2002-06-18,,LONDON,W12 7FA,70100 - Activities of head offices,"[{""name"": ""BBC STUDIOS GROUP LIMITED"", ""until"": ""2018-10-01""}, {""name"": ""BBC VENTURES GROUP LIMITED"", ""until"": ""2018-04-03""}]"
+04514407,BBC GLOBAL NEWS LIMITED,Private Limited Company,Active,United Kingdom,2002-08-19,,LONDON,W12 7FA,60200 - Television programming and broadcasting activities,"[{""name"": ""BBC WORLD NEWS LIMITED"", ""until"": ""2012-09-12""}, {""name"": ""BBC WORLD LIMITED"", ""until"": ""2008-08-01""}]"
+04523987,TWISTDX LIMITED,Private Limited Company,Active,United Kingdom,2002-09-02,,MAIDENHEAD,SL6 4XE,72110 - Research and experimental development on biotechnology,"[{""name"": ""ASM SCIENTIFIC LIMITED"", ""until"": ""2008-04-30""}]"
+04682458,JUST RETIREMENT MANAGEMENT SERVICES LIMITED,Private Limited Company,Active,United Kingdom,2003-02-28,,REIGATE,RH2 7RP,82990 - Other business support service activities n.e.c.,
+04691779,ROLLS-ROYCE SOLUTIONS UK LIMITED,Private Limited Company,Active,United Kingdom,2003-03-10,,DERBY,DE24 8BJ,33190 - Repair of other equipment,"[{""name"": ""MTU UK LIMITED"", ""until"": ""2021-06-30""}, {""name"": ""MTU DETROIT DIESEL UK LIMITED"", ""until"": ""2008-02-06""}]"
+04706930,ROLLS-ROYCE GROUP LIMITED,Private Limited Company,Active,United Kingdom,2003-03-21,,LONDON,N1 9FX,70100 - Activities of head offices,
+04743602,LCH GROUP HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2003-04-24,,LONDON,EC4M 7LS,70100 - Activities of head offices,"[{""name"": ""LCH.CLEARNET GROUP LIMITED"", ""until"": ""2017-04-11""}]"
+04800317,CAPITAL METERS LIMITED,Private Limited Company,Active,United Kingdom,2003-06-16,,LONDON,EC2Y 9HD,"77390 - Renting and leasing of other machinery, equipment and tangible goods n.e.c.",
+04800433,MONE LIMITED,Private Limited Company,Active - Proposal to Strike off,United Kingdom,2003-06-16,,LONDON,SE1 9GL,70100 - Activities of head offices,
+04821049,RECKITT BENCKISER INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,2003-07-04,,,SL1 3UH,64205 - Activities of financial services holding companies,
+04826611,KBC INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,2003-07-09,,,EC2N 1FP,82990 - Other business support service activities n.e.c.,
+04957256,MACQUARIE INTERNATIONALE INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,2003-11-07,,LONDON,EC2Y 9HD,70100 - Activities of head offices,
+04962868,MORTGAGE AGENCY SERVICES NUMBER SIX LIMITED,Private Limited Company,Active,United Kingdom,2003-11-13,,MANCHESTER,M4 4BE,64999 - Financial intermediation not elsewhere classified,
+05017193,JUST RETIREMENT LIMITED,Private Limited Company,Active,United Kingdom,2004-01-16,,REIGATE,RH2 7RP,66290 - Other activities auxiliary to insurance and pension funding,
+05066489,TAVISTOCK INVESTMENTS PLC,Public Limited Company,Active,United Kingdom,2004-03-08,,ASCOT,SL5 9FE,70100 - Activities of head offices,"[{""name"": ""SOCIALGO PLC"", ""until"": ""2013-07-29""}, {""name"": ""BRIGHT THINGS PLC"", ""until"": ""2010-06-16""}]"
+05078782,MUFG SHARE PLAN SERVICES LIMITED,Private Limited Company,Active,United Kingdom,2004-03-19,,LEEDS,LS1 4DL,66110 - Administration of financial markets,"[{""name"": ""LINK SHARE PLAN SERVICES LIMITED"", ""until"": ""2025-01-20""}, {""name"": ""CAPITA SHARE PLAN SERVICES LIMITED"", ""until"": ""2017-11-06""}]"
+05078978,JUST RETIREMENT (HOLDINGS) LIMITED,Private Limited Company,Active,United Kingdom,2004-03-19,,REIGATE,RH2 7RP,64205 - Activities of financial services holding companies,
+05087003,2 ENTERTAIN MANAGEMENT LIMITED,Private Limited Company,Active,United Kingdom,2004-03-29,,LONDON,W12 7FA,59111 - Motion picture production activities,
+05119283,MARUBENI NORTH SEA LIMITED,Private Limited Company,Active,United Kingdom,2004-05-05,,LONDON,EC2V 7AB,06100 - Extraction of crude petroleum,
+05120809,2 ENTERTAIN LIMITED,Private Limited Company,Active,United Kingdom,2004-05-06,,LONDON,W12 7FA,82990 - Other business support service activities n.e.c.,
+05125701,HUB FINANCIAL SOLUTIONS LIMITED,Private Limited Company,Active,United Kingdom,2004-05-12,,REIGATE,RH2 7RP,82990 - Other business support service activities n.e.c.,"[{""name"": ""JUST RETIREMENT SOLUTIONS LIMITED"", ""until"": ""2017-07-03""}]"
+05125745,ENHANCED RETIREMENT LIMITED,Private Limited Company,Active - Proposal to Strike off,United Kingdom,2004-05-12,,REIGATE,RH2 7RP,74990 - Non-trading company,
+05135289,JUST EQUITY RELEASE LIMITED,Private Limited Company,Active - Proposal to Strike off,United Kingdom,2004-05-21,,REIGATE,RH2 7RP,74990 - Non-trading company,
+05135298,JUST ANNUITIES LIMITED,Private Limited Company,Active - Proposal to Strike off,United Kingdom,2004-05-21,,REIGATE,RH2 7RP,74990 - Non-trading company,
+05139713,COZART LIMITED,Private Limited Company,Active,United Kingdom,2004-05-27,,ABINGDON,OX14 1DY,32500 - Manufacture of medical and dental instruments and supplies,
+05162008,TP ICAP LATIN AMERICA HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2004-06-24,,LONDON,EC2M 3TP,64205 - Activities of financial services holding companies,"[{""name"": ""ICAP HOLDINGS (LATIN AMERICA) LIMITED"", ""until"": ""2021-11-03""}, {""name"": ""ICAP FUTURES LIMITED"", ""until"": ""2009-09-11""}]"
+05174354,ICAP HOLDINGS (ASIA PACIFIC) LIMITED,Private Limited Company,Active,United Kingdom,2004-07-08,,LONDON,EC2M 3TP,64205 - Activities of financial services holding companies,"[{""name"": ""ICAP NORTH AMERICA INVESTMENTS LIMITED"", ""until"": ""2008-12-05""}]"
+05196274,U K INSURANCE BUSINESS SOLUTIONS LIMITED,Private Limited Company,Active,United Kingdom,2004-08-03,,NORWICH,NR1 3NG,66220 - Activities of insurance agents and brokers,"[{""name"": ""RBS BUSINESS INSURANCE SERVICES LIMITED"", ""until"": ""2012-09-10""}]"
+05204742,JUST RETIREMENT NOMINEES LIMITED,Private Limited Company,Active - Proposal to Strike off,United Kingdom,2004-08-12,,REIGATE,RH2 7RP,74990 - Non-trading company,
+05259474,MACQUARIE COMMODITIES (UK) LIMITED,Private Limited Company,Liquidation,United Kingdom,2004-10-14,,LONDON,SE1 2AF,74990 - Non-trading company,
+05259503,MACQUARIE COMMODITIES FINANCE (UK) LIMITED,Private Limited Company,Liquidation,United Kingdom,2004-10-14,,LONDON,SE1 2AF,64209 - Activities of other holding companies n.e.c.,
+05369106,LONDON STOCK EXCHANGE GROUP PLC,Public Limited Company,Active,United Kingdom,2005-02-18,,,EC4M 7LS,70100 - Activities of head offices,
+05396234,ABBOTT TOXICOLOGY LIMITED,Private Limited Company,Active,United Kingdom,2005-03-17,,ABINGDON,OX14 1DY,"74909 - Other professional, scientific and technical activities n.e.c.","[{""name"": ""ABBOTT TOXICOLOGY PLC"", ""until"": ""2020-05-01""}, {""name"": ""ALERE TOXICOLOGY PLC"", ""until"": ""2020-05-01""}, {""name"": ""CONCATENO PLC"", ""until"": ""2012-06-20""}]"
+05488651,MLEX LIMITED,Private Limited Company,Active,United Kingdom,2005-06-23,,LONDON,EC4A 4HH,63990 - Other information service activities n.e.c.,
+05582630,MACQUARIE INVESTMENTS 1 LIMITED,Private Limited Company,Active,United Kingdom,2005-10-04,,LONDON,EC2Y 9HD,70100 - Activities of head offices,
+05625463,CENTRICA HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2005-11-16,,WINDSOR,SL4 5GD,70100 - Activities of head offices,
+05647873,GLAXOSMITHKLINE HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2005-12-07,,LONDON,WC1A 1DG,70100 - Activities of head offices,
+05698731,RECKITT BENCKISER (GROSVENOR) HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2006-02-06,,,SL1 3UH,64209 - Activities of other holding companies n.e.c.,
+05754561,VODAFONE CONSOLIDATED HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2006-03-23,,NEWBURY,RG14 2FN,61900 - Other telecommunications activities,
+05785385,WPP CP FINANCE PLC,Public Limited Company,Active,United Kingdom,2006-04-19,,LONDON,SE1 9GL,70100 - Activities of head offices,
+05786247,MARUBENI ENERGY EUROPE LIMITED,Private Limited Company,Active,United Kingdom,2006-04-19,,LONDON,EC2V 7AB,46900 - Non-specialised wholesale trade,
+05807599,TP ICAP FINANCE PLC,Public Limited Company,Active,United Kingdom,2006-05-05,,LONDON,EC2M 3TP,64205 - Activities of financial services holding companies,"[{""name"": ""TP ICAP FINANCE LIMITED"", ""until"": ""2021-10-22""}, {""name"": ""TP ICAP LIMITED"", ""until"": ""2021-10-22""}, {""name"": ""TULLETT PREBON PLC"", ""until"": ""2016-12-28""}, {""name"": ""NEW CST PLC"", ""until"": ""2006-12-15""}]"
+05807690,RELX (HOLDINGS) LIMITED,Private Limited Company,Active,United Kingdom,2006-05-05,,LONDON,WC2N 5JR,82990 - Other business support service activities n.e.c.,"[{""name"": ""REED ELSEVIER (HOLDINGS) LIMITED"", ""until"": ""2015-11-02""}]"
+05809399,SANLAM INVESTMENTS UK LIMITED,Private Limited Company,Active,United Kingdom,2006-05-08,,LONDON,EC4N 6AF,64999 - Financial intermediation not elsewhere classified,"[{""name"": ""SANLAM FOUR INVESTMENTS UK LIMITED"", ""until"": ""2019-02-26""}, {""name"": ""FOUR CAPITAL PARTNERS LIMITED"", ""until"": ""2014-12-22""}]"
+05810043,RELX (INVESTMENTS) PLC,Public Limited Company,Active,United Kingdom,2006-05-09,,,WC2N 5JR,82990 - Other business support service activities n.e.c.,"[{""name"": ""REED ELSEVIER (INVESTMENTS) PLC"", ""until"": ""2015-11-02""}]"
+05867292,ONSTREAM METERS LIMITED,Private Limited Company,Active,United Kingdom,2006-07-05,,LONDON,E1 6PL,"77390 - Renting and leasing of other machinery, equipment and tangible goods n.e.c.","[{""name"": ""MACQUARIE LEASING LIMITED"", ""until"": ""2026-03-17""}]"
+05900686,MUFG CORPORATE MARKETS IR LIMITED,Private Limited Company,Active,United Kingdom,2006-08-09,,LEEDS,LS1 4DL,62020 - Information technology consultancy activities,"[{""name"": ""ORIENT CAPITAL LIMITED"", ""until"": ""2025-01-20""}]"
+05960843,RECKITT BENCKISER TREASURY SERVICES PLC,Public Limited Company,Active,United Kingdom,2006-10-09,,BERKSHIRE,SL1 3UH,64205 - Activities of financial services holding companies,
+05998019,BP ALTERNATIVE ENERGY INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,2006-11-14,,MIDDLESEX,TW16 7BP,70100 - Activities of head offices,"[{""name"": ""BP BIOFUELS UK LIMITED"", ""until"": ""2017-11-27""}, {""name"": ""MEADHURST SERVICES (NO.2) LIMITED"", ""until"": ""2007-06-15""}]"
+05998024,VIVERGO FUELS LIMITED,Private Limited Company,Active,United Kingdom,2006-11-14,,LONDON,W1K 4QY,74990 - Non-trading company,"[{""name"": ""MEADHURST SERVICES (NO.3) LIMITED"", ""until"": ""2007-06-22""}]"
+06027254,CAPITA HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2006-12-13,,LONDON,W2 6BD,70100 - Activities of head offices,"[{""name"": ""CAPITA UPSTREAM LIMITED"", ""until"": ""2007-06-19""}]"
+06146573,MPRC EUROPE LIMITED,Private Limited Company,Active,United Kingdom,2007-03-08,,LONDON,EC2Y 9HD,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""MACQUARIE EUROPEAN INVESTMENT HOLDINGS LIMITED"", ""until"": ""2025-11-24""}]"
+06199816,JUST PROTECTION LIMITED,Private Limited Company,Active - Proposal to Strike off,United Kingdom,2007-04-02,,REIGATE,RH2 7RP,99999 - Dormant Company,
+06208235,TR (2008) LIMITED,Private Limited Company,Active,United Kingdom,2007-04-11,,LONDON,E14 5AQ,74990 - Non-trading company,"[{""name"": ""THOMORG 2007 LIMITED"", ""until"": ""2008-02-13""}, {""name"": ""ALNERY NO. 2709 LIMITED"", ""until"": ""2007-08-15""}]"
+06270876,RECKITT BENCKISER GROUP PLC,Public Limited Company,Active,United Kingdom,2007-06-06,,BERKSHIRE,SL1 3UH,70100 - Activities of head offices,"[{""name"": ""TRUSHELFCO (NO.3293) LIMITED"", ""until"": ""2007-07-24""}]"
+06287793,MACQUARIE (UK) GROUP SERVICES LIMITED,Private Limited Company,Active,United Kingdom,2007-06-20,,LONDON,EC2Y 9HD,82990 - Other business support service activities n.e.c.,
+06300517,AB WORLD FOODS (HOLDINGS) LIMITED,Private Limited Company,Active,United Kingdom,2007-07-03,,LONDON,W1K 4QY,74990 - Non-trading company,"[{""name"": ""JESMAY LIMITED"", ""until"": ""2007-08-30""}]"
+06302743,LANARK HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2007-07-05,,LONDON,SW1H 0DB,64999 - Financial intermediation not elsewhere classified,
+06302746,LANARK FUNDING LIMITED,Private Limited Company,Active,United Kingdom,2007-07-05,,LONDON,SW1H 0DB,64999 - Financial intermediation not elsewhere classified,
+06302751,LANARK MASTER ISSUER PLC,Public Limited Company,Active,United Kingdom,2007-07-05,,LONDON,SW1H 0DB,64999 - Financial intermediation not elsewhere classified,
+06309906,MACQUARIE ROPEMAKER LIMITED,Private Limited Company,Active,United Kingdom,2007-07-11,,LONDON,EC2Y 9HD,64999 - Financial intermediation not elsewhere classified,"[{""name"": ""MACQUARIE BANK INTERNATIONAL LIMITED"", ""until"": ""2021-09-22""}, {""name"": ""MACQUARIE BANC INTERNATIONAL LIMITED"", ""until"": ""2008-01-16""}, {""name"": ""MACQUARIE BANC EUROPE LIMITED"", ""until"": ""2007-12-07""}]"
+06440664,CHROMALLOY UK HOLDINGS LTD,Private Limited Company,Active,United Kingdom,2007-11-29,,IPSWICH,IP1 1QJ,64202 - Activities of production holding companies,
+06469549,SANLAM PRIVATE INVESTMENTS (UK) HOLDINGS LTD,Private Limited Company,Active,United Kingdom,2008-01-10,,LONDON,EC4N 6AF,70100 - Activities of head offices,"[{""name"": ""PRINCIPAL HOLDINGS LIMITED"", ""until"": ""2012-09-24""}, {""name"": ""3567TH SINGLE MEMBER SHELF TRADING COMPANY LIMITED"", ""until"": ""2008-01-18""}]"
+06479314,THIRD NEW COURT LIMITED,Private Limited Company,Active,United Kingdom,2008-01-21,,LONDON,EC4N 8AL,68209 - Other letting and operating of own or leased real estate,
+06505346,ICAP HOLDINGS (UK) LIMITED,Private Limited Company,Active,United Kingdom,2008-02-15,,LONDON,EC2M 3TP,64205 - Activities of financial services holding companies,
+06575962,SANLAM UK LIMITED,Private Limited Company,Active,United Kingdom,2008-04-24,,LONDON,EC4N 6AF,70100 - Activities of head offices,
+06612702,SILVERSTONE FUNDING (NO.1) LIMITED,Private Limited Company,Active,United Kingdom,2008-06-05,,LONDON,EC2R 7AF,82990 - Other business support service activities n.e.c.,
+06612744,SILVERSTONE MASTER ISSUER PLC,Public Limited Company,Active,United Kingdom,2008-06-05,,LONDON,EC2R 7AF,82990 - Other business support service activities n.e.c.,
+06612779,SILVERSTONE SECURITISATION HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2008-06-05,,LONDON,EC2R 7AF,82990 - Other business support service activities n.e.c.,
+06686268,ROLLS-ROYCE CONTROLS AND DATA SERVICES LIMITED,Private Limited Company,Active,United Kingdom,2008-09-02,,LONDON,N1 9FX,99999 - Dormant Company,"[{""name"": ""ROLLS-ROYCE ENGINE CONTROL SYSTEMS LIMITED"", ""until"": ""2014-01-02""}, {""name"": ""ROLLS-ROYCE GOODRICH ENGINE CONTROL SYSTEMS LIMITED"", ""until"": ""2012-12-14""}]"
+06694512,NEX GROUP HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2008-09-10,,LONDON,E1   6PW,70100 - Activities of head offices,"[{""name"": ""ICAP GROUP HOLDINGS PLC"", ""until"": ""2017-03-17""}]"
+06694563,ICAP HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2008-09-10,,LONDON,EC2M 3TP,64205 - Activities of financial services holding companies,
+06775429,TAGETIK UK LIMITED,Private Limited Company,Active,United Kingdom,2008-12-17,,KINGSTON UPON THAMES,KT2 6SR,70229 - Management consultancy activities other than financial management,
+06795362,LONDON STOCK EXCHANGE GROUP HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2009-01-20,,LONDON,EC4M 7LS,74990 - Non-trading company,"[{""name"": ""LONDON STOCK EXCHANGE GROUP HOLDINGS (UK) LIMITED"", ""until"": ""2009-02-09""}]"
+06844137,VODAFONE SALES & SERVICES LIMITED,Private Limited Company,Active,United Kingdom,2009-03-11,,NEWBURY,RG14 2FN,61900 - Other telecommunications activities,"[{""name"": ""VODAFONE GROUP TRADING LIMITED"", ""until"": ""2009-09-28""}]"
+06863247,MACQUARIE COMMODITIES FACTORING HOLDINGS (UK) LIMITED,Private Limited Company,Liquidation,United Kingdom,2009-03-30,,LONDON,SE1 2AF,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""MACQUARIE COMMODITIES FACTORING (UK) LIMITED"", ""until"": ""2010-07-16""}]"
+06876960,VIIV HEALTHCARE LIMITED,Private Limited Company,Active,United Kingdom,2009-04-14,,STEVENAGE,SG1 2NY,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""GLAXOSMITHKLINE NEWCO LIMITED"", ""until"": ""2009-10-23""}]"
+06930326,JUST RETIREMENT GROUP HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2009-06-10,,REIGATE,RH2 7RP,64205 - Activities of financial services holding companies,"[{""name"": ""AVALON ACQUISITIONS LIMITED"", ""until"": ""2013-08-21""}, {""name"": ""BASILPARK LIMITED"", ""until"": ""2009-06-23""}]"
+06952311,VIRGIN MONEY LIMITED,Private Limited Company,Active,United Kingdom,2009-07-03,,GOSFORTH,NE3 4PL,74990 - Non-trading company,"[{""name"": ""NORTHERN ROCK PLC"", ""until"": ""2012-10-12""}, {""name"": ""GOSFORTH SUBSIDIARY NO.1 PLC"", ""until"": ""2009-12-31""}]"
+06982415,VIIV HEALTHCARE TRADING SERVICES UK LIMITED,Private Limited Company,Active,United Kingdom,2009-08-05,,LONDON,WC1A 1DG,46460 - Wholesale of pharmaceutical goods,
+06990358,VIIV HEALTHCARE UK LIMITED,Private Limited Company,Active,United Kingdom,2009-08-13,,LONDON,WC1A 1DG,46460 - Wholesale of pharmaceutical goods,
+07004253,GLAXOSMITHKLINE MERCURY LIMITED,Private Limited Company,Active,United Kingdom,2009-08-28,,LONDON,WC1A 1DG,70100 - Activities of head offices,
+07037795,THOMSON REUTERS INVESTMENT HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2009-10-12,,LONDON,E14 5AQ,70100 - Activities of head offices,"[{""name"": ""ALNERY NO. 2874 LIMITED"", ""until"": ""2009-10-23""}]"
+07042902,TP ICAP EMEA INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,2009-10-14,,LONDON,EC2M 3TP,64205 - Activities of financial services holding companies,"[{""name"": ""TULLETT PREBON INVESTMENT HOLDINGS LIMITED"", ""until"": ""2021-11-03""}]"
+07102717,TURQUOISE GLOBAL HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2009-12-11,,LONDON,EC4M 7LS,64999 - Financial intermediation not elsewhere classified,"[{""name"": ""BAIKAL GLOBAL HOLDINGS LIMITED"", ""until"": ""2010-05-13""}]"
+07182140,SANLAM PARTNERSHIPS LIMITED,Private Limited Company,Liquidation,United Kingdom,2010-03-09,,MANCHESTER,M1 4PB,64999 - Financial intermediation not elsewhere classified,"[{""name"": ""TAVISTOCK FINANCIAL LIMITED"", ""until"": ""2017-10-31""}, {""name"": ""SUTCLIFFE SOLLOWAY FINANCIAL PLANNING LIMITED"", ""until"": ""2015-04-02""}]"
+07205226,INSTITUTIONAL CASH DISTRIBUTORS LIMITED,Private Limited Company,Active,United Kingdom,2010-03-26,,LONDON,EC2Y 9DT,66190 - Activities auxiliary to financial intermediation n.e.c.,
+07257967,GLAXOSMITHKLINE IHC LIMITED,Private Limited Company,Active,United Kingdom,2010-05-18,,LONDON,WC1A 1DG,64999 - Financial intermediation not elsewhere classified,
+07282059,ISWAP LIMITED,Private Limited Company,Active,United Kingdom,2010-06-11,,LONDON,EC2M 3TP,64205 - Activities of financial services holding companies,"[{""name"": ""ICAP (NO.1) LIMITED"", ""until"": ""2011-01-14""}]"
+07282077,ISWAP EURO LIMITED,Private Limited Company,Active,United Kingdom,2010-06-11,,LONDON,EC2M 3TP,66190 - Activities auxiliary to financial intermediation n.e.c.,"[{""name"": ""ICAP (NO.2) LIMITED"", ""until"": ""2011-01-14""}]"
+07361419,MACQUARIE METERS 3 (UK) LIMITED,Private Limited Company,Active,United Kingdom,2010-08-31,,LONDON,EC2Y 9HD,"77390 - Renting and leasing of other machinery, equipment and tangible goods n.e.c.",
+07378551,LONDON STOCK EXCHANGE REG HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2010-09-16,,LONDON,EC4M 7LS,82990 - Other business support service activities n.e.c.,"[{""name"": ""CENTRAL COUNTERPARTY & GUARANTEE LONDON LIMITED"", ""until"": ""2013-05-14""}]"
+07381420,BRITANNIA PENSION TRUSTEES LIMITED,Private Limited Company,Active,United Kingdom,2010-09-20,,MANCHESTER,M4 4BE,65300 - Pension funding,
+07386165,HUB ACQUISITIONS LIMITED,Private Limited Company,Active,United Kingdom,2010-09-23,,REIGATE,RH2 7RP,70100 - Activities of head offices,"[{""name"": ""TOMAS ACQUISITIONS LIMITED"", ""until"": ""2018-11-14""}]"
+07388645,LONDON STOCK EXCHANGE GROUP HOLDINGS (R) LIMITED,Private Limited Company,Active,United Kingdom,2010-09-27,,LONDON,EC4M 7LS,82990 - Other business support service activities n.e.c.,
+07416642,LEXISNEXIS RISK SOLUTIONS UK LIMITED,Private Limited Company,Active,United Kingdom,2010-10-22,,CARDIFF,CF11 0SN,62090 - Other information technology service activities,"[{""name"": ""LEXISNEXIS RISK SOLUTIONS LIMITED"", ""until"": ""2011-01-27""}, {""name"": ""FORMPART (LNRS) LIMITED"", ""until"": ""2011-01-26""}]"
+07419716,WPP FINANCE 2010,Private Unlimited Company,Active,United Kingdom,2010-10-26,,LONDON,SE1 9GL,64209 - Activities of other holding companies n.e.c.,
+07438584,MACQUARIE GROUP INVESTMENTS (UK) NO.2 LIMITED,Private Limited Company,Active,United Kingdom,2010-11-12,,LONDON,EC2Y 9HD,64999 - Financial intermediation not elsewhere classified,
+07451708,BBC EARTH PRODUCTIONS (AFRICA) LIMITED,Private Limited Company,Active,United Kingdom,2010-11-25,,LONDON,W12 7FA,59111 - Motion picture production activities,
+07457698,MARUBENI AGROCHEMICAL LIMITED,Private Limited Company,Active,United Kingdom,2010-12-02,,LONDON,EC2V 7AB,64201 - Activities of agricultural holding companies,
+07524813,ROLLS-ROYCE HOLDINGS PLC,Public Limited Company,Active,United Kingdom,2011-02-10,,LONDON,N1 9FX,70100 - Activities of head offices,
+07578676,WPD WEM HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2011-03-25,,BRISTOL,BS2 0TB,82990 - Other business support service activities n.e.c.,"[{""name"": ""PPL UK INVESTMENTS LIMITED"", ""until"": ""2021-06-16""}]"
+07638414,ROTHSCHILD & CO CREDIT MANAGEMENT LIMITED,Private Limited Company,Active,United Kingdom,2011-05-18,,LONDON,EC4N 8AL,64205 - Activities of financial services holding companies,"[{""name"": ""ROTHSCHILD CREDIT MANAGEMENT LIMITED"", ""until"": ""2018-10-31""}]"
+07713808,MACQUARIE EURO LIMITED,Private Limited Company,Active,United Kingdom,2011-07-21,,LONDON,EC2Y 9HD,64999 - Financial intermediation not elsewhere classified,
+07739397,GLAXOSMITHKLINE INTELLECTUAL PROPERTY MANAGEMENT LIMITED,Private Limited Company,Active,United Kingdom,2011-08-12,,STEVENAGE,SG1 2NY,82990 - Other business support service activities n.e.c.,
+07787231,BBC EARTH PRODUCTIONS LIMITED,Private Limited Company,Active,United Kingdom,2011-09-26,,LONDON,W12 7FA,70100 - Activities of head offices,
+07812240,SANLAM UK HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2011-10-17,,LONDON,EC4N 6AF,64205 - Activities of financial services holding companies,"[{""name"": ""SANLAM INVESTMENT HOLDINGS UK LIMITED"", ""until"": ""2022-08-23""}]"
+07943990,LONDON STOCK EXCHANGE (C) LIMITED,Private Limited Company,Active,United Kingdom,2012-02-09,,LONDON,EC4M 7LS,74990 - Non-trading company,
+07983210,MARUBENI FINANCE EUROPE PLC,Public Limited Company,Active,United Kingdom,2012-03-09,,LONDON,EC2V 7AB,64999 - Financial intermediation not elsewhere classified,
+08169384,NATIONAL GRID INTERCONNECTOR HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2012-08-06,,LONDON,WC2N 5EH,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""NATIONAL GRID THIRTY ONE LIMITED"", ""until"": ""2012-10-05""}]"
+08192386,RECKITT BENCKISER (BRANDS) LIMITED,Private Limited Company,Active,United Kingdom,2012-08-28,,SLOUGH,SL1 3UH,"74909 - Other professional, scientific and technical activities n.e.c.",
+08212953,HUB PENSION CONSULTING LIMITED,Private Limited Company,Active,United Kingdom,2012-09-13,,REIGATE,RH2 7RP,64999 - Financial intermediation not elsewhere classified,"[{""name"": ""CORINTHIAN PENSION CONSULTING LIMITED"", ""until"": ""2020-05-28""}, {""name"": ""BEAUFORT CORPORATE CONSULTING LTD"", ""until"": ""2016-09-16""}]"
+08248121,MACQUARIE INFRASTRUCTURE AND REAL ASSETS INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,2012-10-10,,LONDON,EC2Y 9HD,74990 - Non-trading company,"[{""name"": ""MACQUARIE UK POWER INVESTMENTS LIMITED"", ""until"": ""2014-11-13""}]"
+08270754,VIIV HEALTHCARE UK (NO.3) LIMITED,Private Limited Company,Active,United Kingdom,2012-10-26,,STEVENAGE,SG1 2NY,64209 - Activities of other holding companies n.e.c.,
+08272295,LEVANTERA DEVELOPMENTS LIMITED,Private Limited Company,Active,United Kingdom,2012-10-29,,LONDON,W1S 3AE,"77390 - Renting and leasing of other machinery, equipment and tangible goods n.e.c.",
+08283186,GLAXOSMITHKLINE INTELLECTUAL PROPERTY LIMITED,Private Limited Company,Active,United Kingdom,2012-11-06,,STEVENAGE,SG1 2NY,64209 - Activities of other holding companies n.e.c.,
+08283222,GLAXOSMITHKLINE INTELLECTUAL PROPERTY DEVELOPMENT LIMITED,Private Limited Company,Active,United Kingdom,2012-11-06,,STEVENAGE,SG1 2NY,64209 - Activities of other holding companies n.e.c.,
+08283252,GLAXOSMITHKLINE INTELLECTUAL PROPERTY (NO.2) LIMITED,Private Limited Company,Active,United Kingdom,2012-11-06,,STEVENAGE,SG1 2NY,64209 - Activities of other holding companies n.e.c.,
+08283289,GLAXOSMITHKLINE INTELLECTUAL PROPERTY HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2012-11-06,,STEVENAGE,SG1 2NY,64209 - Activities of other holding companies n.e.c.,
+08286875,WPP JUBILEE LIMITED,Private Limited Company,Active,United Kingdom,2012-11-08,,LONDON,SE1 9GL,70100 - Activities of head offices,"[{""name"": ""WPP 2013 LIMITED"", ""until"": ""2012-11-09""}]"
+08298838,BP AUSTRALIA SWAPS MANAGEMENT LIMITED,Private Limited Company,Active,United Kingdom,2012-11-19,,SUNBURY ON THAMES,TW16 7BP,64999 - Financial intermediation not elsewhere classified,
+08302561,DLG LEGAL SERVICES LIMITED,Private Limited Company,Active,United Kingdom,2012-11-21,,LEEDS,LS1 4AZ,69109 - Activities of patent and copyright agents; other legal activities n.e.c.,"[{""name"": ""NEWCO 3 LIMITED"", ""until"": ""2013-07-22""}]"
+08401611,LIKEWIZE SERVICES UK LIMITED,Private Limited Company,Active,United Kingdom,2013-02-13,,CREWE,CW2 5XF,61900 - Other telecommunications activities,"[{""name"": ""BRIGHTSTAR 20:20 UK LIMITED"", ""until"": ""2021-08-20""}, {""name"": ""20:20 MOBILE 1 LIMITED"", ""until"": ""2013-11-27""}]"
+08451384,LSEG REGULATORY REPORTING LIMITED,Private Limited Company,Active,United Kingdom,2013-03-19,,LONDON,EC4M 7LS,63990 - Other information service activities n.e.c.,"[{""name"": ""UNAVISTA LIMITED"", ""until"": ""2024-01-02""}]"
+08530763,LONDON STOCK EXCHANGE LEI LIMITED,Private Limited Company,Active,United Kingdom,2013-05-15,,LONDON,EC4M 7LS,66190 - Activities auxiliary to financial intermediation n.e.c.,"[{""name"": ""UNAVISTA LEI LIMITED"", ""until"": ""2017-06-08""}, {""name"": ""FTSE BENCHMARKS LIMITED"", ""until"": ""2015-12-10""}]"
+08568957,JUST GROUP PLC,Public Limited Company,Active,United Kingdom,2013-06-13,,REIGATE,RH2 7RP,70100 - Activities of head offices,"[{""name"": ""JRP GROUP PLC"", ""until"": ""2017-05-18""}, {""name"": ""JUST RETIREMENT GROUP PLC"", ""until"": ""2016-04-04""}]"
+08690533,RECKITT BENCKISER HOLDINGS (TFFC) LIMITED,Private Limited Company,Active,United Kingdom,2013-09-13,,SLOUGH,SL1 3UH,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""THE R.T. FRENCH'S FOOD GROUP LIMITED"", ""until"": ""2017-12-08""}]"
+08733801,MUFG PENSION & MARKET SERVICES (UK) LIMITED,Private Limited Company,Active,United Kingdom,2013-10-15,,LEEDS,LS1 4DL,66110 - Administration of financial markets,"[{""name"": ""LINK GROUP ADMINISTRATION LIMITED"", ""until"": ""2025-01-20""}, {""name"": ""LINK MARKET SERVICES (EMEA) LIMITED"", ""until"": ""2019-11-29""}, {""name"": ""LINK EUROPEAN HOLDINGS LIMITED"", ""until"": ""2013-12-06""}]"
+08754657,WPP FINANCE 2013,Private Unlimited Company,Active,United Kingdom,2013-10-30,,LONDON,SE1 9GL,82990 - Other business support service activities n.e.c.,
+08784077,RB UK COMMERCIAL LIMITED,Private Limited Company,Active,United Kingdom,2013-11-20,,SLOUGH,SL1 3UH,46460 - Wholesale of pharmaceutical goods,
+08857746,NATIONAL GRID ELECTRICITY DISTRIBUTION NETWORK HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2014-01-23,,BRISTOL,BS2 0TB,70100 - Activities of head offices,"[{""name"": ""WPD DISTRIBUTION NETWORK HOLDINGS LIMITED"", ""until"": ""2022-09-20""}, {""name"": ""WESTERN POWER DISTRIBUTION LIMITED"", ""until"": ""2014-09-30""}, {""name"": ""WPD 2014 LIMITED"", ""until"": ""2014-01-31""}]"
+08911044,DLG PENSION TRUSTEE LIMITED,Private Limited Company,Active,United Kingdom,2014-02-25,,NORWICH,NR1 3NG,66290 - Other activities auxiliary to insurance and pension funding,
+08935474,WITTINGTON INVESTMENTS FINANCE LIMITED,Private Limited Company,Active,United Kingdom,2014-03-12,,LONDON,W1K 4QY,74990 - Non-trading company,
+08958360,MBC EUROPE LIMITED,Private Limited Company,Active,United Kingdom,2014-03-25,,LONDON,EC2V 7AB,64202 - Activities of production holding companies,
+08980140,LSEG BUSINESS SERVICES LIMITED,Private Limited Company,Active,United Kingdom,2014-04-04,,LONDON,EC4M 7LS,62090 - Other information technology service activities,"[{""name"": ""LSEG SSC LIMITED"", ""until"": ""2015-02-18""}]"
+09080531,TP ICAP ASIA PACIFIC HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2014-06-11,,LONDON,EC2M 3TP,64205 - Activities of financial services holding companies,"[{""name"": ""ICAP GLOBAL BROKING HOLDINGS LIMITED"", ""until"": ""2021-11-03""}]"
+09100501,SANLAM INVESTMENTS HOLDINGS UK LIMITED,Private Limited Company,Active,United Kingdom,2014-06-24,,LONDON,EC4N 6AF,64205 - Activities of financial services holding companies,"[{""name"": ""SANLAM FOUR INVESTMENTS HOLDINGS UK LIMITED"", ""until"": ""2019-02-26""}, {""name"": ""SANLAM FOUR INVESTMENT HOLDINGS UK LIMITED"", ""until"": ""2014-12-22""}, {""name"": ""MM&S (5837) LIMITED"", ""until"": ""2014-07-25""}]"
+09129992,NATIONAL GRID IFA 2 LIMITED,Private Limited Company,Active,United Kingdom,2014-07-14,,LONDON,WC2N 5EH,35120 - Transmission of electricity,
+09174176,RSA LAW LIMITED,Private Limited Company,Liquidation,United Kingdom,2014-08-13,,BIRMINGHAM,B4 6AT,74990 - Non-trading company,
+09223384,NATIONAL GRID ELECTRICITY DISTRIBUTION PLC,Public Limited Company,Active,United Kingdom,2014-09-17,,BRISTOL,BS2 0TB,35130 - Distribution of electricity,"[{""name"": ""WESTERN POWER DISTRIBUTION PLC"", ""until"": ""2022-09-20""}, {""name"": ""PPL WPD 2 LIMITED"", ""until"": ""2014-09-30""}]"
+09255154,TTEP UK&I INVESTMENTS LTD,Private Limited Company,Active,United Kingdom,2014-10-08,,LONDON,SW1A 1EE,35140 - Trade of electricity,"[{""name"": ""EP UK INVESTMENTS LTD"", ""until"": ""2026-06-20""}]"
+09288591,D.F. KING LTD,Private Limited Company,Active,United Kingdom,2014-10-30,,LEEDS,LS1 4DL,70221 - Financial management,"[{""name"": ""LINK DFK LIMITED"", ""until"": ""2015-02-19""}]"
+09297460,JUST RETIREMENT FINANCE PLC,Public Limited Company,Active,United Kingdom,2014-11-05,,REIGATE,RH2 7RP,74990 - Non-trading company,
+09313935,LONDON STOCK EXCHANGE GROUP (SERVICES) LIMITED,Private Limited Company,Active,United Kingdom,2014-11-17,,LONDON,EC4M 7LS,74990 - Non-trading company,
+09415215,JUST RETIREMENT MONEY LIMITED,Private Limited Company,Active,United Kingdom,2015-01-30,,REIGATE,RH2 7RP,66290 - Other activities auxiliary to insurance and pension funding,"[{""name"": ""ARGUS MORTGAGES LIMITED"", ""until"": ""2015-05-22""}]"
+09463829,BBC STUDIOS PRODUCTIONS LIMITED,Private Limited Company,Active,United Kingdom,2015-02-27,,LONDON,W12 7FA,60200 - Television programming and broadcasting activities,"[{""name"": ""BBC STUDIOS LIMITED"", ""until"": ""2018-10-01""}]"
+09489059,RELX OVERSEAS HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2015-03-13,,LONDON,WC2N 5JR,70100 - Activities of head offices,"[{""name"": ""RELX OVERSEAS HOLDING LIMITED"", ""until"": ""2023-09-27""}, {""name"": ""RELX OVERSEAS HOLDINGS LIMITED"", ""until"": ""2023-08-31""}]"
+09498559,BY MILES LTD,Private Limited Company,Active,United Kingdom,2015-03-19,,NORWICH,NR1 3NG,82990 - Other business support service activities n.e.c.,"[{""name"": ""IMSURE GROUP LIMITED"", ""until"": ""2017-06-05""}, {""name"": ""MULTAS MENTAS LIMITED"", ""until"": ""2016-11-03""}]"
+09569889,SOFTBANK GROUP CAPITAL LIMITED,Private Limited Company,Active,United Kingdom,2015-04-30,,LONDON,W1K 3JR,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""SOFTBANK GROUP INTERNATIONAL LIMITED"", ""until"": ""2016-04-27""}]"
+09572658,JUST RE 1 LIMITED,Private Limited Company,Active,United Kingdom,2015-05-05,,REIGATE,RH2 7RP,66290 - Other activities auxiliary to insurance and pension funding,
+09572665,JUST RE 2 LIMITED,Private Limited Company,Active,United Kingdom,2015-05-05,,REIGATE,RH2 7RP,66290 - Other activities auxiliary to insurance and pension funding,
+09595911,VIRGIN MONEY UK LIMITED,Private Limited Company,Active,United Kingdom,2015-05-18,,SWINDON,SN38 1NW,70100 - Activities of head offices,"[{""name"": ""CYBG PLC"", ""until"": ""2019-10-30""}, {""name"": ""PIANODOVE PLC"", ""until"": ""2015-10-01""}]"
+09612439,MACQUARIE INVESTMENT MANAGEMENT EUROPE LIMITED,Private Limited Company,Active,United Kingdom,2015-05-28,,LONDON,EC2Y 9HD,64999 - Financial intermediation not elsewhere classified,
+09622720,QUANTILE TECHNOLOGIES LIMITED,Private Limited Company,Active,United Kingdom,2015-06-04,,LONDON,EC4R 0AN,66190 - Activities auxiliary to financial intermediation n.e.c.,
+09725785,JRP NOMINEES LIMITED,Private Limited Company,Active - Proposal to Strike off,United Kingdom,2015-08-10,,REIGATE,RH2 7RP,74990 - Non-trading company,"[{""name"": ""JRP GROUP LIMITED"", ""until"": ""2016-04-04""}]"
+09794737,ONSTREAM HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2015-09-25,,LONDON,E1 6PL,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""MACQUARIE METERS 5 (UK) LIMITED"", ""until"": ""2026-03-17""}]"
+09874533,NATIONAL GRID PARTNERS LIMITED,Private Limited Company,Active,United Kingdom,2015-11-16,,LONDON,WC2N 5EH,64303 - Activities of venture and development capital companies,"[{""name"": ""NATIONAL GRID TECHNOLOGIES LIMITED"", ""until"": ""2019-04-17""}, {""name"": ""NATIONAL GRID THIRTY FOUR LIMITED"", ""until"": ""2018-07-03""}, {""name"": ""CADENT GAS LIMITED"", ""until"": ""2017-05-02""}, {""name"": ""NATIONAL GRID THIRTY FOUR LIMITED"", ""until"": ""2017-03-01""}]"
+09891147,BPS PRINCIPAL EMPLOYER LIMITED,Private Limited Company,Active,United Kingdom,2015-11-26,,MANCHESTER,M4 4BE,65300 - Pension funding,"[{""name"": ""TANSYCOURT LIMITED"", ""until"": ""2016-06-28""}]"
+09891170,LANARK TRUSTEES LIMITED,Private Limited Company,Active,United Kingdom,2015-11-26,,LONDON,SW1H 0DB,64999 - Financial intermediation not elsewhere classified,"[{""name"": ""TANSYCOVE LIMITED"", ""until"": ""2016-07-08""}]"
+09903271,NEPTUNE NETWORKS LIMITED,Private Limited Company,Active,United Kingdom,2015-12-04,,LONDON,EC2M 3TP,62090 - Other information technology service activities,"[{""name"": ""HAMSARD 3390 LIMITED"", ""until"": ""2016-03-23""}]"
+09944107,VIIV HEALTHCARE FINANCE LIMITED,Private Limited Company,Active,United Kingdom,2016-01-11,,LONDON,WC1A 1DG,64999 - Financial intermediation not elsewhere classified,
+09995266,MACQUARIE PHYSICAL COMMODITIES UK LIMITED,Private Limited Company,Active,United Kingdom,2016-02-09,,LONDON,EC2Y 9HD,64999 - Financial intermediation not elsewhere classified,
+10013770,NEX GROUP LIMITED,Private Limited Company,Active,United Kingdom,2016-02-18,,LONDON,E1   6PW,70100 - Activities of head offices,"[{""name"": ""ICAP NEWCO PLC"", ""until"": ""2016-05-13""}]"
+10145612,HUB PENSION CONSULTING (HOLDINGS) LIMITED,Private Limited Company,Active,United Kingdom,2016-04-25,,REIGATE,RH2 7RP,82990 - Other business support service activities n.e.c.,"[{""name"": ""CORINTHIAN GROUP LIMITED"", ""until"": ""2021-09-24""}]"
+10220978,ALBACORE CAPITAL (UK) LIMITED,Private Limited Company,Active,United Kingdom,2016-06-08,,LONDON,SW1A 1LA,64999 - Financial intermediation not elsewhere classified,
+10298770,EAGLE PLACE COVERED BONDS (HOLDINGS) LIMITED,Private Limited Company,Active,United Kingdom,2016-07-27,,LONDON,E14 5HU,64209 - Activities of other holding companies n.e.c.,
+10298909,EAGLE PLACE COVERED BONDS FINANCE LIMITED,Private Limited Company,Active,United Kingdom,2016-07-27,,LONDON,E14 5HU,64209 - Activities of other holding companies n.e.c.,
+10430326,SWAPAGENT LIMITED,Private Limited Company,Active,United Kingdom,2016-10-17,,LONDON,EC4M 7LS,64999 - Financial intermediation not elsewhere classified,
+10434442,WPP FINANCE 2017,Private Unlimited Company,Active,United Kingdom,2016-10-18,,LONDON,SE1 9GL,82990 - Other business support service activities n.e.c.,
+10436639,WPP FINANCE 2016,Private Unlimited Company,Active - Proposal to Strike off,United Kingdom,2016-10-19,,LONDON,SE1 9GL,82990 - Other business support service activities n.e.c.,
+10452758,JUST RETIREMENT SOLUTIONS LIMITED,Private Limited Company,Active - Proposal to Strike off,United Kingdom,2016-10-31,,REIGATE,RH2 7RP,74990 - Non-trading company,"[{""name"": ""HUB FINANCIAL SOLUTIONS LIMITED"", ""until"": ""2017-07-03""}]"
+10459817,HUB PENSION SOLUTIONS LIMITED,Private Limited Company,Active,United Kingdom,2016-11-02,,REIGATE,RH2 7RP,82990 - Other business support service activities n.e.c.,"[{""name"": ""HUB TRANSFER SOLUTIONS LIMITED"", ""until"": ""2018-04-30""}, {""name"": ""TRANSFER RIGHT LIMITED"", ""until"": ""2017-07-21""}]"
+10480217,MOORGATE PL HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2016-11-15,,LONDON,EC2Y 9HD,64209 - Activities of other holding companies n.e.c.,
+10496704,JUST DIRECT LIMITED,Private Limited Company,Active - Proposal to Strike off,United Kingdom,2016-11-25,,REIGATE,RH2 7RP,74990 - Non-trading company,"[{""name"": ""JUST INCORPORATED LIMITED"", ""until"": ""2024-11-12""}]"
+10496803,RETIRE DIFFERENT LIMITED,Private Limited Company,Active,United Kingdom,2016-11-25,,REIGATE,RH2 7RP,74990 - Non-trading company,"[{""name"": ""JRP GROUP LIMITED"", ""until"": ""2025-05-09""}, {""name"": ""JUST GROUP LIMITED"", ""until"": ""2017-05-18""}, {""name"": ""FAIRFLEX LIMITED"", ""until"": ""2017-03-03""}]"
+10498335,SB INVESTMENT ADVISERS (UK) LIMITED,Private Limited Company,Active,United Kingdom,2016-11-25,,LONDON,W1K 3JR,66300 - Fund management activities,"[{""name"": ""SOFTBANK VISION ADVISERS LIMITED"", ""until"": ""2017-04-21""}]"
+10563159,WDC LIMITED,Private Limited Company,Active,United Kingdom,2017-01-13,,CANNOCK,WS12 3YL,70229 - Management consultancy activities other than financial management,
+10640222,MACQUARIE INFRASTRUCTURE AND REAL ASSETS CORE LIMITED,Private Limited Company,Active,United Kingdom,2017-02-27,,LONDON,EC2Y 9HD,74990 - Non-trading company,
+10643877,SVF MEMBER (UK) LIMITED,Private Limited Company,Active,United Kingdom,2017-02-28,,LONDON,W1K 3JR,64209 - Activities of other holding companies n.e.c.,
+10698251,MJ UK HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2017-03-30,,SLOUGH,SL1 3UH,96090 - Other service activities n.e.c.,
+10752423,PIPER JAVELIN HOLDING COMPANY LIMITED,Private Limited Company,Active,United Kingdom,2017-05-03,,SWINDON,SN38 1NW,64205 - Activities of financial services holding companies,
+10773207,"MJN INTERNATIONAL HOLDINGS (UK), LTD.",Private Limited Company,Active,United Kingdom,2017-05-16,,SLOUGH,SL1 3UH,82990 - Other business support service activities n.e.c.,
+10775740,PIPER JAVELIN NO 1 LIMITED,Private Limited Company,Active,United Kingdom,2017-05-17,,SWINDON,SN38 1NW,41100 - Development of building projects,
+10837437,RELX FINANCE LIMITED,Private Limited Company,Active,United Kingdom,2017-06-27,,LONDON,WC2N 5JR,82990 - Other business support service activities n.e.c.,
+10865342,THE CO-OPERATIVE BANK HOLDINGS P.L.C.,Public Limited Company,Active,United Kingdom,2017-07-13,,MANCHESTER,M4 4BE,74990 - Non-trading company,"[{""name"": ""BALLOON STREET HOLDINGS LIMITED"", ""until"": ""2017-09-01""}]"
+10867355,BP CARBON TRADING LIMITED,Private Limited Company,Active,United Kingdom,2017-07-14,,SUNBURY ON THAMES,TW16 7BP,96090 - Other service activities n.e.c.,"[{""name"": ""BP COMMODITIES TRADING LIMITED"", ""until"": ""2021-07-14""}]"
+10991462,NATIONAL GRID ELECTRICITY DISTRIBUTION HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2017-10-02,,BRISTOL,BS2 0TB,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""WESTERN POWER DISTRIBUTION HOLDING COMPANY LIMITED"", ""until"": ""2022-09-20""}, {""name"": ""PPL WPD INVESTMENTS LIMITED"", ""until"": ""2021-06-17""}]"
+11014226,NATIONAL ENERGY SYSTEM OPERATOR LIMITED,Private Limited Company,Active,United Kingdom,2017-10-16,,WOKINGHAM,RG41 5BN,96090 - Other service activities n.e.c.,"[{""name"": ""NATIONAL GRID ELECTRICITY SYSTEM OPERATOR LIMITED"", ""until"": ""2024-10-01""}]"
+11061440,RECKITT BENCKISER (HEALTH) HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2017-11-13,,SLOUGH,SL1 3UH,64205 - Activities of financial services holding companies,
+11061572,RECKITT BENCKISER (HYGIENE HOME) HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2017-11-13,,SLOUGH,SL1 3UH,64205 - Activities of financial services holding companies,
+11069293,RECKITT BENCKISER HEALTH LIMITED,Private Limited Company,Active,United Kingdom,2017-11-17,,SLOUGH,SL1 3UH,70100 - Activities of head offices,
+11104018,AEGLETES HOLDCO LIMITED,Private Limited Company,Active,United Kingdom,2017-12-08,,LONDON,W1S 3AE,82990 - Other business support service activities n.e.c.,
+11273092,LSEG DATA AND RISK LIMITED,Private Limited Company,Active,United Kingdom,2018-03-23,,LONDON,E14 5AQ,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""REFINITIV UK PARENT LIMITED"", ""until"": ""2025-11-07""}, {""name"": ""FINANCIAL & RISK UK PARENT LIMITED"", ""until"": ""2019-02-27""}]"
+11276290,CME LONDON LIMITED,Private Limited Company,Active,United Kingdom,2018-03-26,,LONDON,E1 6PW,66110 - Administration of financial markets,
+11284867,EHV UK LIMITED,Private Limited Company,Active,United Kingdom,2018-03-29,,BERKSHIRE,SL6 2SL,46499 - Wholesale of household goods (other than musical instruments) n.e.c.,"[{""name"": ""RB UK HYGIENE HOME COMMERCIAL LIMITED"", ""until"": ""2026-07-20""}]"
+11299879,ARM HOLDINGS PLC,Public Limited Company,Active,United Kingdom,2018-04-09,,CAMBRIDGE,CB1 9NJ,64209 - Activities of other holding companies n.e.c.,
+11347638,INFRACAPITAL PARTNERS III SUBHOLDINGS GP1 LIMITED,Private Limited Company,Active,United Kingdom,2018-05-04,,LONDON,W1W 5PF,82990 - Other business support service activities n.e.c.,
+11347641,INFRACAPITAL PARTNERS III SUBHOLDINGS GP2 LIMITED,Private Limited Company,Active,United Kingdom,2018-05-04,,LONDON,W1W 5PF,82990 - Other business support service activities n.e.c.,
+11480952,GLAXOSMITHKLINE INTELLECTUAL PROPERTY (NO.3) LIMITED,Private Limited Company,Active,United Kingdom,2018-07-24,,STEVENAGE,SG1 2NY,"74909 - Other professional, scientific and technical activities n.e.c.",
+11483474,NATIONWIDE GROWTH LIMITED,Private Limited Company,Active,United Kingdom,2018-07-25,,SWINDON,SN38 1NW,64205 - Activities of financial services holding companies,"[{""name"": ""NBS VENTURES MANAGEMENT LIMITED"", ""until"": ""2026-09-08""}]"
+11534385,LAST MILE INFRASTRUCTURE GROUP LIMITED,Private Limited Company,Active,United Kingdom,2018-08-23,,STONEHOUSE,GL10 3RF,64301 - Activities of investment trusts,"[{""name"": ""ENERGETICS GROUP LIMITED"", ""until"": ""2019-09-05""}, {""name"": ""HIRST BIDCO LIMITED"", ""until"": ""2018-10-30""}]"
+11584733,NBS VENTURES LIMITED,Private Limited Company,Active,United Kingdom,2018-09-24,,SWINDON,SN38 1NW,64205 - Activities of financial services holding companies,
+11598074,THE CO-OPERATIVE BANK FINANCE P.L.C.,Public Limited Company,Active,United Kingdom,2018-10-01,,MANCHESTER,M4 4BE,64205 - Activities of financial services holding companies,"[{""name"": ""BALLOON STREET ISSUERCO LIMITED"", ""until"": ""2019-02-07""}]"
+11614308,LAST MILE INFRASTRUCTURE HOLDCO1 LIMITED,Private Limited Company,Active,United Kingdom,2018-10-10,,STONEHOUSE,GL10 3RF,64301 - Activities of investment trusts,"[{""name"": ""ENERGETICS HOLDCO1 LIMITED"", ""until"": ""2019-09-05""}]"
+11616387,LAST MILE INFRASTRUCTURE HOLDCO2 LIMITED,Private Limited Company,Active,United Kingdom,2018-10-10,,STONEHOUSE,GL10 3RF,64301 - Activities of investment trusts,"[{""name"": ""ENERGETICS HOLDCO2 LIMITED"", ""until"": ""2019-09-05""}]"
+11626661,LAST MILE INFRASTRUCTURE (HOLDINGS) LIMITED,Private Limited Company,Active,United Kingdom,2018-10-16,,STONEHOUSE,GL10 3RF,64301 - Activities of investment trusts,"[{""name"": ""ENERGETICS GROUP (HOLDINGS) LIMITED"", ""until"": ""2019-09-05""}, {""name"": ""HIRST HOLDCO LIMITED"", ""until"": ""2018-10-30""}]"
+11655793,MACQUARIE TRANSPORTATION FINANCE LIMITED,Private Limited Company,Active,United Kingdom,2018-11-02,,LONDON,EC2Y 9HD,64209 - Activities of other holding companies n.e.c.,
+11667655,MACQUARIE PRINCIPAL FINANCE UK LIMITED,Private Limited Company,Active,United Kingdom,2018-11-08,,LONDON,EC2Y 9HD,64205 - Activities of financial services holding companies,
+11670358,MACQUARIE GROUP INVESTMENTS (UK) NO.1 LIMITED,Private Limited Company,Active,United Kingdom,2018-11-09,,LONDON,EC2Y 9HD,64209 - Activities of other holding companies n.e.c.,
+11721880,GLAXOSMITHKLINE INTELLECTUAL PROPERTY (NO.4) LIMITED,Private Limited Company,Active,United Kingdom,2018-12-11,,STEVENAGE,SG1 2NY,96090 - Other service activities n.e.c.,
+11752522,NBS COSEC LIMITED,Private Limited Company,Active,United Kingdom,2019-01-07,,SWINDON,SN38 1NW,70100 - Activities of head offices,
+12028923,WOLTERS KLUWER HOLDINGS (UK) FSS PENSION TRUSTEE LIMITED,Private Limited Company,Active,United Kingdom,2019-06-03,,SURREY,KT2 6SR,65300 - Pension funding,
+12115783,ARM TECHNOLOGY INVESTMENTS 2 LIMITED,Private Limited Company,Active,United Kingdom,2019-07-22,,CAMBRIDGE,CB1 9NJ,64209 - Activities of other holding companies n.e.c.,
+12189384,BY MILES TECHNOLOGY SERVICES LTD,Private Limited Company,Active,United Kingdom,2019-09-04,,NORWICH,NR1 3NG,62012 - Business and domestic software development,
+12263719,ITHACA ENERGY PLC,Public Limited Company,Active,United Kingdom,2019-10-15,,LONDON,W1G 0PP,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""DELEK NORTH SEA LIMITED"", ""until"": ""2022-10-07""}]"
+12270837,BY MILES GROUP LTD,Private Limited Company,Active,United Kingdom,2019-10-18,,NORWICH,NR1 3NG,64205 - Activities of financial services holding companies,
+12292179,KANTAR GROUP HOLDINGS LTD,Private Limited Company,Active,United Kingdom,2019-10-31,,LONDON,SE1 9LQ,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""SUMMER (BC) UK BIDCO II LTD"", ""until"": ""2020-02-12""}]"
+12368861,HEMPTON COURT MANCO LIMITED,Private Limited Company,Active,United Kingdom,2019-12-18,,LONDON,EC4N 6AG,74990 - Non-trading company,
+12698648,INEOS QUATTRO HOLDINGS UK LIMITED,Private Limited Company,Active,United Kingdom,2020-06-25,,LYNDHURST,SO43 7FG,70100 - Activities of head offices,"[{""name"": ""INEOS 226 LIMITED"", ""until"": ""2021-03-05""}]"
+12729353,ERB TRADING LIMITED,Private Limited Company,Active,United Kingdom,2020-07-08,,SLOUGH,SL1 3UH,"74909 - Other professional, scientific and technical activities n.e.c.",
+12777595,ALLIED MILLS LIMITED,Private Limited Company,Active,United Kingdom,2020-07-29,,LONDON,W1K 4QY,10611 - Grain milling,"[{""name"": ""ALLIED MILLS (NO.1) LIMITED"", ""until"": ""2020-08-25""}]"
+12777775,INEOS ACETYLS INTERNATIONAL LIMITED,Private Limited Company,Active,United Kingdom,2020-07-29,,LYNDHURST,SO43 7FG,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""INEOS 287 LIMITED"", ""until"": ""2020-08-12""}]"
+12825643,CASTROL HOLDINGS INTERNATIONAL LIMITED,Private Limited Company,Active,United Kingdom,2020-08-20,,READING,RG8 7QR,64209 - Activities of other holding companies n.e.c.,
+12857301,LSEG PTS HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2020-09-04,,LONDON,EC4R 0AN,64205 - Activities of financial services holding companies,"[{""name"": ""QUANTILE GROUP LIMITED"", ""until"": ""2025-10-17""}]"
+12867358,OCR LABS GLOBAL LIMITED,Private Limited Company,Active,United Kingdom,2020-09-09,,LONDON,WC2N 5JR,62012 - Business and domestic software development,
+13039768,ROLLS-ROYCE SMR LIMITED,Private Limited Company,Active,United Kingdom,2020-11-24,,DERBY,DE24 8BJ,71129 - Other engineering activities,"[{""name"": ""LC NUCLEAR LIMITED"", ""until"": ""2021-08-02""}]"
+13091751,LSEG FINANCE PLC,Public Limited Company,Active,United Kingdom,2020-12-21,,LONDON,EC4M 7LS,64205 - Activities of financial services holding companies,"[{""name"": ""LSEGA FINANCING PLC"", ""until"": ""2025-12-12""}]"
+13244512,REGENT SUBCO LIMITED,Private Limited Company,Active,United Kingdom,2021-03-04,,LONDON,EC2N 4BQ,64209 - Activities of other holding companies n.e.c.,
+13317911,ROTHSCHILD & CO EQUITY MARKETS SOLUTIONS LIMITED,Private Limited Company,Active,United Kingdom,2021-04-07,,LONDON,EC4N 8AL,64999 - Financial intermediation not elsewhere classified,"[{""name"": ""ROTHSCHILD & CO CAPITAL MARKETS ADVISORY LIMITED"", ""until"": ""2022-03-11""}]"
+13521339,OCTOPUS MONEY TRUSTEE LIMITED,Private Limited Company,Active,United Kingdom,2021-07-20,,LONDON,EC1N 2HT,99999 - Dormant Company,"[{""name"": ""VIRGIN MONEY TRUSTEE LIMITED"", ""until"": ""2025-11-18""}]"
+13552691,SB GLOBAL ADVISERS LIMITED,Private Limited Company,Active,United Kingdom,2021-08-06,,LONDON,W1K 3JR,64205 - Activities of financial services holding companies,
+13644392,SB GLOBAL ADVISERS CAPITAL MARKETS LIMITED,Private Limited Company,Active,United Kingdom,2021-09-27,,LONDON,W1K 3JR,70221 - Financial management,
+13715492,CORIO GENERATION LIMITED,Private Limited Company,Active,United Kingdom,2021-11-01,,LONDON,EC2Y 9HD,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""GIG OSW INVESTMENTS LIMITED"", ""until"": ""2022-05-10""}]"
+13950076,LSEG POST TRADE SERVICES LIMITED,Private Limited Company,Active,United Kingdom,2022-03-02,,LONDON,EC4M 7LS,64999 - Financial intermediation not elsewhere classified,
+13965450,KRONOS HOLDCO (UK) LIMITED,Private Limited Company,Active,United Kingdom,2022-03-09,,LONDON,W1K 3JR,64209 - Activities of other holding companies n.e.c.,
+13965760,KRONOS I (UK) LIMITED,Private Limited Company,Active,United Kingdom,2022-03-09,,LONDON,W1K 3JR,64209 - Activities of other holding companies n.e.c.,
+14002583,OCTOPUS GROUP HOLDINGS LTD,Private Limited Company,Active,United Kingdom,2022-03-25,,LONDON,EC1N 2HT,64209 - Activities of other holding companies n.e.c.,
+14005495,OE HOLDCO LTD,Private Limited Company,Active,United Kingdom,2022-03-28,,LONDON,EC1N 2HT,64209 - Activities of other holding companies n.e.c.,
+14059322,OCTOPUS MONEY HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2022-04-21,,LONDON,EC1N 2HT,64205 - Activities of financial services holding companies,"[{""name"": ""OCTOPUS ACCELERATOR HOLDINGS LIMITED"", ""until"": ""2023-05-30""}]"
+14069055,OPV 1 LIMITED,Private Limited Company,Active,United Kingdom,2022-04-26,,LONDON,EC1N 2HT,64205 - Activities of financial services holding companies,"[{""name"": ""OCTOPUS MONEY STAKES LIMITED"", ""until"": ""2024-11-27""}, {""name"": ""OCTOPUS ACCELERATOR STAKES LIMITED"", ""until"": ""2023-05-30""}]"
+14645212,PRUDENTIAL FUNDING (ASIA) PLC,Public Limited Company,Active,United Kingdom,2023-02-07,,LONDON,EC4M 7NG,64205 - Activities of financial services holding companies,
+14821773,ENI CCUS HOLDING LIMITED,Private Limited Company,Active,United Kingdom,2023-04-24,,LONDON,SW1W 8PZ,64209 - Activities of other holding companies n.e.c.,
+14903490,VODAFONETHREE HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2023-05-30,,NEWBURY,RG14 2FN,61900 - Other telecommunications activities,"[{""name"": ""VODAFONE UK TRADING HOLDINGS LIMITED"", ""until"": ""2025-05-28""}]"
+15031006,ABF INVESTMENTS (NO.2) LIMITED,Private Limited Company,Active,United Kingdom,2023-07-26,,LONDON,W1K 4QY,70100 - Activities of head offices,
+15329326,VODAFONE SHARED OPERATIONS LIMITED,Private Limited Company,Active,United Kingdom,2023-12-05,,NEWBURY,RG14 2FN,82990 - Other business support service activities n.e.c.,
+16128002,RECKITT UK HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2024-12-10,,BERKSHIRE,SL1 3UH,64209 - Activities of other holding companies n.e.c.,
+16232145,TP ICAP NEWCO LIMITED,Private Limited Company,Active,United Kingdom,2025-02-05,,LONDON,EC2M 3TP,64205 - Activities of financial services holding companies,
+16362486,LAVENDER UK HOLDCO LIMITED,Private Limited Company,Active,United Kingdom,2025-04-03,,BERKSHIRE,SL6 2SL,64209 - Activities of other holding companies n.e.c.,
+16775451,ROLLS-ROYCE US HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2025-10-09,,LONDON,N1 9FX,70100 - Activities of head offices,
+16937683,MACQUARIE CGM UK HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2025-12-31,,LONDON,EC2Y 9HD,64209 - Activities of other holding companies n.e.c.,
+17070409,ALLEGRO TOPCO LIMITED,Private Limited Company,Active,United Kingdom,2026-03-04,,LONDON,SW1H 0DB,64209 - Activities of other holding companies n.e.c.,
+17070945,ALLEGRO MIDCO LIMITED,Private Limited Company,Active,United Kingdom,2026-03-04,,LONDON,SW1H 0DB,64209 - Activities of other holding companies n.e.c.,
+17071033,ALLEGRO BIDCO LIMITED,Private Limited Company,Active,United Kingdom,2026-03-04,,LONDON,SW1H 0DB,64209 - Activities of other holding companies n.e.c.,
+17100828,WAYSTAR SERVICING COMPANY LIMITED,Private Limited Company,Active,United Kingdom,2026-03-18,,LONDON,EC2M 7EB,64209 - Activities of other holding companies n.e.c.,
+LP014870,INFRACAPITAL PARTNERS (NT) II LP,Limited Partnership,Active,United Kingdom,2012-02-03,,LONDON,W1W 5PF,None Supplied,
+LP015276,M&G UK COMPANIES FINANCING FUND II LP,Limited Partnership,Active,United Kingdom,2012-11-15,,LONDON,EC3M 5AG,None Supplied,
+NI042257,S & B PRODUCTION LIMITED,Private Limited Company,Active,United Kingdom,2002-01-04,,BELFAST,,32990 - Other manufacturing n.e.c.,
+OC302492,FIVE ARROWS MANAGERS LLP,Limited Liability Partnership,Active,United Kingdom,2002-06-26,,LONDON,EC4N 8AL,None Supplied,"[{""name"": ""ELGIN CAPITAL LLP"", ""until"": ""2016-02-05""}]"
+OC305139,LOUIS CAPITAL MARKETS UK LLP,Limited Liability Partnership,Active,United Kingdom,2003-07-21,,LONDON,EC2M 3TP,None Supplied,
+OC313878,NATIONWIDE COVERED BONDS LLP,Limited Liability Partnership,Active,United Kingdom,2005-06-25,,SWINDON,SN38 1NW,None Supplied,
+OC343979,MOORLAND COVERED BONDS LIMITED LIABILITY PARTNERSHIP,Limited Liability Partnership,Active,United Kingdom,2009-03-12,,MANCHESTER,M4 4BE,None Supplied,"[{""name"": ""BRITANNIA COVERED BONDS LLP"", ""until"": ""2010-10-20""}]"
+OC412988,EAGLE PLACE COVERED BONDS LLP,Limited Liability Partnership,Active,United Kingdom,2016-07-27,,GOSFORTH,NE3 4PL,None Supplied,
+OC416165,SVF HOLDINGS (UK) LLP,Limited Liability Partnership,Active,United Kingdom,2017-02-28,,LONDON,W1K 3JR,None Supplied,
+OC422333,INFRACAPITAL PARTNERS III SUBHOLDINGS (EURO) GP LLP,Limited Liability Partnership,Active,United Kingdom,2018-05-04,,LONDON,W1W 5PF,None Supplied,
+OC422334,INFRACAPITAL PARTNERS III SUBHOLDINGS (STERLING) GP LLP,Limited Liability Partnership,Active,United Kingdom,2018-05-04,,LONDON,W1W 5PF,None Supplied,
+RC000057,BRITISH BROADCASTING CORPORATION,Royal Charter Company,Active,United Kingdom,1981-01-01,,,,None Supplied,
+SC001111,CLYDESDALE BANK LIMITED,Private Limited Company,Active,United Kingdom,1882-04-03,,GLASGOW,G2 7ER,64191 - Banks,
+SC002116,AVIVA INSURANCE LIMITED,Private Limited Company,Active,United Kingdom,1891-02-23,,,PH2 0NH,65120 - Non-life insurance,
+SC005098,CASTROL GROUP HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1902-05-15,,ABERDEEN,AB10 1YL,70100 - Activities of head offices,"[{""name"": ""CASTROL GROUP HOLDINGS PLC"", ""until"": ""2024-12-06""}, {""name"": ""BURMAH CASTROL PLC"", ""until"": ""2024-12-06""}]"
+SC082015,ABRDN HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,1983-03-02,,EDINBURGH,EH2 2LL,64205 - Activities of financial services holding companies,"[{""name"": ""ABRDN HOLDINGS PLC"", ""until"": ""2022-11-25""}, {""name"": ""ABERDEEN ASSET MANAGEMENT PLC"", ""until"": ""2022-11-25""}]"
+SC123106,BRITANNIC STRATEGIES LIMITED,Private Limited Company,Active,United Kingdom,1990-02-21,,ABERDEEN,AB21 7PB,82990 - Other business support service activities n.e.c.,
+SC210546,PRUDENTIAL HOLDINGS LIMITED,Private Limited Company,Active,United Kingdom,2000-09-01,,EDINBURGH,EH1 2EN,64209 - Activities of other holding companies n.e.c.,
+SC272009,ITHACA ENERGY (UK) LIMITED,Private Limited Company,Active,United Kingdom,2004-08-16,,ABERDEEN,AB15 4YL,06100 - Extraction of crude petroleum,
+SC286832,ABERDEEN GROUP PLC,Public Limited Company,Active,United Kingdom,2005-06-30,,EDINBURGH,EH2 2LL,70100 - Activities of head offices,"[{""name"": ""ABRDN PLC"", ""until"": ""2025-03-12""}, {""name"": ""STANDARD LIFE ABERDEEN PLC"", ""until"": ""2021-07-02""}, {""name"": ""STANDARD LIFE PLC"", ""until"": ""2017-08-14""}]"
+SC424067,UK GREEN INVESTMENT BANK LIMITED,Private Limited Company,Active,United Kingdom,2012-05-15,,EDINBURGH,EH2 1JX,64191 - Banks,
+SC455073,LAST MILE INFRASTRUCTURE HOLDCO LIMITED,Private Limited Company,Active,United Kingdom,2013-07-22,,GLASGOW,G72 0FT,43999 - Other specialised construction activities n.e.c.,"[{""name"": ""ENERGETICS HOLDCO LIMITED"", ""until"": ""2019-09-05""}]"
+SC574147,GREEN INVESTMENT GROUP LIMITED,Private Limited Company,Active,United Kingdom,2017-08-18,,EDINBURGH,EH2 1JX,64209 - Activities of other holding companies n.e.c.,"[{""name"": ""UK GREEN COMMUNITY LENDING LIMITED"", ""until"": ""2017-08-21""}]"
+SC576143,GREEN INVESTMENT GROUP INVESTMENTS LIMITED,Private Limited Company,Active,United Kingdom,2017-09-12,,EDINBURGH,EH2 1JX,64209 - Activities of other holding companies n.e.c.,
+ZC000054,LONDON ASSURANCE (THE),Other company type,Active,United Kingdom,1981-01-01,,LONDON,EC2N 4BQ,64209 - Activities of other holding companies n.e.c.,

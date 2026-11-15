@@ -1,0 +1,1004 @@
+{
+ "benign_cycle": [
+  "QZ-618835",
+  "QZ-884347"
+ ],
+ "near_duplicates": [
+  [
+   "QZ-647389",
+   "QZ-855504"
+  ],
+  [
+   "QZ-667556",
+   "QZ-909280"
+  ],
+  [
+   "QZ-112997",
+   "QZ-189277"
+  ],
+  [
+   "QZ-302988",
+   "QZ-345081"
+  ]
+ ],
+ "schemes": [
+  {
+   "id": "S1",
+   "pattern": "split",
+   "controller": "QZ-601800",
+   "target": "QZ-877779",
+   "shells": [
+    "QZ-255260",
+    "QZ-153987"
+   ]
+  },
+  {
+   "id": "S2",
+   "pattern": "chain",
+   "controller": "QZ-402685",
+   "target": "QZ-703127",
+   "shells": [
+    "QZ-105516",
+    "QZ-934745",
+    "QZ-251660"
+   ]
+  },
+  {
+   "id": "S3",
+   "pattern": "cycle",
+   "controller": "QZ-157114",
+   "target": "QZ-290242",
+   "shells": [
+    "QZ-760839",
+    "QZ-791802"
+   ]
+  }
+ ],
+ "watchlist": {
+  "QFA-01": "QZ-601800",
+  "QFA-02": "QZ-402685",
+  "QFA-03": "QZ-157114",
+  "QFA-04": null,
+  "QFA-05": "QZ-647389"
+ },
+ "articles": {
+  "G-001": {
+   "mentions": [
+    {
+     "text": "Harrow Point",
+     "start": 0,
+     "end": 12,
+     "entity": "QZ-552532"
+    },
+    {
+     "text": "Farah Dahlgren",
+     "start": 34,
+     "end": 48,
+     "entity": "QP-9598"
+    },
+    {
+     "text": "Harrow Point Investments Foundation",
+     "start": 92,
+     "end": 127,
+     "entity": "QZ-552532"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-9598",
+    "seller": null,
+    "company": "QZ-552532",
+    "percent": 35.0,
+    "date": "2026-06-01"
+   }
+  },
+  "G-002": {
+   "mentions": [
+    {
+     "text": "Saltmarsh",
+     "start": 0,
+     "end": 9,
+     "entity": "QZ-719427"
+    },
+    {
+     "text": "Velden Shoal",
+     "start": 27,
+     "end": 39,
+     "entity": "QZ-775278"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QZ-719427",
+    "seller": null,
+    "company": "QZ-775278",
+    "percent": 51.0,
+    "date": "2026-06-03"
+   }
+  },
+  "G-003": {
+   "mentions": [
+    {
+     "text": "Ashgrove Investments Holdings Ltd",
+     "start": 0,
+     "end": 33,
+     "entity": "QZ-512317"
+    },
+    {
+     "text": "In\u00e9s Orsini",
+     "start": 55,
+     "end": 66,
+     "entity": "QP-1644"
+    },
+    {
+     "text": "Ashgrove Investments Holdings Ltd",
+     "start": 93,
+     "end": 126,
+     "entity": "QZ-512317"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-1644",
+    "seller": null,
+    "company": "QZ-512317",
+    "percent": 60.0,
+    "date": "2026-06-15"
+   }
+  },
+  "G-004": {
+   "mentions": [
+    {
+     "text": "Noor Lombardi",
+     "start": 0,
+     "end": 13,
+     "entity": "QP-1341"
+    },
+    {
+     "text": "Coral Gate",
+     "start": 40,
+     "end": 50,
+     "entity": "QZ-706605"
+    },
+    {
+     "text": "Zofia Kowalczyk",
+     "start": 56,
+     "end": 71,
+     "entity": "QP-8688"
+    },
+    {
+     "text": "Coral Gate Investments IBC",
+     "start": 157,
+     "end": 183,
+     "entity": "QZ-706605"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-1341",
+    "seller": "QP-8688",
+    "company": "QZ-706605",
+    "percent": 100.0,
+    "date": "2026-06-20"
+   }
+  },
+  "G-005": {
+   "mentions": [
+    {
+     "text": "Kestrel Isle Holdings",
+     "start": 0,
+     "end": 21,
+     "entity": "QZ-713962"
+    },
+    {
+     "text": "Mei Thorne",
+     "start": 43,
+     "end": 53,
+     "entity": "QP-2105"
+    },
+    {
+     "text": "Kestrel Isle Holdings Foundation",
+     "start": 126,
+     "end": 158,
+     "entity": "QZ-713962"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-2105",
+    "seller": null,
+    "company": "QZ-713962",
+    "percent": 60.0,
+    "date": "2026-06-30"
+   }
+  },
+  "G-006": {
+   "mentions": [
+    {
+     "text": "Sable Strand Fishing Cooperative",
+     "start": 0,
+     "end": 32,
+     "entity": "QZ-884347"
+    },
+    {
+     "text": "Tamsin Bay Growers Cooperative Foundation",
+     "start": 50,
+     "end": 91,
+     "entity": "QZ-618835"
+    },
+    {
+     "text": "Tamsin Bay Growers Cooperative Foundation",
+     "start": 143,
+     "end": 184,
+     "entity": "QZ-618835"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QZ-884347",
+    "seller": null,
+    "company": "QZ-618835",
+    "percent": 10.0,
+    "date": "2026-07-09"
+   }
+  },
+  "G-007": {
+   "mentions": [
+    {
+     "text": "Brightwater Capital",
+     "start": 0,
+     "end": 19,
+     "entity": "QZ-601800"
+    },
+    {
+     "text": "Brightwater Assets",
+     "start": 37,
+     "end": 55,
+     "entity": "QZ-153987"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QZ-601800",
+    "seller": null,
+    "company": "QZ-153987",
+    "percent": 55.0,
+    "date": "2026-07-25"
+   }
+  },
+  "G-008": {
+   "mentions": [
+    {
+     "text": "Zofia Kowalczyk",
+     "start": 0,
+     "end": 15,
+     "entity": "QP-8688"
+    },
+    {
+     "text": "Amberley Sound",
+     "start": 33,
+     "end": 47,
+     "entity": "QZ-540225"
+    },
+    {
+     "text": "Amberley Sound Holdings Holdings Ltd",
+     "start": 82,
+     "end": 118,
+     "entity": "QZ-540225"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-8688",
+    "seller": null,
+    "company": "QZ-540225",
+    "percent": 60.0,
+    "date": "2026-08-01"
+   }
+  },
+  "G-009": {
+   "mentions": [
+    {
+     "text": "Jun Jaramillo",
+     "start": 0,
+     "end": 13,
+     "entity": "QP-5930"
+    },
+    {
+     "text": "Velden Shoal Capital",
+     "start": 31,
+     "end": 51,
+     "entity": "QZ-330460"
+    },
+    {
+     "text": "Velden Shoal Capital IBC",
+     "start": 103,
+     "end": 127,
+     "entity": "QZ-330460"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-5930",
+    "seller": null,
+    "company": "QZ-330460",
+    "percent": 25.0,
+    "date": "2026-08-04"
+   }
+  },
+  "G-010": {
+   "mentions": [
+    {
+     "text": "Sigrid Jaramillo",
+     "start": 0,
+     "end": 16,
+     "entity": "QP-6385"
+    },
+    {
+     "text": "Larkspur Energy",
+     "start": 34,
+     "end": 49,
+     "entity": "QZ-331614"
+    },
+    {
+     "text": "Larkspur Energy Holdings Ltd",
+     "start": 101,
+     "end": 129,
+     "entity": "QZ-331614"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-6385",
+    "seller": null,
+    "company": "QZ-331614",
+    "percent": 40.0,
+    "date": "2026-08-23"
+   }
+  },
+  "G-011": {
+   "mentions": [
+    {
+     "text": "Saltmarsh Trading IBC",
+     "start": 0,
+     "end": 21,
+     "entity": "QZ-760839"
+    },
+    {
+     "text": "Marrow Bay Holdings",
+     "start": 43,
+     "end": 62,
+     "entity": "QZ-157114"
+    },
+    {
+     "text": "Saltmarsh Trading IBC",
+     "start": 89,
+     "end": 110,
+     "entity": "QZ-760839"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QZ-157114",
+    "seller": null,
+    "company": "QZ-760839",
+    "percent": 60.0,
+    "date": "2026-08-30"
+   }
+  },
+  "G-012": {
+   "mentions": [
+    {
+     "text": "Kestrel Isle",
+     "start": 0,
+     "end": 12,
+     "entity": "QZ-791611"
+    },
+    {
+     "text": "Low Cay",
+     "start": 30,
+     "end": 37,
+     "entity": "QZ-597948"
+    },
+    {
+     "text": "Low Cay Trading Holdings Ltd",
+     "start": 101,
+     "end": 129,
+     "entity": "QZ-597948"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QZ-791611",
+    "seller": null,
+    "company": "QZ-597948",
+    "percent": 75.0,
+    "date": "2026-09-01"
+   }
+  },
+  "G-013": {
+   "mentions": [
+    {
+     "text": "In\u00e9s Orsini",
+     "start": 0,
+     "end": 11,
+     "entity": "QP-1644"
+    },
+    {
+     "text": "Ashgrove Logistics Foundation",
+     "start": 31,
+     "end": 60,
+     "entity": "QZ-121125"
+    }
+   ],
+   "claim": {
+    "kind": "director",
+    "person": "QP-1644",
+    "company": "QZ-121125",
+    "date": "2026-09-03"
+   }
+  },
+  "G-014": {
+   "mentions": [
+    {
+     "text": "Caio Beaulieu",
+     "start": 0,
+     "end": 13,
+     "entity": "QP-8184"
+    },
+    {
+     "text": "Tamsin Bay Ventures Foundation",
+     "start": 39,
+     "end": 69,
+     "entity": "QZ-588250"
+    },
+    {
+     "text": "Astrid Winterbourne",
+     "start": 75,
+     "end": 94,
+     "entity": "QP-4609"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-8184",
+    "seller": "QP-4609",
+    "company": "QZ-588250",
+    "percent": 49.0,
+    "date": "2026-09-06"
+   }
+  },
+  "G-015": {
+   "mentions": [
+    {
+     "text": "Viggo Iversen",
+     "start": 0,
+     "end": 13,
+     "entity": "QP-7614"
+    },
+    {
+     "text": "Greywind Investments Partners Holdings Ltd",
+     "start": 33,
+     "end": 75,
+     "entity": "QZ-667556"
+    },
+    {
+     "text": "Greywind Investments Partners Holdings Ltd",
+     "start": 94,
+     "end": 136,
+     "entity": "QZ-667556"
+    },
+    {
+     "text": "Greywind Investments Partners Holdings Ltd",
+     "start": 155,
+     "end": 197,
+     "entity": "QZ-667556"
+    }
+   ],
+   "claim": {
+    "kind": "director",
+    "person": "QP-7614",
+    "company": "QZ-667556",
+    "date": "2026-09-14"
+   }
+  },
+  "G-016": {
+   "mentions": [
+    {
+     "text": "Alba Jaramillo",
+     "start": 0,
+     "end": 14,
+     "entity": "QP-5476"
+    },
+    {
+     "text": "Larkspur Resources IBC",
+     "start": 34,
+     "end": 56,
+     "entity": "QZ-105516"
+    },
+    {
+     "text": "Larkspur Resources IBC",
+     "start": 58,
+     "end": 80,
+     "entity": "QZ-105516"
+    }
+   ],
+   "claim": {
+    "kind": "director",
+    "person": "QP-5476",
+    "company": "QZ-105516",
+    "date": "2026-09-14"
+   }
+  },
+  "G-017": {
+   "mentions": [
+    {
+     "text": "Harrow Point Investments Foundation",
+     "start": 0,
+     "end": 35,
+     "entity": "QZ-552532"
+    },
+    {
+     "text": "Valentin Winterbourne",
+     "start": 57,
+     "end": 78,
+     "entity": "QP-3824"
+    },
+    {
+     "text": "Harrow Point Investments Foundation",
+     "start": 171,
+     "end": 206,
+     "entity": "QZ-552532"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-3824",
+    "seller": null,
+    "company": "QZ-552532",
+    "percent": 40.0,
+    "date": "2026-09-22"
+   }
+  },
+  "G-018": {
+   "mentions": [
+    {
+     "text": "Tamsin Bay Growers Cooperative Foundation",
+     "start": 0,
+     "end": 41,
+     "entity": "QZ-618835"
+    },
+    {
+     "text": "Orla Schofield",
+     "start": 63,
+     "end": 77,
+     "entity": "QP-3133"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-3133",
+    "seller": null,
+    "company": "QZ-618835",
+    "percent": 12.0,
+    "date": "2026-10-04"
+   }
+  },
+  "G-019": {
+   "mentions": [
+    {
+     "text": "Larkspur",
+     "start": 0,
+     "end": 8,
+     "entity": "QZ-105516"
+    },
+    {
+     "text": "Amberley Sound Fuels LLC",
+     "start": 35,
+     "end": 59,
+     "entity": "QZ-703127"
+    },
+    {
+     "text": "Nico Holt",
+     "start": 65,
+     "end": 74,
+     "entity": "QP-8071"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QZ-105516",
+    "seller": "QP-8071",
+    "company": "QZ-703127",
+    "percent": 16.0,
+    "date": "2026-10-06"
+   }
+  },
+  "G-020": {
+   "mentions": [
+    {
+     "text": "Quillon Head Assets Holdings Ltd",
+     "start": 0,
+     "end": 32,
+     "entity": "QZ-619730"
+    },
+    {
+     "text": "Greywind Fuels Holdings Ltd",
+     "start": 47,
+     "end": 74,
+     "entity": "QZ-619730"
+    },
+    {
+     "text": "Quillon Head Assets Holdings Ltd",
+     "start": 125,
+     "end": 157,
+     "entity": "QZ-619730"
+    }
+   ],
+   "claim": {
+    "kind": "rename",
+    "company": "QZ-619730",
+    "new_name": "Greywind Fuels Holdings Ltd",
+    "date": "2026-10-07"
+   }
+  },
+  "G-021": {
+   "mentions": [
+    {
+     "text": "Mei Thorne",
+     "start": 0,
+     "end": 10,
+     "entity": "QP-2105"
+    },
+    {
+     "text": "Greywind",
+     "start": 27,
+     "end": 35,
+     "entity": "QZ-796796"
+    },
+    {
+     "text": "Greywind Terminals Holdings Ltd",
+     "start": 70,
+     "end": 101,
+     "entity": "QZ-796796"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-2105",
+    "seller": null,
+    "company": "QZ-796796",
+    "percent": 5.0,
+    "date": "2026-10-15"
+   }
+  },
+  "G-022": {
+   "mentions": [
+    {
+     "text": "Marrow Bay Fuels LLC",
+     "start": 0,
+     "end": 20,
+     "entity": "QZ-290242"
+    },
+    {
+     "text": "Velden Shoal Terminals LLC",
+     "start": 35,
+     "end": 61,
+     "entity": "QZ-290242"
+    },
+    {
+     "text": "Marrow Bay Fuels LLC",
+     "start": 95,
+     "end": 115,
+     "entity": "QZ-290242"
+    }
+   ],
+   "claim": {
+    "kind": "rename",
+    "company": "QZ-290242",
+    "new_name": "Velden Shoal Terminals LLC",
+    "date": "2026-10-25"
+   }
+  },
+  "G-023": {
+   "mentions": [
+    {
+     "text": "Omar Hollis",
+     "start": 39,
+     "end": 50,
+     "entity": "QP-2458"
+    },
+    {
+     "text": "Amberley Sound",
+     "start": 68,
+     "end": 82,
+     "entity": "QZ-703127"
+    },
+    {
+     "text": "Amberley Sound Fuels LLC",
+     "start": 171,
+     "end": 195,
+     "entity": "QZ-703127"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-2458",
+    "seller": null,
+    "company": "QZ-703127",
+    "percent": 16.0,
+    "date": "2023-09-08"
+   }
+  },
+  "G-024": {
+   "mentions": [
+    {
+     "text": "Astrid Winterbourne",
+     "start": 39,
+     "end": 58,
+     "entity": "QP-4609"
+    },
+    {
+     "text": "Velden Shoal Partners",
+     "start": 77,
+     "end": 98,
+     "entity": "QZ-102501"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-4609",
+    "seller": null,
+    "company": "QZ-102501",
+    "percent": 100.0,
+    "date": "2017-01-14"
+   }
+  },
+  "G-025": {
+   "mentions": [
+    {
+     "text": "Nico Holt",
+     "start": 39,
+     "end": 48,
+     "entity": "QP-8071"
+    },
+    {
+     "text": "Greywind Investments Holdings Ltd",
+     "start": 67,
+     "end": 100,
+     "entity": "QZ-909280"
+    },
+    {
+     "text": "Greywind Investments Holdings Ltd",
+     "start": 123,
+     "end": 156,
+     "entity": "QZ-909280"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-8071",
+    "seller": null,
+    "company": "QZ-909280",
+    "percent": 100.0,
+    "date": "1998-09-09"
+   }
+  },
+  "G-026": {
+   "mentions": [
+    {
+     "text": "Saltmarsh Partners IBC",
+     "start": 0,
+     "end": 22,
+     "entity": "QZ-719427"
+    },
+    {
+     "text": "Wexmoor Partners IBC",
+     "start": 37,
+     "end": 57,
+     "entity": "QZ-719427"
+    },
+    {
+     "text": "Saltmarsh Partners IBC",
+     "start": 91,
+     "end": 113,
+     "entity": "QZ-719427"
+    }
+   ],
+   "claim": {
+    "kind": "rename",
+    "company": "QZ-719427",
+    "new_name": "Wexmoor Partners IBC",
+    "date": "2026-10-28"
+   }
+  },
+  "G-027": {
+   "mentions": [
+    {
+     "text": "Calder Reef Ventures IBC",
+     "start": 0,
+     "end": 24,
+     "entity": "QZ-255260"
+    },
+    {
+     "text": "Low Cay Fuels LLC",
+     "start": 54,
+     "end": 71,
+     "entity": "QZ-877779"
+    },
+    {
+     "text": "Anders Holt",
+     "start": 77,
+     "end": 88,
+     "entity": "QP-5346"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QZ-255260",
+    "seller": "QP-5346",
+    "company": "QZ-877779",
+    "percent": 15.33,
+    "date": "2026-10-29"
+   }
+  },
+  "G-028": {
+   "mentions": [
+    {
+     "text": "Valentin Winterbourne",
+     "start": 0,
+     "end": 21,
+     "entity": "QP-3824"
+    },
+    {
+     "text": "Larkspur Shipping",
+     "start": 40,
+     "end": 57,
+     "entity": "QZ-949934"
+    },
+    {
+     "text": "Larkspur Shipping Foundation",
+     "start": 109,
+     "end": 137,
+     "entity": "QZ-949934"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-3824",
+    "seller": null,
+    "company": "QZ-949934",
+    "percent": 7.5,
+    "date": "2026-10-30"
+   }
+  },
+  "G-029": {
+   "mentions": [
+    {
+     "text": "Larkspur",
+     "start": 0,
+     "end": 8,
+     "entity": "QZ-949934"
+    },
+    {
+     "text": "Nico Velasco",
+     "start": 30,
+     "end": 42,
+     "entity": "QP-7751"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-7751",
+    "seller": null,
+    "company": "QZ-949934",
+    "percent": 12.0,
+    "date": "2026-11-02"
+   }
+  },
+  "G-030": {
+   "mentions": [
+    {
+     "text": "Gideon Yoshida",
+     "start": 0,
+     "end": 14,
+     "entity": "QP-2423"
+    },
+    {
+     "text": "Sable Strand Investments LLC",
+     "start": 34,
+     "end": 62,
+     "entity": "QZ-209321"
+    },
+    {
+     "text": "Sable Strand Investments LLC",
+     "start": 81,
+     "end": 109,
+     "entity": "QZ-209321"
+    }
+   ],
+   "claim": {
+    "kind": "director",
+    "person": "QP-2423",
+    "company": "QZ-209321",
+    "date": "2026-11-03"
+   }
+  },
+  "G-031": {
+   "mentions": [
+    {
+     "text": "Pellow Rock",
+     "start": 0,
+     "end": 11,
+     "entity": "QZ-889973"
+    },
+    {
+     "text": "Anders Holt",
+     "start": 33,
+     "end": 44,
+     "entity": "QP-5346"
+    },
+    {
+     "text": "Pellow Rock Holdings Foundation",
+     "start": 116,
+     "end": 147,
+     "entity": "QZ-889973"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QP-5346",
+    "seller": null,
+    "company": "QZ-889973",
+    "percent": 5.0,
+    "date": "2026-11-05"
+   }
+  },
+  "G-032": {
+   "mentions": [
+    {
+     "text": "Valentin Winterbourne",
+     "start": 0,
+     "end": 21,
+     "entity": "QP-3824"
+    },
+    {
+     "text": "Marrow Bay Fuels",
+     "start": 37,
+     "end": 53,
+     "entity": "QZ-290242"
+    },
+    {
+     "text": "Saltmarsh Trading",
+     "start": 57,
+     "end": 74,
+     "entity": "QZ-760839"
+    }
+   ],
+   "claim": {
+    "kind": "stake",
+    "buyer": "QZ-760839",
+    "seller": "QP-3824",
+    "company": "QZ-290242",
+    "percent": 15.67,
+    "date": "2026-11-10"
+   }
+  }
+ },
+ "pending": [
+  "G-004",
+  "G-014",
+  "G-018",
+  "G-019",
+  "G-020",
+  "G-021",
+  "G-022",
+  "G-026",
+  "G-027",
+  "G-028",
+  "G-029",
+  "G-031",
+  "G-032"
+ ],
+ "snapshot": "2026-09-30"
+}

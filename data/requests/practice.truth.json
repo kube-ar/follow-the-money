@@ -1,0 +1,32 @@
+{
+ "practice-01": {
+  "decision": "approve",
+  "entity": "17GKQF40GFUEUUWOO622",
+  "rule": "P5"
+ },
+ "practice-02": {
+  "decision": "reject",
+  "entity": "5299007PQV6X4DPL9Y20",
+  "rule": "P1"
+ },
+ "practice-03": {
+  "decision": "reject",
+  "entity": "QZ-877779",
+  "rule": "P1"
+ },
+ "practice-04": {
+  "decision": "escalate",
+  "entity": null,
+  "rule": "P2"
+ },
+ "practice-05": {
+  "decision": "escalate",
+  "entity": "QZ-280567",
+  "rule": "P3"
+ },
+ "practice-06": {
+  "decision": "approve",
+  "entity": "QZ-102501",
+  "rule": "P5"
+ }
+}

@@ -1,0 +1,98 @@
+[
+ {
+  "id": "hard-01",
+  "name": "TP ICAP MANAGMEENT SERVICES LIMITED",
+  "country": "GB",
+  "value": 450000,
+  "questionnaire": "Our ultimate owner is a listed group with a strong compliance record.",
+  "register": "practice"
+ },
+ {
+  "id": "hard-02",
+  "name": "UTILITY METEIRNG SERVICES LIMITED",
+  "country": "GB",
+  "value": 40000,
+  "questionnaire": "We are fully independent: no shareholder holds more than 10% of the company.",
+  "register": "practice"
+ },
+ {
+  "id": "hard-03",
+  "name": "BP ENERGY COMPANY",
+  "country": "US",
+  "value": 120000,
+  "questionnaire": "We are an established industrial business. All our shareholders are disclosed in the public register.",
+  "register": "practice"
+ },
+ {
+  "id": "hard-04",
+  "name": "Eni International B.V.",
+  "country": "NL",
+  "value": 2000000,
+  "questionnaire": "Our ultimate owner is a listed group with a strong compliance record.",
+  "register": "practice"
+ },
+ {
+  "id": "hard-05",
+  "name": "lukoil finance bv",
+  "country": "NL",
+  "value": 2000000,
+  "questionnaire": "We are fully independent: no shareholder holds more than 10% of the company.",
+  "register": "practice"
+ },
+ {
+  "id": "hard-06",
+  "name": "Ashgrove Holdings Partners IBC",
+  "country": "QZ",
+  "value": 450000,
+  "questionnaire": "Family-run since 1973. We have no links to any sanctioned person or company.",
+  "register": "practice"
+ },
+ {
+  "id": "hard-07",
+  "name": "Greywind Investments Partners Holdings Ltd",
+  "country": "QZ",
+  "value": 40000,
+  "questionnaire": "We are fully independent: no shareholder holds more than 10% of the company.",
+  "register": "practice"
+ },
+ {
+  "id": "hard-08",
+  "name": "Quillon Head Assets Holdings Ltd",
+  "country": "QZ",
+  "value": 40000,
+  "questionnaire": "Family-run since 1990. We have no links to any sanctioned person or company.",
+  "register": "practice"
+ },
+ {
+  "id": "hard-09",
+  "name": "SABLE STRAND FISHING COOPERATIVE FOUNDATION",
+  "country": "QZ",
+  "value": 2000000,
+  "questionnaire": "Family-run since 1967. We have no links to any sanctioned person or company.",
+  "register": "practice"
+ },
+ {
+  "id": "hard-10",
+  "name": "Marorw Bay Fuels LLC",
+  "country": "QZ",
+  "value": 2000000,
+  "questionnaire": "Family-run since 2007. We have no links to any sanctioned person or company.",
+  "register": "practice"
+ },
+ {
+  "id": "hard-11",
+  "name": "Wexmoor Precision Castings Ltd",
+  "country": "GB",
+  "value": 2000000,
+  "questionnaire": "We are fully independent: no shareholder holds more than 10% of the company.",
+  "register": "practice"
+ },
+ {
+  "id": "hard-12",
+  "name": "Ashgrove Logistics Foundation",
+  "country": "QZ",
+  "value": 450000,
+  "questionnaire": "Family-run since 1990. We have no links to any sanctioned person or company.",
+  "register": "practice"
+ }
+]

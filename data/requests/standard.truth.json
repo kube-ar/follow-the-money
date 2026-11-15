@@ -1,0 +1,62 @@
+{
+ "standard-01": {
+  "decision": "approve",
+  "entity": "213800AEN577VPYUWS88",
+  "rule": "P5"
+ },
+ "standard-02": {
+  "decision": "approve",
+  "entity": "213800XNDZKITUAB8E78",
+  "rule": "P5"
+ },
+ "standard-03": {
+  "decision": "approve",
+  "entity": "2138002Z83ZBVHB7NM33",
+  "rule": "P5"
+ },
+ "standard-04": {
+  "decision": "approve",
+  "entity": "213800SY81IZZARPNP46",
+  "rule": "P5"
+ },
+ "standard-05": {
+  "decision": "reject",
+  "entity": "5493008CGNE47EJ89474",
+  "rule": "P1"
+ },
+ "standard-06": {
+  "decision": "reject",
+  "entity": "5493007XYP6TMCO8L243",
+  "rule": "P1"
+ },
+ "standard-07": {
+  "decision": "reject",
+  "entity": "QZ-402685",
+  "rule": "P1"
+ },
+ "standard-08": {
+  "decision": "escalate",
+  "entity": "QZ-588250",
+  "rule": "P4"
+ },
+ "standard-09": {
+  "decision": "approve",
+  "entity": "QZ-112997",
+  "rule": "P5"
+ },
+ "standard-10": {
+  "decision": "escalate",
+  "entity": null,
+  "rule": "P2"
+ },
+ "standard-11": {
+  "decision": "reject",
+  "entity": null,
+  "rule": "P1"
+ },
+ "standard-12": {
+  "decision": "reject",
+  "entity": "QZ-255260",
+  "rule": "P1"
+ }
+}

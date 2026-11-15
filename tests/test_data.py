@@ -82,3 +82,15 @@ def test_quezal_names_are_not_real_names():
     for name in ("practice", "final"):
         q = load_quezal(name)
         assert not {norm(c.name) for c in q.companies.values()} & real
+
+
+def test_request_packs_and_history_are_reproducible():
+    from dataclasses import asdict
+
+    from trail.requests import REQUESTS, build, build_history
+
+    regs = load("practice")
+    for pack in ("practice", "standard", "hard"):
+        shipped = json.loads((REQUESTS / f"{pack}.json").read_text(encoding="utf-8"))
+        assert [asdict(r) for r, _ in build(pack, regs, "practice")] == shipped
+    assert build_history(regs) == json.loads((REQUESTS / "history.json").read_text(encoding="utf-8"))

@@ -20,7 +20,7 @@ from pathlib import Path
 
 from . import names
 
-GENERATOR_VERSION = 3
+GENERATOR_VERSION = 4
 SNAPSHOT = date(2026, 9, 30)  # the register extract is as of this day
 NEWS_FROM, NEWS_UNTIL = date(2026, 6, 1), date(2026, 11, 10)
 PATTERNS = ("split", "chain", "cycle")
@@ -136,6 +136,8 @@ class _Namer:
         """A different company whose name nearly matches an existing one."""
         stem = base_name.rsplit(" ", 2 if form == "Holdings Ltd" else 1)[0]
         for extra in ("Partners", "Group", "International", "Services", "Marine"):
+            if extra in stem.split():
+                continue
             candidate = f"{stem} {extra}"
             if norm(candidate) not in self.used:
                 self.used.add(norm(candidate))

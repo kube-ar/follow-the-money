@@ -8,6 +8,7 @@ trail check 1 --reference     ...on the reference solution, to see what passing 
 trail use-reference 1         replace your file with the reference (yours is kept as .mine.py)
 trail use-reference 1 --undo
 trail generate --seed 7       a brand-new Quezal register in data/quezal/mine/
+trail requests practice       the supplier requests of a pack, for the agent milestones
 """
 
 from __future__ import annotations
@@ -90,6 +91,18 @@ def cmd_find(args) -> None:
     for c in r.quezal.companies.values():
         if hit(c.name):
             print(f"Quezal           {c.id}  {c.name}")
+
+
+def cmd_requests(args) -> None:
+    from .requests import PACKS, load_requests, truth_for
+
+    for pack in [args.pack] if args.pack else PACKS:
+        print(f"\n{pack}")
+        for r in load_requests(pack):
+            t = truth_for(r)
+            answer = t.decision if t and t.decision else "(hidden)"
+            print(f"  {r.id:12} {r.country}  {r.name[:48]:48}  {answer}")
+    print()
 
 
 def cmd_check(args) -> None:
@@ -184,6 +197,10 @@ def main(argv: list[str] | None = None) -> None:
     p = sub.add_parser("find", help="ids whose names contain all the words")
     p.add_argument("words")
     p.set_defaults(fn=cmd_find)
+
+    p = sub.add_parser("requests", help="list the supplier requests of a pack")
+    p.add_argument("pack", nargs="?")
+    p.set_defaults(fn=cmd_requests)
 
     p = sub.add_parser("check", help="run a milestone's checks")
     p.add_argument("milestone")

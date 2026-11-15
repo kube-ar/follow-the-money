@@ -1,0 +1,98 @@
+[
+ {
+  "id": "standard-01",
+  "name": "dlg pension trustee limited",
+  "country": "GB",
+  "value": 450000,
+  "questionnaire": "We are an established industrial business. All our shareholders are disclosed in the public register.",
+  "register": "practice"
+ },
+ {
+  "id": "standard-02",
+  "name": "ROLLSR-OYCE OVERSEAS HOLDINGS LIMITED",
+  "country": "GB",
+  "value": 120000,
+  "questionnaire": "We are an established industrial business. All our shareholders are disclosed in the public register.",
+  "register": "practice"
+ },
+ {
+  "id": "standard-03",
+  "name": "TP ICAP MANAGEMENT SERVICES LIMITED",
+  "country": "GB",
+  "value": 120000,
+  "questionnaire": "We are fully independent: no shareholder holds more than 10% of the company.",
+  "register": "practice"
+ },
+ {
+  "id": "standard-04",
+  "name": "NATIONWIDE GROWTH LIMITED",
+  "country": "GB",
+  "value": 2000000,
+  "questionnaire": "We are an established industrial business. All our shareholders are disclosed in the public register.",
+  "register": "practice"
+ },
+ {
+  "id": "standard-05",
+  "name": "EIGER SHIPPING SA",
+  "country": "CH",
+  "value": 2000000,
+  "questionnaire": "We are fully independent: no shareholder holds more than 10% of the company.",
+  "register": "practice"
+ },
+ {
+  "id": "standard-06",
+  "name": "LME TRADING DMCC",
+  "country": "AE",
+  "value": 120000,
+  "questionnaire": "Family-run since 1973. We have no links to any sanctioned person or company.",
+  "register": "practice"
+ },
+ {
+  "id": "standard-07",
+  "name": "HARROW POINT HOLDINGS IBC",
+  "country": "QZ",
+  "value": 40000,
+  "questionnaire": "Our ultimate owner is a listed group with a strong compliance record.",
+  "register": "practice"
+ },
+ {
+  "id": "standard-08",
+  "name": "Tamsin Bay Ventures Foundation",
+  "country": "QZ",
+  "value": 120000,
+  "questionnaire": "We are an established commodities business. All our shareholders are disclosed in the public register.",
+  "register": "practice"
+ },
+ {
+  "id": "standard-09",
+  "name": "Calder Reef Assets LLC",
+  "country": "QZ",
+  "value": 450000,
+  "questionnaire": "We are an established insurance business. All our shareholders are disclosed in the public register.",
+  "register": "practice"
+ },
+ {
+  "id": "standard-10",
+  "name": "Tessaro Quantum Instruments GmbH",
+  "country": "DE",
+  "value": 450000,
+  "questionnaire": "We are an established industrial business. All our shareholders are disclosed in the public register.",
+  "register": "practice"
+ },
+ {
+  "id": "standard-11",
+  "name": "Varnholt Bunker Supply GmbH",
+  "country": "DE",
+  "value": 40000,
+  "questionnaire": "Our ultimate owner is a listed group with a strong compliance record.",
+  "register": "practice"
+ },
+ {
+  "id": "standard-12",
+  "name": "Calder Reef Ventures IBC",
+  "country": "QZ",
+  "value": 40000,
+  "questionnaire": "We are an established tourism business. All our shareholders are disclosed in the public register.",
+  "register": "practice"
+ }
+]

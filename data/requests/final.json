@@ -1,0 +1,66 @@
+[
+ {
+  "id": "final-01",
+  "name": "JUSTREINI & BROOKS,LIMITED",
+  "country": "GB",
+  "value": 120000,
+  "questionnaire": "We are fully independent: no shareholder holds more than 10% of the company.",
+  "register": "final"
+ },
+ {
+  "id": "final-02",
+  "name": "Limited liability company \"LUKOIL-Reservnefteproduct-Trading\"",
+  "country": "RU",
+  "value": 2000000,
+  "questionnaire": "We are an established industrial business. All our shareholders are disclosed in the public register.",
+  "register": "final"
+ },
+ {
+  "id": "final-03",
+  "name": "Ashgrove Terminals LLC",
+  "country": "QZ",
+  "value": 40000,
+  "questionnaire": "We are fully independent: no shareholder holds more than 10% of the company.",
+  "register": "final"
+ },
+ {
+  "id": "final-04",
+  "name": "VELDEN SHOAL HOLDINGS IBC",
+  "country": "QZ",
+  "value": 450000,
+  "questionnaire": "Our ultimate owner is a listed group with a strong compliance record.",
+  "register": "final"
+ },
+ {
+  "id": "final-05",
+  "name": "Velden Shoal Shipping LLC",
+  "country": "QZ",
+  "value": 450000,
+  "questionnaire": "Our ultimate owner is a listed group with a strong compliance record.",
+  "register": "final"
+ },
+ {
+  "id": "final-06",
+  "name": "Larkspur Freight Foundation",
+  "country": "QZ",
+  "value": 120000,
+  "questionnaire": "We are fully independent: no shareholder holds more than 10% of the company.",
+  "register": "final"
+ },
+ {
+  "id": "final-07",
+  "name": "Quillon Head Assets IBC",
+  "country": "QZ",
+  "value": 120000,
+  "questionnaire": "We are an established fishing business. All our shareholders are disclosed in the public register.",
+  "register": "final"
+ },
+ {
+  "id": "final-08",
+  "name": "Amberley Sound Ceramics SARL",
+  "country": "FR",
+  "value": 120000,
+  "questionnaire": "We are an established industrial business. All our shareholders are disclosed in the public register.",
+  "register": "final"
+ }
+]

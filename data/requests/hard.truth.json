@@ -1,0 +1,62 @@
+{
+ "hard-01": {
+  "decision": "approve",
+  "entity": "2138002Z83ZBVHB7NM33",
+  "rule": "P5"
+ },
+ "hard-02": {
+  "decision": "approve",
+  "entity": "ZINH2N3K3CUPM82JGB80",
+  "rule": "P5"
+ },
+ "hard-03": {
+  "decision": "approve",
+  "entity": "549300MG5Q5VOTHPK831",
+  "rule": "P5"
+ },
+ "hard-04": {
+  "decision": "approve",
+  "entity": "549300MGDWB06O797V30",
+  "rule": "P5"
+ },
+ "hard-05": {
+  "decision": "reject",
+  "entity": "72450024EGZK2K8NAG02",
+  "rule": "P1"
+ },
+ "hard-06": {
+  "decision": "reject",
+  "entity": "QZ-647389",
+  "rule": "P1"
+ },
+ "hard-07": {
+  "decision": "approve",
+  "entity": "QZ-667556",
+  "rule": "P5"
+ },
+ "hard-08": {
+  "decision": "escalate",
+  "entity": "QZ-619730",
+  "rule": "P4"
+ },
+ "hard-09": {
+  "decision": "escalate",
+  "entity": "QZ-884347",
+  "rule": "P3"
+ },
+ "hard-10": {
+  "decision": "reject",
+  "entity": "QZ-290242",
+  "rule": "P1"
+ },
+ "hard-11": {
+  "decision": "escalate",
+  "entity": null,
+  "rule": "P2"
+ },
+ "hard-12": {
+  "decision": "approve",
+  "entity": "QZ-121125",
+  "rule": "P5"
+ }
+}

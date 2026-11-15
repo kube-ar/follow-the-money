@@ -33,6 +33,12 @@ def _m(mid: str, slug: str, title: str, name: str) -> Milestone:
                      f"trail.checks.m{mid}")  # fmt: skip
 
 
+def _d(n: int, slug: str, title: str) -> Milestone:
+    name = f"d{n}_{slug.replace('-', '_')}"
+    return Milestone(f"d{n}", "agentic-graphrag", slug, title, f"trail.agent.{name}", f"reference/agent/{name}.py",
+                     f"trail.checks.d{n}")  # fmt: skip
+
+
 MILESTONES = {
     m.id: m
     for m in [
@@ -41,6 +47,19 @@ MILESTONES = {
         _m("3", "reading-the-gazette", "Reading the Gazette", "m3_reading_the_gazette"),
         _m("4", "effective-ownership", "Effective ownership", "m4_effective_ownership"),
         _m("5", "screening", "Screening a supplier", "m5_screening"),
+        *[
+            _d(n, slug, title)
+            for n, slug, title in (
+                (1, "the-first-screening", "The first screening"),
+                (2, "the-risk-policy", "The risk policy"),
+                (3, "what-we-cleared-before", "What we cleared before"),
+                (4, "one-branch-per-owner", "One branch per owner"),
+                (5, "the-registry-desk", "The registry desk"),
+                (6, "decision-review", "Decision review"),
+                (7, "cost-and-clearance", "Cost and clearance"),
+                (8, "the-final-batch", "The final batch"),
+            )
+        ],  # fmt: skip
     ]
 }
 

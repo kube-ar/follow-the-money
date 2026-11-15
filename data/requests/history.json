@@ -1,0 +1,253 @@
+[
+ {
+  "id": "H-01",
+  "entity": "QZ-525000",
+  "name": "Low Cay Resources Holdings Ltd",
+  "decision": "approve",
+  "decided_on": "2026-08-02",
+  "facts": [
+   {
+    "subject": "QP-3033",
+    "predicate": "holds",
+    "object": "QZ-525000",
+    "value": 40.0,
+    "valid_from": "2026-04-11"
+   },
+   {
+    "subject": "QZ-766249",
+    "predicate": "holds",
+    "object": "QZ-525000",
+    "value": 60.0,
+    "valid_from": "2023-11-26"
+   },
+   {
+    "subject": "QZ-525000",
+    "predicate": "named",
+    "object": "Low Cay Resources Holdings Ltd",
+    "value": null,
+    "valid_from": "2023-06-11"
+   }
+  ]
+ },
+ {
+  "id": "H-02",
+  "entity": "QZ-540225",
+  "name": "Amberley Sound Holdings Holdings Ltd",
+  "decision": "approve",
+  "decided_on": "2026-06-05",
+  "facts": [
+   {
+    "subject": "QP-3659",
+    "predicate": "holds",
+    "object": "QZ-540225",
+    "value": 40.0,
+    "valid_from": "2009-06-18"
+   },
+   {
+    "subject": "QZ-540225",
+    "predicate": "named",
+    "object": "Amberley Sound Holdings Holdings Ltd",
+    "value": null,
+    "valid_from": "2001-11-11"
+   }
+  ]
+ },
+ {
+  "id": "H-03",
+  "entity": "QZ-552532",
+  "name": "Harrow Point Investments Foundation",
+  "decision": "approve",
+  "decided_on": "2026-06-27",
+  "facts": [
+   {
+    "subject": "QP-4609",
+    "predicate": "holds",
+    "object": "QZ-552532",
+    "value": 25.0,
+    "valid_from": "2019-05-07"
+   },
+   {
+    "subject": "QP-9598",
+    "predicate": "holds",
+    "object": "QZ-552532",
+    "value": 35.0,
+    "valid_from": "2026-06-01"
+   },
+   {
+    "subject": "QZ-552532",
+    "predicate": "named",
+    "object": "Harrow Point Investments Foundation",
+    "value": null,
+    "valid_from": "2011-08-18"
+   }
+  ]
+ },
+ {
+  "id": "H-04",
+  "entity": "QZ-588250",
+  "name": "Tamsin Bay Ventures Foundation",
+  "decision": "approve",
+  "decided_on": "2026-09-10",
+  "facts": [
+   {
+    "subject": "QP-4609",
+    "predicate": "holds",
+    "object": "QZ-588250",
+    "value": 49.0,
+    "valid_from": "2020-11-07"
+   },
+   {
+    "subject": "QZ-512317",
+    "predicate": "holds",
+    "object": "QZ-588250",
+    "value": 51.0,
+    "valid_from": "2011-07-20"
+   },
+   {
+    "subject": "QZ-588250",
+    "predicate": "named",
+    "object": "Tamsin Bay Ventures Foundation",
+    "value": null,
+    "valid_from": "2001-04-16"
+   }
+  ]
+ },
+ {
+  "id": "H-05",
+  "entity": "QZ-597948",
+  "name": "Low Cay Trading Holdings Ltd",
+  "decision": "approve",
+  "decided_on": "2026-06-23",
+  "facts": [
+   {
+    "subject": "QP-1341",
+    "predicate": "holds",
+    "object": "QZ-597948",
+    "value": 25.0,
+    "valid_from": "2018-11-27"
+   },
+   {
+    "subject": "QZ-597948",
+    "predicate": "named",
+    "object": "Low Cay Trading Holdings Ltd",
+    "value": null,
+    "valid_from": "2013-04-22"
+   }
+  ]
+ },
+ {
+  "id": "H-06",
+  "entity": "QZ-672101",
+  "name": "Harrow Point Assets Foundation",
+  "decision": "approve",
+  "decided_on": "2026-05-07",
+  "facts": [
+   {
+    "subject": "QZ-672101",
+    "predicate": "named",
+    "object": "Harrow Point Assets Foundation",
+    "value": null,
+    "valid_from": "2022-01-06"
+   }
+  ]
+ },
+ {
+  "id": "H-07",
+  "entity": "QZ-706605",
+  "name": "Coral Gate Investments IBC",
+  "decision": "approve",
+  "decided_on": "2026-07-11",
+  "facts": [
+   {
+    "subject": "QP-8688",
+    "predicate": "holds",
+    "object": "QZ-706605",
+    "value": 100.0,
+    "valid_from": "2012-08-18"
+   },
+   {
+    "subject": "QZ-706605",
+    "predicate": "named",
+    "object": "Coral Gate Investments IBC",
+    "value": null,
+    "valid_from": "2007-12-14"
+   }
+  ]
+ },
+ {
+  "id": "H-08",
+  "entity": "QZ-713962",
+  "name": "Kestrel Isle Holdings Foundation",
+  "decision": "approve",
+  "decided_on": "2026-06-25",
+  "facts": [
+   {
+    "subject": "QP-1729",
+    "predicate": "holds",
+    "object": "QZ-713962",
+    "value": 40.0,
+    "valid_from": "2025-07-18"
+   },
+   {
+    "subject": "QZ-713962",
+    "predicate": "named",
+    "object": "Kestrel Isle Holdings Foundation",
+    "value": null,
+    "valid_from": "2017-10-21"
+   }
+  ]
+ },
+ {
+  "id": "H-09",
+  "entity": "QZ-748945",
+  "name": "Brightwater Terminals Foundation",
+  "decision": "approve",
+  "decided_on": "2026-06-11",
+  "facts": [
+   {
+    "subject": "QP-2423",
+    "predicate": "holds",
+    "object": "QZ-748945",
+    "value": 25.0,
+    "valid_from": "2020-10-24"
+   },
+   {
+    "subject": "QZ-398331",
+    "predicate": "holds",
+    "object": "QZ-748945",
+    "value": 75.0,
+    "valid_from": "2026-06-03"
+   },
+   {
+    "subject": "QZ-748945",
+    "predicate": "named",
+    "object": "Brightwater Terminals Foundation",
+    "value": null,
+    "valid_from": "2007-07-29"
+   }
+  ]
+ },
+ {
+  "id": "H-10",
+  "entity": "QZ-889973",
+  "name": "Pellow Rock Holdings Foundation",
+  "decision": "approve",
+  "decided_on": "2026-07-25",
+  "facts": [
+   {
+    "subject": "QZ-565064",
+    "predicate": "holds",
+    "object": "QZ-889973",
+    "value": 80.0,
+    "valid_from": "2025-07-12"
+   },
+   {
+    "subject": "QZ-889973",
+    "predicate": "named",
+    "object": "Pellow Rock Holdings Foundation",
+    "value": null,
+    "valid_from": "2018-05-19"
+   }
+  ]
+ }
+]

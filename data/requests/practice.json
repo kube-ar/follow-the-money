@@ -1,0 +1,50 @@
+[
+ {
+  "id": "practice-01",
+  "name": "MACQUARIE ROPEMAKER LIMITED",
+  "country": "GB",
+  "value": 120000,
+  "questionnaire": "We are an established industrial business. All our shareholders are disclosed in the public register.",
+  "register": "practice"
+ },
+ {
+  "id": "practice-02",
+  "name": "LUKOIL INTERNATIONAL GmbH",
+  "country": "AT",
+  "value": 450000,
+  "questionnaire": "Our ultimate owner is a listed group with a strong compliance record.",
+  "register": "practice"
+ },
+ {
+  "id": "practice-03",
+  "name": "Low Cay Fuels LLC",
+  "country": "QZ",
+  "value": 40000,
+  "questionnaire": "Our ultimate owner is a listed group with a strong compliance record.",
+  "register": "practice"
+ },
+ {
+  "id": "practice-04",
+  "name": "Pellow Rock Dairy Supplies Ltd",
+  "country": "GB",
+  "value": 450000,
+  "questionnaire": "We are fully independent: no shareholder holds more than 10% of the company.",
+  "register": "practice"
+ },
+ {
+  "id": "practice-05",
+  "name": "Stillwater Logistics LLC",
+  "country": "QZ",
+  "value": 450000,
+  "questionnaire": "Our ultimate owner is a listed group with a strong compliance record.",
+  "register": "practice"
+ },
+ {
+  "id": "practice-06",
+  "name": "Velden Shoal Partners IBC",
+  "country": "QZ",
+  "value": 2000000,
+  "questionnaire": "Our ultimate owner is a listed group with a strong compliance record.",
+  "register": "practice"
+ }
+]

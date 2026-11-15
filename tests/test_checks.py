@@ -178,3 +178,56 @@ def test_m5_catches_direct_majorities_counted_as_hidden():
         return {(c, t) for c in listed for t in ref._m2()._controlled(regs, c)}
 
     assert "Hidden controllers, practice register" in failing("5", patched("5", hidden_controllers=everything)[0])
+
+
+def test_d1_catches_a_failure_rule_left_out():
+    ref = reference("d1")
+
+    def four(desk):
+        return [f for f in ref.failures(desk) if f != "temporal ignorance"]
+
+    assert "Failures, named" in failing("d1", patched("d1", failures=four)[0])
+
+
+def test_d2_catches_near_misses_taken_at_face_value():
+    def everything(regs, entity, hits):
+        return [h["id"] for h in hits]
+
+    assert "Near misses don't count" in failing("d2", patched("d2", relevant_designations=everything)[0])
+
+
+def test_d3_catches_a_memory_that_only_reads_the_register():
+    from trail import answers
+
+    def register_only(history, regs):
+        return [h["id"] for h in history if any(s.since > h["decided_on"] for s in answers.holdings(regs.quezal)
+                                                if s.company_id == h["entity"])]  # fmt: skip
+
+    assert "Past approvals gone stale" in failing("d3", patched("d3", stale=register_only)[0])
+
+
+def test_d5_catches_a_gate_that_lets_everything_through():
+    assert "Text the supplier wrote can't drive an action" in failing(
+        "d5", patched("d5", allowed=lambda *a: "allow")[0]
+    )
+
+
+def test_d4_decides_through_structured_output_with_a_fake_llm():
+    from trail.requests import load_requests, truth_for
+
+    ref = reference("d4")
+    request = load_requests("practice")[2]  # a Quezal company a listed one controls
+    truth = truth_for(request)
+
+    class FakeLLM:
+        calls = 0
+
+        def json(self, prompt, schema, system=None):
+            FakeLLM.calls += 1
+            if FakeLLM.calls == 1:  # first answer: two problems, so the reference retries
+                return {"decision": "reject", "entity": truth.entity, "reasons": ["Something is off."], "owners": []}
+            return {"decision": "reject", "entity": truth.entity, "owners": [],
+                    "reasons": ["Quezal register: a watch-listed company controls it.", "Watch list: listed."]}  # fmt: skip
+
+    desk = ref.screen(request, FakeLLM())
+    assert FakeLLM.calls == 2 and desk.verdict()["correct"]

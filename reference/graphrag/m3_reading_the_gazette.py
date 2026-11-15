@@ -22,7 +22,7 @@ def lexical_graph(regs: Registers) -> nx.DiGraph:
         for i, sentence in enumerate(SENTENCE.split(a.body)):
             chunk = f"{a.id}#{i}"
             g.add_node(chunk, kind="chunk", text=sentence)
-            g.add_edge(a.id, chunk, type="HAS_CHUNK")
+            g.add_edge(chunk, a.id, type="PART_OF")
             if previous:
                 g.add_edge(previous, chunk, type="NEXT")
             previous = chunk

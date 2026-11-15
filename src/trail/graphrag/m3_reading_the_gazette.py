@@ -27,7 +27,7 @@ KINDS = ("stake", "rename", "director")
 
 def lexical_graph(regs: Registers) -> Any:
     """The Gazette as a lexical graph: an article node per item, a chunk node per sentence (split
-    with SENTENCE), HAS_CHUNK from article to chunk, NEXT between consecutive chunks of an item."""
+    with SENTENCE), PART_OF from each chunk to its article, NEXT between consecutive chunks of an item."""
     raise NotImplementedError
 
 

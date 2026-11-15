@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.pytest_cache/
+.ruff_cache/
+dist/
+# your own generated cases
+data/quezal/mine/
+# backups made by `trail use-reference`
+*.mine.py
+*.mine.ttl
+
+# cached LLM answers
+.trail-cache/

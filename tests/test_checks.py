@@ -436,3 +436,83 @@ def test_a_failed_model_call_reaches_the_check():
     r = Result("claims", None)
     with pytest.raises(LLMError):
         attempt(r, read, None, None)
+
+
+def test_d4_fails_a_decision_the_officer_refuses(monkeypatch):
+    """The plan milestone is about checking a decision before the officer sees it: a refused one fails it."""
+    from trail.desk import Desk
+
+    monkeypatch.setenv("TRAIL_LLM_PROVIDER", "anthropic")  # configured, but never called below
+
+    def screen(request, llm, mention_questionnaire=False):
+        desk = Desk(request)
+        desk.call("search", {"name": request.name, "country": request.country})
+        desk.call("sanctions_search", {"name": request.name})
+        reasons = ["The register search returned it.", "The sanctions list has no entry."]
+        if mention_questionnaire:
+            reasons.append("The questionnaire isn't evidence, so we ignored it.")  # any mention cites it (P7)
+        desk.call("decide", {"decision": "escalate", "entity": "", "reasons": reasons})
+        return desk
+
+    refused = run_checks("d4", patched("d4", screen=lambda r, llm: screen(r, llm, True))[0])["The planned screening"]
+    assert not refused.passed and "0 accepted" in refused.score and any("refused" in d for d in refused.details)
+    clean = run_checks("d4", patched("d4", screen=screen)[0])["The planned screening"]
+    assert clean.passed and "6 accepted" in clean.score
+
+
+def _gathered(ref, request):
+    from trail.desk import Desk
+
+    desk, notes = Desk(request), {}
+    for phase in ref.phases(ref.plan(request)):
+        for step in phase:
+            if step in ref.STEPS:
+                ref.STEPS[step](desk, request, notes)
+    for owner in notes["owners"]:
+        ref._owner_branch(desk, owner, notes)
+    return desk, notes
+
+
+def test_d4_reference_gathers_what_each_rule_needs():
+    """On every request of every pack, with no model, the reference's plan returns the facts the policy's answer
+    rests on: a listed owner however far up the chain (P1), no identification (P2), the known stake (P3), a Gazette
+    item about the supplier (P4), and no list or stake problem for an approval. Inside the budget."""
+    from trail.desk import DECISIONS
+    from trail.requests import load_requests, truth_for
+
+    ref = reference("d4")
+    for pack in ("practice", "standard", "hard", "final"):
+        for request in load_requests(pack):
+            truth = truth_for(request)
+            want = truth.decision or next(d for d in DECISIONS if truth.right(d))
+            desk, notes = _gathered(ref, request)
+            held = notes.get("holders") or {}
+            listed, low = bool(ref.listed_names(notes)), held.get("known_total_percent", 100) < 75
+            assert listed == (want == "reject"), request.name
+            if want == "approve":
+                assert notes["entity"] and not low, request.name
+            if truth.rule == "P2":
+                assert not notes["entity"], request.name
+            if truth.rule == "P3":
+                assert low, request.name
+            if truth.rule == "P4":
+                assert notes["news"], request.name
+            assert desk.spent <= desk.budget, request.name
+
+
+def test_d4_reference_repairs_and_catches_what_code_can_see():
+    from trail.requests import load_requests
+
+    ref = reference("d4")
+    request = load_requests("practice")[2]  # Low Cay Fuels: a watch-listed company controls it, two levels up
+    desk, notes = _gathered(ref, request)
+    assert [o["id"] for o in notes["owners"]] == ["QZ-601800"] and "54%" in notes["owners"][0]["how"]
+    decision = {"decision": "reject", "entity": "Low Cay Fuels LLC (QZ-877779)", "owners": [],
+                "reasons": ["Quezal register: QZ-601800 controls it.", "Watch list: QFA-01.",
+                            "The questionnaire says it is independent."]}  # fmt: skip
+    fixed = ref.repaired(desk, notes, decision)
+    assert fixed["entity"] == "QZ-877779" and len(fixed["reasons"]) == 2
+    assert ref.validate_decision(desk, fixed) == [] and ref.contradictions(notes, fixed) == []
+    assert ref.contradictions(notes, {**fixed, "decision": "approve"})
+    schema = ref.decision_schema(notes)
+    assert "QZ-877779" in schema["properties"]["entity"]["enum"] and "" in schema["properties"]["entity"]["enum"]

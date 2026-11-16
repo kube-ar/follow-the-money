@@ -72,6 +72,16 @@ def run(module: ModuleType) -> list[Result]:
             agent.score = f"{decided}/6 decided, {accepted} accepted, {correct} correct, {credits} credits"
             if decided < 6:
                 agent.fail("Every practice request must end in a decision.")
+            elif accepted < decided:
+                agent.fail(
+                    "A decision reached the officer with a problem your checks are there to stop. Leave the model less "
+                    "to get wrong: the supplier's id as an enum in the schema, and in code, drop reasons that mention "
+                    "the questionnaire or a source the desk never returned."
+                )
+                for request, desk in runs:
+                    verdict = desk.verdict()
+                    if desk.decision is not None and not verdict["accepted"]:
+                        agent.details.append(f"{request.name}: the officer refused it: {verdict['reason']}")
         except NotStarted:
             agent.started = agent.passed = False
     return [compound, planned, fanned, meaning, agent]

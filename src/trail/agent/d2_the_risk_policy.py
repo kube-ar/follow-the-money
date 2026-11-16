@@ -16,10 +16,21 @@ from typing import Any
 from trail.desk import Desk, Request
 from trail.registers import Registers
 
-# How `describe` reads each kind of record: a regex its id matches, the table in trail.desk.records(regs)
-# that holds it, the key column, the fields that identify it, and its context: name → [table,
-# their column, our column, the column to list]. A new kind of record must need only a new entry here.
-SPEC: dict[str, dict] = {}
+# How `describe` reads each kind of record. Every entry has the same five keys:
+#   match     a regex the record's id matches
+#   table     the table in trail.desk.records(regs) that holds it
+#   key       the column of that table that holds the id
+#   identify  the columns that identify the record
+#   context   related records, by name: [table, their column, our column, the column to list], that is, the
+#             rows of `table` whose `their column` equals this record's `our column`, listed by `the column to list`
+# A new kind of record must need only a new entry here. Entity (a GLEIF record, by LEI) is the example: its
+# children are the GLEIF rows whose parent is its LEI. Add one entry per other kind of id: UK company numbers,
+# QZ- companies, QP- people, designations.
+SPEC: dict[str, dict] = {
+    "Entity": {"match": r"^[A-Z0-9]{18}\d{2}$", "table": "gleif", "key": "lei",
+               "identify": ["legal_name", "country", "registration_number"],
+               "context": {"children": ["gleif", "parent", "lei", "lei"]}},
+}  # fmt: skip
 
 
 def policy_graph() -> Any:

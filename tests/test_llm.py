@@ -207,3 +207,52 @@ def test_conversation_loop_on_openai_compatible(monkeypatch):
     assert sent[0]["tools"][0]["function"]["name"] == "lookup"
     assert sent[1]["messages"][-1] == {"role": "tool", "tool_call_id": "c1", "content": "ok"}
     assert sent[1]["messages"][-2]["tool_calls"][0]["function"]["arguments"] == '{"q": "x"}'
+
+
+def test_a_cut_off_answer_is_tried_once_more(monkeypatch):
+    """Reasoning models sometimes think past the length limit; the second try usually finishes."""
+    finishes = iter(["length", "stop"])
+
+    def create(**request):
+        message = SimpleNamespace(content='{"ok": true}', refusal=None)
+        return SimpleNamespace(
+            choices=[SimpleNamespace(message=message, finish_reason=next(finishes))],
+            usage=SimpleNamespace(prompt_tokens=7, completion_tokens=2),
+        )
+
+    client = SimpleNamespace(chat=SimpleNamespace(completions=SimpleNamespace(create=create)))
+    monkeypatch.setattr(openai, "OpenAI", lambda **kw: client)
+    monkeypatch.setenv("FIREWORKS_API_KEY", "k")
+    llm = get_llm("fireworks", "m")
+    assert llm.json("q", SCHEMA) == {"ok": True}
+    assert llm.usage.calls == 2
+
+
+def test_trail_llm_makes_one_tool_round_trip(monkeypatch):
+    """`trail llm` also checks tool calling, which every agent milestone needs."""
+    from trail.cli import tool_round_trip
+
+    def message(content, calls):
+        return SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content=content, tool_calls=calls))],
+                               usage=None)  # fmt: skip
+
+    sent = []
+
+    def fake(replies):
+        class Fake:
+            def __init__(self, **kw):
+                def create(**request):
+                    sent.append(request)
+                    return replies.pop(0)
+
+                self.chat = SimpleNamespace(completions=SimpleNamespace(create=create))
+
+        return Fake
+
+    call = SimpleNamespace(id="c1", function=SimpleNamespace(name="add", arguments='{"a": 17, "b": 25}'))
+    monkeypatch.setenv("OPENROUTER_API_KEY", "k")
+    monkeypatch.setattr(openai, "OpenAI", fake([message(None, [call]), message("42", None)]))
+    assert tool_round_trip(get_llm("openrouter", "some/model")) == "add(17, 25) = 42, then: '42'"
+    assert sent[1]["messages"][-1] == {"role": "tool", "tool_call_id": "c1", "content": "42"}
+    monkeypatch.setattr(openai, "OpenAI", fake([message("42", None)]))
+    assert tool_round_trip(get_llm("openrouter", "some/model")) is None  # it answered without the tool

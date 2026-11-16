@@ -10,7 +10,8 @@ bottom: which layer broke?
 
 Check your work with `uv run trail check 5`. No LLM needed.
 
-Fast path: reuse your milestone 2 matching and milestone 4 control, called from here.
+Fast path: reuse your milestone 2 matching and its control rule (plain Python, no Neo4j), called
+from here; if you skipped milestone 2, `trail use-reference 2` gives you a working one.
 Deep path: score each candidate on several kinds of evidence and keep the reasons.
 """
 

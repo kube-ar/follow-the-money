@@ -86,8 +86,8 @@ def group(graph, lei: str) -> set[str]:
 
 
 def ownership_loops(graph) -> list[list[str]]:
-    held_by = nx.DiGraph(_edges(graph, "PARENT") + [(b, a) for a, b in _edges(graph, "HOLDS")])
-    return [list(c) for c in nx.simple_cycles(held_by)]
+    edges = nx.DiGraph(_edges(graph, "PARENT") + _edges(graph, "HOLDS"))  # child → parent, holder → company
+    return [list(c) for c in nx.simple_cycles(edges)]
 
 
 _INDEX: tuple[list[str], VectorIndex] | None = None

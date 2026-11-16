@@ -5,10 +5,12 @@ trail show 213800LH1BZH3DI6G760   everything the registers say about an id (LEI,
 trail find "eiger shipping"   ids whose names contain the words
 trail check 1                 run milestone 1's checks on your code
 trail check 1 --reference     ...on the reference solution, to see what passing looks like
+trail check d4 --no-llm       ...skipping the checks that call a model (they cost money)
 trail use-reference 1         replace your file with the reference (yours is kept as .mine.py)
 trail use-reference 1 --undo
 trail generate --seed 7       a brand-new Quezal register in data/quezal/mine/
 trail requests practice       the supplier requests of a pack, for the agent milestones
+trail llm                     check your model setup: a text answer, a JSON answer and one tool call
 """
 
 from __future__ import annotations
@@ -117,10 +119,21 @@ def cmd_check(args) -> None:
     else:
         module = importlib.import_module(m.module)
     checks = importlib.import_module(m.checks)
-    from .checks.core import report
+    from .checks import core
+    from .llm import SESSION, LLMError
 
+    core.NO_LLM = args.no_llm
     print(f"Running milestone {m.id} on {'the reference solution' if args.reference else m.file}…")
-    ok = report(m, checks.run(module), args.lang)
+    try:
+        results = checks.run(module)
+    except LLMError as e:  # a model call from code that isn't a model check: say so instead of a traceback
+        sys.exit(f"A model call failed: {e}\nRun `uv run trail llm` to check your setup.")
+    ok = core.report(m, results, args.lang)
+    if any(core.SKIPPED in r.notes for r in results):
+        print("The model checks were skipped (--no-llm): the milestone is complete only once they pass.")
+    if SESSION.calls or SESSION.cached:  # what the run cost, so you can see it before your provider's bill does
+        print(f"LLM use: {SESSION.calls} calls ({SESSION.cached} answers from the cache), "
+              f"{SESSION.input_tokens:,} tokens in, {SESSION.output_tokens:,} out")  # fmt: skip
     sys.exit(0 if ok else 1)
 
 
@@ -161,6 +174,40 @@ def cmd_generate(args) -> None:
     print(f"wrote {folder} · load it with load({name!r})")
 
 
+ADD = {
+    "name": "add",
+    "description": "Add two whole numbers.",
+    "parameters": {
+        "type": "object",
+        "properties": {"a": {"type": "integer"}, "b": {"type": "integer"}},
+        "required": ["a", "b"],
+        "additionalProperties": False,
+    },
+}
+
+
+def tool_round_trip(llm) -> str | None:
+    """One tool call through Conversation, as the agent milestones make them: what the model did, or None if it
+    answered without calling the tool."""
+    from .llm import Conversation
+
+    convo = Conversation(llm, [ADD], system="Use the add tool for any arithmetic.")
+    turn = convo.send("What is 17 + 25? Call the add tool, then reply with the result.")
+    if turn.done:
+        return None
+    results, errors, asked = {}, set(), []
+    for call in turn.tool_calls:
+        try:
+            results[call.id] = int(call.arguments["a"]) + int(call.arguments["b"])
+            asked.append(f"{call.name}({call.arguments['a']}, {call.arguments['b']}) = {results[call.id]}")
+        except (KeyError, TypeError, ValueError):
+            results[call.id] = {"error": "add takes two whole numbers, a and b"}
+            errors.add(call.id)
+            asked.append(f"{call.name}({call.arguments}): bad arguments")
+    final = convo.reply(results, errors=errors)
+    return f"{', '.join(asked)}, then: {final.text.strip()[:60]!r}"
+
+
 def cmd_llm(args) -> None:
     from .llm import LLMError, get_llm
 
@@ -178,9 +225,18 @@ def cmd_llm(args) -> None:
             },
         )
         print("json:", answer)
-        print(f"OK: {llm.usage.calls} calls, {llm.usage.input_tokens} tokens in, {llm.usage.output_tokens} out.")
     except LLMError as e:
         sys.exit(f"LLM setup problem: {e}")
+    no_tools = (f"The agent milestones (d1 to d8) need a model that calls tools (function calling): check that "
+                f"{llm.model} supports it at {llm.provider.name}, or pick another TRAIL_LLM_MODEL.")  # fmt: skip
+    try:
+        trip = tool_round_trip(llm)
+    except LLMError as e:
+        sys.exit(f"Text and JSON work, but the tool call failed: {e}\n{no_tools}")
+    if trip is None:
+        sys.exit(f"Text and JSON work, but the model answered without calling the tool.\n{no_tools}")
+    print("tool:", trip)
+    print(f"OK: {llm.usage.calls} calls, {llm.usage.input_tokens} tokens in, {llm.usage.output_tokens} out.")
 
 
 def main(argv: list[str] | None = None) -> None:
@@ -206,6 +262,9 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("milestone")
     p.add_argument("--reference", action="store_true", help="check the reference solution instead of your code")
     p.add_argument("--lang", default="en", choices=["en", "es"], help="language of the links to the lessons")
+    p.add_argument(
+        "--no-llm", action="store_true", help="skip the checks that call a model (they're marked not started)"
+    )
     p.set_defaults(fn=cmd_check)
 
     p = sub.add_parser("use-reference", help="swap your file for the reference solution")
@@ -213,7 +272,7 @@ def main(argv: list[str] | None = None) -> None:
     p.add_argument("--undo", action="store_true", help="put your own file back")
     p.set_defaults(fn=cmd_use_reference)
 
-    p = sub.add_parser("llm", help="check your LLM provider setup (.env) with two tiny calls")
+    p = sub.add_parser("llm", help="check your LLM provider setup (.env): text, JSON and one tool call")
     p.set_defaults(fn=cmd_llm)
 
     p = sub.add_parser("generate", help="build a new Quezal register")
@@ -222,6 +281,9 @@ def main(argv: list[str] | None = None) -> None:
     p.set_defaults(fn=cmd_generate)
 
     args = parser.parse_args(argv)
+    from . import llm
+
+    llm._load_env()  # before anything runs: NEO4J_* reach store() and the provider settings reach every check
     args.fn(args)
 
 

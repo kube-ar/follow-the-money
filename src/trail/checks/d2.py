@@ -26,6 +26,50 @@ SCREENED = ["549300MG5Q5VOTHPK831", "549300MGDWB06O797V30", "549300LCJ1UJXHYBWI2
             "5493007XYP6TMCO8L243", "213800LH1BZH3DI6G760"]  # fmt: skip
 
 
+KEYS = ("match", "table", "key", "identify", "context")
+
+
+def spec_problems(spec, tables: dict[str, list[dict]]) -> list[str]:
+    """What's wrong with a SPEC's shape: five keys per entry, and tables and columns that exist."""
+    if not isinstance(spec, dict) or not spec:
+        return ["SPEC has no entries: one per kind of record, each with the keys match, table, key, identify and "
+                "context, like the Entity entry the file starts with"]  # fmt: skip
+    out = []
+    for name, t in spec.items():
+        if not isinstance(t, dict) or set(t) != set(KEYS):
+            have = sorted(t) if isinstance(t, dict) else type(t).__name__
+            out.append(f"SPEC[{name!r}] has {have}: every entry has exactly the keys match, table, key, identify and "
+                       "context (see the Entity entry)")  # fmt: skip
+            continue
+        try:
+            re.compile(t["match"])
+        except (re.error, TypeError):
+            out.append(f"SPEC[{name!r}]['match'] isn't a regex")
+        if not isinstance(t["table"], str) or t["table"] not in tables:
+            out.append(f"SPEC[{name!r}]['table'] is {t['table']!r}: one of {sorted(tables)}")
+            continue
+        columns = set(tables[t["table"]][0]) if tables[t["table"]] else set()
+        fields = [t["key"], *t["identify"]] if isinstance(t["identify"], (list, tuple)) else []
+        if not t["identify"] or not fields or not all(isinstance(f, str) for f in fields):
+            out.append(f"SPEC[{name!r}]: 'key' is a column name and 'identify' a list of at least one column name")
+        elif columns and not set(fields) <= columns:
+            out.append(f"SPEC[{name!r}]: {t['table']} has no column {sorted(set(fields) - columns)[0]!r} "
+                       f"(it has {sorted(columns)})")  # fmt: skip
+        if not isinstance(t["context"], dict):
+            out.append(
+                f"SPEC[{name!r}]['context'] maps a name to [table, their column, our column, the column to list]"
+            )
+            continue
+        for rel, link in t["context"].items():
+            ok = (isinstance(link, (list, tuple)) and len(link) == 4 and all(isinstance(x, str) for x in link)
+                  and link[0] in tables)  # fmt: skip
+            theirs = set(tables[link[0]][0]) if ok and tables[link[0]] else set()
+            if not ok or (theirs and not {link[1], link[3]} <= theirs) or (columns and link[2] not in columns):
+                out.append(f"SPEC[{name!r}]['context'][{rel!r}] is {link!r}: [table, their column, our column, the "
+                           "column to list], with tables and columns from trail.desk.records(regs)")  # fmt: skip
+    return out
+
+
 def official_describe(regs, node_id: str, spec: dict) -> dict:
     tables = records(regs)
     for type_name, t in spec.items():
@@ -94,7 +138,14 @@ def _rules(module, regs, r: Result) -> None:
 
 
 def _describe(module, regs, r: Result) -> None:
-    spec = dict(module.SPEC)
+    spec = getattr(module, "SPEC", None)
+    problems = spec_problems(spec, records(regs))
+    if problems:  # the official reading below needs these keys: say what's missing instead of failing inside it
+        for p in problems:
+            r.fail(p)
+        r.score = f"SPEC: {len(problems)} problems"
+        return
+    spec = dict(spec)
     q = regs.quezal
     ids = ["213800LH1BZH3DI6G760", "5493008CGNE47EJ89474", sorted(regs.companies)[0], sorted(q.companies)[0],
            q.truth["schemes"][0]["target"], sorted(q.people)[0], "RUS3094", "X-404"]  # fmt: skip
@@ -103,6 +154,9 @@ def _describe(module, regs, r: Result) -> None:
         total += 1
         got = attempt(r, module.describe, regs, node_id, spec)
         want = official_describe(regs, node_id, spec)
+        if "error" in want and node_id != "X-404":  # every kind of record here needs an entry in SPEC
+            r.fail(f"describe({node_id!r}): no entry in SPEC matches this kind of record")
+            continue
         ok = (got or {}).get("error") is not None if "error" in want else got == want
         right += ok
         if not ok and got is not None:

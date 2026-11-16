@@ -20,18 +20,20 @@ FAILURES = ("context amnesia", "relationship blindness", "temporal ignorance", "
 
 def screen(request: Request, llm: Any) -> Desk:
     """Work one request at a fresh Desk(request) with `llm` (trail.llm.get_llm()) until the agent calls
-    `decide` or runs out of turns, and return the desk. trail.llm.Conversation runs the tool calls."""
+    `decide` or runs out of turns, and return the desk. trail.llm.Conversation carries the turns with the
+    model; desk.call(name, arguments) runs each tool call it asks for."""
     raise NotImplementedError
 
 
 def failures(desk: Desk) -> list[str]:
-    """Which of FAILURES the run shows, in FAILURES' order, by these rules on desk.log:
+    """Which of FAILURES the run shows, in FAILURES' order, by these rules on desk.log (a successful call
+    is one whose action has ok=True; a failed call returned an error and cost nothing):
 
-    context amnesia: the same tool called twice with the same arguments.
-    relationship blindness: no call that asks who is above the supplier (gleif_parent, ch_control,
-      quezal_holders).
-    temporal ignorance: a Quezal supplier (country QZ) and no look at the Gazette, which reports
-      what the register doesn't show yet.
+    context amnesia: the same tool called successfully twice with the same arguments.
+    relationship blindness: no successful call that asks who is above the supplier (gleif_parent,
+      ch_control, quezal_holders).
+    temporal ignorance: a Quezal supplier (country QZ) and no successful look at the Gazette, which
+      reports what the register doesn't show yet.
     reasoning paralysis: no decision at the end.
     tool chaos: three or more calls that failed.
     """

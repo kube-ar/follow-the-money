@@ -33,6 +33,26 @@ REQUIRED = {"Ownership": ("owner", "asset", "recordId"), "Sanction": ("entity", 
 REFS = ("owner", "asset", "entity")
 DATASETS = {"gleif", "companies_house", "uk_sanctions", "quezal"}
 MATCH_BAR = 0.97
+# How the check finds the entity that stands for each register record.
+FINDS = {"GLEIF entities": 'dataset "gleif" and leiCode the LEI',
+         "UK companies": 'dataset "companies_house", jurisdiction "gb" and registrationNumber the company number, '
+                         'as Companies House writes it (00102498)',
+         "Quezal companies": 'dataset "quezal", jurisdiction "qz" and registrationNumber the QZ- id',
+         "Quezal people": 'schema Person in dataset "quezal", named as the register names them'}  # fmt: skip
+
+# Listings made up for the status check, so that every rule of "above" decides a status at least once. The real
+# lists touch none of these companies.
+MADE_UP = {("AFG0002", "07042902"), ("AFG0004", "00306672"), ("QFA-04", "QZ-884347")}
+PRETEND = "pretending 07042902, 00306672 and QZ-884347 are listed"
+WHY = {
+    "07282059": "its corporate owner 07042902 holds 25-50%, not more than half",
+    "00313307": "00306672 holds 75-100% of it, and only Companies House says so",
+    "01413180": "00313307 holds 50-75% of it, and 00306672 holds 75-100% of 00313307",
+    "02134749": "00306672 holds 75-100% of it",
+    "QZ-618835": "QZ-884347 holds 10% of it: a minority holder doesn't control it",
+}
+MADE_UP_ENTITIES = ["07042902", "213800ZRO677Z1T2RA74", "07282059", "00306672", "00313307", "01413180", "02134749",
+                    "QZ-884347", "QZ-618835"]  # fmt: skip
 
 
 def blinded(regs: Registers) -> Registers:
@@ -87,7 +107,7 @@ def _ftm_checks(regs: Registers, ents: list[dict], align: Result, stakes: Result
     coverage.append(("Quezal people", min(persons, len(regs.quezal.people)), len(regs.quezal.people)))
     for what, got, want in coverage:
         if got < want:
-            problems.append(f"{what}: {got} of {want} have an entity")
+            problems.append(f"{what}: {got} of {want} have an entity (found by {FINDS[what]})")
     for p in problems[:8]:
         align.fail(p)
     align.score = f"{len(ents)} entities, {len(problems)} problems"
@@ -234,7 +254,14 @@ def run(module: ModuleType) -> list[Result]:
             right += got == want
             if got != want and got is not None:
                 status.fail(f"{e}: {got!r}, want {want!r}" + ("" if got in answers.STATUSES else " (one of STATUSES)"))
-        tally(status, right, len(entities), "entities")
+        made_up = matches | MADE_UP
+        for e in MADE_UP_ENTITIES:
+            got = attempt(status, module.sanction_status, regs, made_up, e)
+            want = answers.sanction_status(regs, e, made_up)
+            right += got == want
+            if got != want and got is not None:
+                status.fail(f"{e}, {PRETEND}: {got!r}, want {want!r}" + (f" ({WHY[e]})" if e in WHY else ""))
+        tally(status, right, len(entities) + len(MADE_UP_ENTITIES), "entities")
     except NotStarted:
         status.started = status.passed = False
     return results

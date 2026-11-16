@@ -109,10 +109,16 @@ PROMPT = """Read this news item from the Quezal Gazette, published on {published
 {body}
 
 List its claims. kind is "stake" (someone holds or takes a percentage of a company), "rename"
-(a company will use a new name) or "director" (someone joins a board). Copy names exactly as the
-text writes them; use "" for fields that don't apply and 0 for a missing percent. date is when the
-fact happened (YYYY-MM-DD): for "since <month year>" use the first day of that month; if the item
-gives no other date, use the publication date."""
+(a company will use a new name) or "director" (someone joins a board). Fill only the fields of
+the claim's kind:
+- stake: buyer is who now holds or takes the shares, seller who gives them up, company the
+  company whose shares they are, percent the stake.
+- rename: company is the company as the item names it now, new_name the name it will use.
+- director: person is who joins the board, company the company whose board it is.
+Copy names exactly as the text writes them; use "" for fields that don't apply and 0 for a missing
+percent. Only list what the item reports as news: background ("Founded in 2011, X works in
+shipping") is not a claim. date is when the fact happened (YYYY-MM-DD): for "since <month year>"
+use the first day of that month; if the item gives no other date, use the publication date."""
 
 
 def read_article(regs: Registers, article: Article, llm: Any) -> list[dict]:

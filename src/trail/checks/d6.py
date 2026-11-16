@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from types import ModuleType
 
-from ..desk import SOURCE_WORDS, TOOL_SOURCE, Desk
+from ..desk import TOOL_SOURCE, Desk, sources_cited
 from ..requests import load_requests, truth_for
 from .core import NotStarted, Result, attempt, tally
 
@@ -61,8 +61,7 @@ def scripted() -> dict[str, tuple[Desk, str]]:
 
 
 def official_waste(desk: Desk) -> int:
-    text = " ".join((desk.decision or {}).get("reasons", [])).lower()
-    cited = {k for k, words in SOURCE_WORDS.items() if any(w in text for w in words)}
+    cited = sources_cited((desk.decision or {}).get("reasons", []))
     return sum(
         a.cost for a in desk.log if a.ok and TOOL_SOURCE.get(a.tool) in SOURCES and TOOL_SOURCE[a.tool] not in cited
     )

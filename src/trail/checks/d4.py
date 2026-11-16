@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from types import ModuleType
 
-from ..desk import DECISIONS, SOURCE_WORDS, Desk
+from ..desk import DECISIONS, Desk, sources_cited
 from ..requests import load_requests
 from .agent import needs_llm, run_pack, summary
 from .core import NotStarted, Result, attempt, tally
@@ -14,6 +14,7 @@ L_WORKFLOW = ("agentic-graphrag", "agent-workflow-graph", "Agent workflow graphs
 L_OUTPUT = ("agentic-graphrag", "structured-output", "Structured output for agents")
 L_PLANNING = ("agentic-graphrag", "agent-planning", "Agent planning")
 DESK_TOOLS = set(Desk.COSTS) - {"decide"}
+MAX_TOOLS = 3  # a step per question: GLEIF, Companies House and Quezal each answer "who is above?" with their own tool
 PROBLEMS = ("bad-decision", "unknown-entity", "too-few-sources", "unconsulted-source", "questionnaire-cited",
             "stakes-over-100", "approve-without-list")  # fmt: skip
 
@@ -38,8 +39,7 @@ def official_problems(desk: Desk, d: dict) -> list[str]:
     e = (d.get("entity") or "").strip()
     if e and e not in regs.gleif and e not in regs.companies and e not in regs.quezal.companies:
         found.add("unknown-entity")
-    text = " ".join(d.get("reasons", [])).lower()
-    cited = {k for k, words in SOURCE_WORDS.items() if any(w in text for w in words)}
+    cited = sources_cited(d.get("reasons", []))
     if not {"register", "list"} <= cited:
         found.add("too-few-sources")
     if (cited - {"questionnaire"}) - desk.consulted():
@@ -112,8 +112,8 @@ def _plan(module, r: Result) -> None:
         tools = s.get("tools", [])
         if s.get("kind") != "execution" and tools:
             problems.append(f"{s['id']}: only execution steps hold tools")
-        if len(tools) > 2:
-            problems.append(f"{s['id']}: {len(tools)} tools; keep execution steps narrow (two at most)")
+        if len(tools) > MAX_TOOLS:
+            problems.append(f"{s['id']}: {len(tools)} tools; keep execution steps narrow ({MAX_TOOLS} at most)")
         if set(tools) - DESK_TOOLS:
             problems.append(f"{s['id']}: unknown tools {sorted(set(tools) - DESK_TOOLS)}")
     for p in problems:

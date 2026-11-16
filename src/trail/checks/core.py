@@ -8,9 +8,12 @@ import traceback
 from collections.abc import Callable
 from dataclasses import dataclass, field
 
+from ..llm import LLMError
 from ..milestones import Milestone, lesson_url
 
 MAX_DETAILS = 4
+NO_LLM = False  # `trail check --no-llm`: the checks that call a model are skipped
+SKIPPED = "Skipped: --no-llm. Run without it to include the checks that call your model."
 
 
 class NotStarted(Exception):
@@ -36,6 +39,7 @@ def attempt(result: Result, fn: Callable, *args, none_ok: bool = False, **kwargs
     """Call your function. NotImplementedError marks the check as not started.
 
     A None answer counts as a forgotten return, unless `none_ok` (None is a real answer there).
+    An LLMError goes up to the check, which says the model call failed (a bad key isn't your code's fault).
     """
     try:
         value = fn(*args, **kwargs)
@@ -43,6 +47,8 @@ def attempt(result: Result, fn: Callable, *args, none_ok: bool = False, **kwargs
         result.started = False
         result.passed = False
         raise NotStarted from e
+    except LLMError:
+        raise
     except Exception:
         result.passed = False
         tb = traceback.format_exc().strip().splitlines()
@@ -52,6 +58,22 @@ def attempt(result: Result, fn: Callable, *args, none_ok: bool = False, **kwargs
     if value is None and not none_ok:
         result.fail(f"{getattr(fn, '__name__', 'your function')} returned None: did it forget a return?")
     return value
+
+
+def needs_llm(result: Result):
+    """The model from .env for a check that calls one, or None (the check is then not started, with a note)."""
+    from ..llm import get_llm
+
+    if NO_LLM:
+        result.started = result.passed = False
+        result.notes.append(SKIPPED)
+        return None
+    try:
+        return get_llm()
+    except LLMError as e:
+        result.started = result.passed = False
+        result.notes.append(f"Needs an LLM: {e}. Then run `uv run trail llm`.")
+        return None
 
 
 def tally(result: Result, right: int, total: int, unit: str) -> None:

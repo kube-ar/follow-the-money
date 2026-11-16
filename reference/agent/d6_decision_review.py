@@ -4,15 +4,14 @@ from __future__ import annotations
 
 import networkx as nx
 
-from trail.desk import SOURCE_WORDS, TOOL_SOURCE, Desk
+from trail.desk import TOOL_SOURCE, Desk, sources_cited
 
 DIAGNOSES = ("grounding", "knowledge", "retrieval", "reasoning", "none")
 SOURCES = {k for k in TOOL_SOURCE.values() if k != "questionnaire"}
 
 
 def _cited(decision: dict | None) -> set[str]:
-    text = " ".join((decision or {}).get("reasons", [])).lower()
-    return {kind for kind, words in SOURCE_WORDS.items() if any(w in text for w in words)}
+    return sources_cited((decision or {}).get("reasons", []))
 
 
 def execution_graph(desk: Desk) -> nx.DiGraph:

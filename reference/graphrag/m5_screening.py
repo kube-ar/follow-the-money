@@ -1,18 +1,18 @@
 """Milestone 5 · Screening a supplier: a reference solution. Spoilers: `trail use-reference 5` copies it.
 
-It reuses the matching and the open-world status from milestone 2 (loaded from the same folder)."""
+It reuses the matching and the open-world status of milestone 2's reference, loaded from reference/graphrag
+(never from the folder it sits in: after `trail use-reference 5`, that folder holds your own milestone 2)."""
 
 from __future__ import annotations
 
 import importlib.util
 import sys
-from pathlib import Path
 
 from rapidfuzz import fuzz
 
-from trail.registers import Registers
+from trail.registers import ROOT, Registers
 
-HERE = Path(__file__).resolve().parent
+M2 = ROOT / "reference" / "graphrag" / "m2_three_sources.py"
 STATUSES = ("listed", "owned by a listed entity", "no listing found")
 LAYERS = ("matching", "linking", "extraction", "answers")
 _M2 = None
@@ -22,7 +22,7 @@ _MATCHES: dict[int, set] = {}
 def _m2():
     global _M2
     if _M2 is None:
-        spec = importlib.util.spec_from_file_location("m2_for_m5", HERE / "m2_three_sources.py")
+        spec = importlib.util.spec_from_file_location("m2_for_m5", M2)
         _M2 = importlib.util.module_from_spec(spec)
         sys.modules[spec.name] = _M2
         spec.loader.exec_module(_M2)

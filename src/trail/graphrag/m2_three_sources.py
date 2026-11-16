@@ -35,6 +35,11 @@ def to_ftm(regs: Registers) -> list[dict]:
       its dates and the record it came from (recordId: the PSC id, the child LEI, the Quezal
       holder and company). Individuals with significant control are anonymous: leave them out.
     - Jurisdictions and countries are lowercase ISO codes: "gb", "ru", Quezal is "qz".
+    - How the check finds the entity for each record: a GLEIF entity by its leiCode (dataset gleif);
+      a UK company by registrationNumber equal to its company number, exactly as Companies House
+      writes it ("00102498"), with jurisdiction "gb" (dataset companies_house); a Quezal company by
+      registrationNumber equal to its QZ- id, with jurisdiction "qz" (dataset quezal); a Quezal
+      person as a Person in dataset quezal with the name the register gives.
     """
     raise NotImplementedError
 

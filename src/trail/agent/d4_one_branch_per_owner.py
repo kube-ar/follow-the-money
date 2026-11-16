@@ -27,7 +27,7 @@ def compound_success(per_step: float, steps: int) -> float:
 
 def plan(request: Request) -> list[dict]:
     """The screening as steps {"id", "kind" (one of KINDS), "tools": [desk tools], "needs": [step ids]}, made
-    without calling a tool. All four kinds appear; only execution steps hold tools, two at most each. Include
+    without calling a tool. All four kinds appear; only execution steps hold tools, three at most each. Include
     a step with id "owners" (who is above the supplier) and one with id "decide"."""
     raise NotImplementedError
 
@@ -45,7 +45,8 @@ def phases(steps: list[dict]) -> list[list[str]]:
 
 def validate_decision(desk: Desk, decision: dict) -> list[str]:
     """The PROBLEMS a decision {"decision", "entity", "reasons", "owners": [{"id", "percent"}]} has, in PROBLEMS'
-    order. Uses trail.desk.SOURCE_WORDS for what the reasons cite and desk.consulted() for what was looked up.
+    order. Uses trail.desk.sources_cited(reasons) for what the reasons cite (the officer's own word rules) and
+    desk.consulted() for what was looked up.
 
     bad-decision: not approve, reject or escalate. unknown-entity: an entity no register has (empty is fine).
     too-few-sources: the reasons don't cite a register and a list. unconsulted-source: they cite a kind of

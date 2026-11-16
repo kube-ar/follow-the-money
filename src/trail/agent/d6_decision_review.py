@@ -21,7 +21,7 @@ DIAGNOSES = ("grounding", "knowledge", "retrieval", "reasoning", "none")
 def execution_graph(desk: Desk) -> Any:
     """A node per desk call (step, tool, arguments, spent, cost, ok), NEXT between consecutive calls, and,
     if there was a decision, a node for it with CITES edges to the calls whose kind of source (trail.desk.
-    TOOL_SOURCE) its reasons name (trail.desk.SOURCE_WORDS)."""
+    TOOL_SOURCE) its reasons name (trail.desk.sources_cited)."""
     raise NotImplementedError
 
 

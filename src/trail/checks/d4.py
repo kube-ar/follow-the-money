@@ -65,7 +65,13 @@ def run(module: ModuleType) -> list[Result]:
         except NotStarted:
             r.started = r.passed = False
     llm = needs_llm(agent)
-    if llm is not None:
+    from ..board import reachable
+
+    trouble = reachable() if llm is not None else None
+    if trouble:
+        agent.started = agent.passed = False
+        agent.notes.append(trouble)
+    elif llm is not None:
         try:
             runs = run_pack(agent, module.screen, "practice", llm)
             decided, accepted, correct, credits = summary(runs)
@@ -126,6 +132,9 @@ def _plan(module, r: Result) -> None:
             problems.append(f"{s['id']}: {len(tools)} tools; keep execution steps narrow ({MAX_TOOLS} at most)")
         if set(tools) - DESK_TOOLS:
             problems.append(f"{s['id']}: unknown tools {sorted(set(tools) - DESK_TOOLS)}")
+    if not any(s.get("kind") == "execution" and "board" in s.get("tools", []) for s in steps):
+        problems.append("no execution step asks the ownership board: who owns whom, however far up, is a question "
+                        "for the graph (the board tool)")  # fmt: skip
     for p in problems:
         r.fail(p)
     r.score = f"{len(steps)} steps, {len(problems)} problems"

@@ -213,6 +213,7 @@ def test_d5_catches_a_gate_that_lets_everything_through():
     )
 
 
+@pytest.mark.skipif(not neo4j_up(), reason="needs Neo4j: docker compose up -d")
 def test_d4_decides_through_structured_output_with_a_fake_llm():
     from trail.requests import load_requests, truth_for
 
@@ -440,9 +441,11 @@ def test_a_failed_model_call_reaches_the_check():
 
 def test_d4_fails_a_decision_the_officer_refuses(monkeypatch):
     """The plan milestone is about checking a decision before the officer sees it: a refused one fails it."""
+    from trail import board
     from trail.desk import Desk
 
     monkeypatch.setenv("TRAIL_LLM_PROVIDER", "anthropic")  # configured, but never called below
+    monkeypatch.setattr(board, "reachable", lambda: None)  # this agent never asks the board
 
     def screen(request, llm, mention_questionnaire=False):
         desk = Desk(request)
@@ -473,6 +476,7 @@ def _gathered(ref, request):
     return desk, notes
 
 
+@pytest.mark.skipif(not neo4j_up(), reason="needs Neo4j: docker compose up -d")
 def test_d4_reference_gathers_what_each_rule_needs():
     """On every request of every pack, with no model, the reference's plan returns the facts the policy's answer
     rests on: a listed owner however far up the chain (P1), no identification (P2), the known stake (P3), a Gazette
@@ -496,10 +500,11 @@ def test_d4_reference_gathers_what_each_rule_needs():
             if truth.rule == "P3":
                 assert low, request.name
             if truth.rule == "P4":
-                assert notes["news"], request.name
+                assert ref.about_the_supplier(notes)[0], request.name
             assert desk.spent <= desk.budget, request.name
 
 
+@pytest.mark.skipif(not neo4j_up(), reason="needs Neo4j: docker compose up -d")
 def test_d4_reference_repairs_and_catches_what_code_can_see():
     from trail.requests import load_requests
 
@@ -516,3 +521,57 @@ def test_d4_reference_repairs_and_catches_what_code_can_see():
     assert ref.contradictions(notes, {**fixed, "decision": "approve"})
     schema = ref.decision_schema(notes)
     assert "QZ-877779" in schema["properties"]["entity"]["enum"] and "" in schema["properties"]["entity"]["enum"]
+
+
+def test_the_board_is_read_only_and_bounded():
+    """What a model writes for the board is checked before it runs: no Neo4j needed for that."""
+    from trail.board import problem, sources
+
+    ok = "MATCH (h)-[x:HOLDS*1..3]->(c:Company {id: 'QZ-877779'}) RETURN h.id LIMIT 10"
+    assert problem(ok, 50) is None and sources(ok) == {"register"}
+    assert "read-only" in problem("MATCH (n) DETACH DELETE n RETURN 1 LIMIT 1", 50)
+    assert "LIMIT" in problem("MATCH (c:Company) RETURN c.id", 50)
+    assert "Designation" in problem("MATCH (d:Designation) RETURN d LIMIT 5", 50)  # the lists stay at the desk
+    assert sources("MATCH (a:Article)-[:MENTIONS]->(c:Company) RETURN a.id LIMIT 5") == {"news", "register"}
+
+
+def test_the_officer_counts_what_a_board_query_read(monkeypatch):
+    from trail import board
+    from trail.desk import Desk
+    from trail.requests import load_requests
+
+    monkeypatch.setattr(board, "run", lambda regs, register, query, params, max_rows: [{"id": "QZ-1"}])
+    desk = Desk(load_requests("practice")[2])
+    desk.call("board", {"query": "MATCH (a:Article) RETURN a.id LIMIT 5"})
+    assert desk.consulted() == {"news"} and desk.spent == desk.COSTS["board"]
+    assert "board" not in {t["name"] for t in desk.tools()} and "board" in {t["name"] for t in desk.tools(board=True)}
+
+
+def test_the_board_keeps_the_mentions_the_linker_cant_resolve():
+    """A short name that fits several companies stays linked to all of them, unsure; a full name is sure.
+    Milestone 3's linker, as the desk loads it."""
+    from trail.board import mentions
+    from trail.registers import load
+
+    final = load("final")
+    larkspur = next(a for a in final.quezal.gazette if a.id == "G-020")  # "Larkspur issued new shares…": nine Larkspurs
+    assert mentions(final, larkspur).get("QZ-248304") is False
+    practice = load("practice")
+    velden = {a.id: a for a in practice.quezal.gazette}
+    assert mentions(practice, velden["G-002"]).get("QZ-102501") is False  # "…holds 51% of Velden Shoal": which one?
+    assert mentions(practice, velden["G-024"]).get("QZ-102501") is True  # "Velden Shoal Partners", in full
+
+
+def test_d4_needs_a_plan_that_asks_the_board():
+    ref = reference("d4")
+    no_graph = [dict(s, tools=[t for t in s["tools"] if t != "board"] or ["gazette"]) for s in ref.plan(None)]
+    no_graph = [dict(s, tools=[]) if s["kind"] != "execution" else s for s in no_graph]
+    assert "A plan that's a workflow graph" in failing("d4", patched("d4", plan=lambda request: no_graph)[0])
+
+
+def test_d7_catches_a_junior_desk_that_can_ask_the_board():
+    """The ownership board shows who owns whom: a junior desk that still answers it leaks what the role hides."""
+    ref = reference("d7")
+    leaky = dict(ref.RESTRICTED, junior={"ch_control", "quezal_holders"})
+    module = patched("d7", restricted=lambda desk, role: ref._Restricted(desk, leaky.get(role, set())))[0]
+    assert "Ownership data is invisible to a junior desk" in failing("d7", module)

@@ -2,7 +2,8 @@
 
 The plan does the lookups in code and turns what they returned into a short list of facts: the supplier,
 its owners and the owners' owners, who controls it, what the lists say about each of them, what the Gazette
-reports. The model makes one decision, under the policy: approve, reject or escalate. Its answer can only name
+reports. Who owns whom, and which Gazette items name the supplier, come from the ownership board: Cypher over
+the graph GraphRAG milestones 3 and 4 build (trail.board, which needs Neo4j). The lists come from the desk. The model makes one decision, under the policy: approve, reject or escalate. Its answer can only name
 an id the desk returned (an enum in the schema), its meaning is checked before the officer sees it, what code
 can fix, code fixes, and what disagrees with the facts goes back to the model once. The fewer things the model
 has to get right, the less a small model gets wrong.
@@ -13,15 +14,13 @@ from __future__ import annotations
 import re
 from typing import Any
 
-from trail.desk import DECISIONS, Desk, Request, key, sources_cited
+from trail.desk import DECISIONS, Desk, Request, sources_cited
 
 KINDS = ("reasoning", "execution", "decision", "validation")
 PROBLEMS = ("bad-decision", "unknown-entity", "too-few-sources", "unconsulted-source", "questionnaire-cited",
             "stakes-over-100", "approve-without-list")  # fmt: skip
 MATCH = 90  # a search hit this close is the supplier; below it, the registers don't identify it
 LISTED = 95  # a list entry this close to a name is that name; closer ones than 85 never come back
-UP = 6  # how many levels of Quezal holders the owners step climbs, at most
-KEEP = 12  # credits the climb leaves for the lists and the Gazette
 
 
 def compound_success(per_step: float, steps: int) -> float:
@@ -33,9 +32,9 @@ def plan(request: Request) -> list[dict]:
         {"id": "frame", "kind": "reasoning", "tools": [], "needs": []},
         {"id": "identify", "kind": "execution", "tools": ["search"], "needs": ["frame"]},
         {"id": "record", "kind": "execution", "tools": ["gleif_record", "ch_company", "quezal_company"], "needs": ["identify"]},
-        {"id": "owners", "kind": "execution", "tools": ["gleif_parent", "ch_control", "quezal_holders"], "needs": ["identify"]},
+        {"id": "owners", "kind": "execution", "tools": ["board", "ch_control", "quezal_holders"], "needs": ["identify"]},
         {"id": "lists", "kind": "execution", "tools": ["sanctions_search", "watchlist_search"], "needs": ["identify"]},
-        {"id": "news", "kind": "execution", "tools": ["gazette"], "needs": ["identify"]},
+        {"id": "news", "kind": "execution", "tools": ["board"], "needs": ["identify"]},
         {"id": "decide", "kind": "decision", "tools": [], "needs": ["record", "owners", "lists", "news"]},
         {"id": "check", "kind": "validation", "tools": [], "needs": ["decide"]},
     ]  # fmt: skip
@@ -122,39 +121,46 @@ def _record(desk: Desk, request: Request, notes: dict) -> None:
         notes["record"] = desk.call("ch_company", {"number": e})
 
 
+# Who owns whom, however far up, goes to the ownership board: the graph GraphRAG milestone 4 builds. One Cypher
+# query replaces a lookup per company on the way up.
+
+GLEIF_UP = """
+MATCH p = (:Company {id: $id})-[:PARENT*1..6]->(o:Company)
+RETURN o.id AS id, o.name AS name, length(p) AS level ORDER BY level LIMIT 50"""
+
+STAKES_ABOVE = """
+MATCH (c:Company)-[:HOLDS*0..6]->(:Company {id: $id})
+WITH DISTINCT c
+MATCH (h)-[x:HOLDS]->(c)
+RETURN h.id AS holder, h.name AS name, c.id AS company, x.percent AS percent LIMIT 50"""
+
+NEWS_ABOUT = """
+MATCH (a:Article)-[m:MENTIONS]->(c:Company {id: $id})
+OPTIONAL MATCH (a)-[:MENTIONS {sure: false}]->(other:Company) WHERE other <> c
+RETURN a.id AS id, a.published_on AS published_on, a.text AS text, m.sure AS sure, count(other) AS others
+ORDER BY published_on LIMIT 20"""
+
+
 def _owners(desk: Desk, request: Request, notes: dict) -> None:
-    """Who owns the supplier, by its register. On Quezal, climb: the holders, then the holders of every company
-    among them, until no company is left above (or the credits run low), and work out in code who controls it."""
+    """Who owns the supplier, by its register. GLEIF parents at every level, and on Quezal, every stake in every
+    company above the supplier, from the board; who controls the supplier is worked out in code from those stakes."""
     e, notes["owners"] = notes["entity"], []
     if is_lei(e):
-        parents = desk.call("gleif_parent", {"lei": e})
-        for kind in ("direct_parent", "ultimate_parent_reported"):
-            p = parents.get(kind) if isinstance(parents, dict) else None
-            if p and p["lei"] not in [o["id"] for o in notes["owners"]]:
-                notes["owners"].append({"id": p["lei"], "name": p["name"], "how": f"GLEIF {kind.replace('_', ' ')}"})
+        for p in rows(desk.call("board", {"query": GLEIF_UP, "params": {"id": e}})):
+            how = "GLEIF direct parent" if p["level"] == 1 else f"GLEIF parent, {p['level']} levels up"
+            notes["owners"].append({"id": p["id"], "name": p["name"], "how": how})
     if notes["uk_number"]:
         for o in rows(desk.call("ch_control", {"number": notes["uk_number"]})):
             if o["kind"] in ("corporate", "legal-person") and (o["share_band"] or "").startswith(("50", "75")):
                 notes["owners"].append({"id": o.get("registration_number") or o["name"], "name": o["name"],
                                         "how": f"Companies House owner, {o['share_band']} of the shares"})  # fmt: skip
     if e.startswith("QZ-"):
+        notes["holders"] = desk.call("quezal_holders", {"id": e})  # the supplier's own holders, with since and date
         stakes: dict[str, dict[str, float]] = {}
         names: dict[str, str] = {}
-        level = [e]
-        for _ in range(UP):
-            above = []
-            for company in level:
-                if company != e and desk.remaining < KEEP:
-                    break
-                held = desk.call("quezal_holders", {"id": company})
-                if company == e and isinstance(held, dict):
-                    notes["holders"] = held
-                for h in rows(held, "holders"):
-                    stakes.setdefault(company, {})[h["holder"]] = h["percent"]
-                    names[h["holder"]] = h["name"]
-                    if h["holder"].startswith("QZ-") and h["holder"] not in stakes and h["holder"] not in above:
-                        above.append(h["holder"])
-            level = above
+        for r in rows(desk.call("board", {"query": STAKES_ABOVE, "params": {"id": e}})):
+            stakes.setdefault(r["company"], {})[r["holder"]] = r["percent"]
+            names[r["holder"]] = r["name"]
         notes["stakes"], notes["names"] = stakes, names
         for owner in sorted(names):
             if owner.startswith("QZ-") and e in controlled(stakes, owner):
@@ -196,25 +202,11 @@ def _lists(desk: Desk, request: Request, notes: dict) -> None:
 
 
 def _news(desk: Desk, request: Request, notes: dict) -> None:
-    """The Gazette often names a company by its first word ("Larkspur issued new shares…"). Search that word, then
-    link each item in code: it's about the supplier when it names the supplier in full, or names it only by the
-    short form while no item names another company that starts the same way ("Velden Shoal Capital IBC")."""
-    notes["news"], notes["other_news"] = [], 0
-    if notes["country"] != "QZ":
-        return
-    words = request.name.split()
-    short = words[0] if len(words[0]) >= 4 or len(words) == 1 else " ".join(words[:2])
-    notes["short"], supplier = short, key(request.name)
-    items = rows(desk.call("gazette", {"name": short}))
-    named = {a["id"]: [key(m) for m in re.findall(rf"\b{re.escape(short)}(?: [A-Z][\w&.-]*)*", a["text"])]
-             for a in items}  # fmt: skip
-    others = {n for ns in named.values() for n in ns if n != supplier and not supplier.startswith(n)}
-    for a in items:
-        full = supplier in key(a["text"])
-        if full or (named[a["id"]] and not others):
-            notes["news"].append(dict(a, full=full))
-        else:
-            notes["other_news"] += 1
+    """The Gazette items about the supplier, as milestone 3's linker tied them to it on the board. An item whose
+    short name fits several companies is tied to all of them, unsure: it may be about the supplier."""
+    notes["news"] = []
+    if notes["country"] == "QZ" and notes["entity"].startswith("QZ-"):
+        notes["news"] = rows(desk.call("board", {"query": NEWS_ABOUT, "params": {"id": notes["entity"]}}))
 
 
 def _owner_branch(desk: Desk, owner: dict, notes: dict) -> None:
@@ -247,7 +239,9 @@ policy. Use only these facts. Apply the rules in order: the first one that fits 
 - P3 escalate: a Quezal supplier whose known shareholders hold less than 75%.
 - P4 escalate: the Gazette reports a change for the supplier that its register doesn't show yet: a stake bought or
   agreed, or a new name, in the supplier itself. A report of something the register already shows is not a change,
-  and neither is a stake the supplier takes in another company.
+  and neither is a stake the supplier takes in another company. An item the linker can't tie to one company may
+  still be about the supplier: if it reports such a change after the register's date, you can't rule it out, so
+  escalate.
 - P5 approve: none of the above.
 A list entry counts when it is the same company: the same name (legal forms and punctuation aside) or the same
 registration number. A different company with a similar name doesn't count."""
@@ -287,17 +281,28 @@ def facts(desk: Desk, request: Request, notes: dict) -> str:
     for o in notes["owners"]:
         lines.append(f"Lists, owner {o['id']} {o['name']}: {_hits(o.get('lists', {}))}.")
     if notes["country"] == "QZ":
-        news = notes.get("news", [])
-        short = notes.get("short", request.name)
+        news, earlier = about_the_supplier(notes)
         for a in news:
-            names = ("names the supplier in full" if a["full"] else
-                     f'names it as "{short}", and no other company starting with "{short}" appears in the Gazette')  # fmt: skip
-            lines.append(f"Gazette {a['id']} ({a['published_on']}, {names}): {' '.join(a['text'].split())[:400]}")
+            whose = ("names the supplier" if a["sure"] else f"names a short name that fits the supplier and "
+                     f"{a['others']} other companies: the linker can't tell which")  # fmt: skip
+            lines.append(f"Gazette {a['id']} ({a['published_on']}, {whose}): {' '.join(a['text'].split())[:400]}")
         if not news:
-            lines.append("Gazette: no item is about the supplier.")
-        if notes.get("other_news"):
-            lines.append(f'Gazette: {notes["other_news"]} more items name other companies starting with "{short}".')
+            lines.append("Gazette: no item names the supplier.")
+        if earlier:
+            lines.append(f"Gazette: {earlier} more items name a short name that fits the supplier and other companies, "
+                         "dated before the register's date. The register would show those changes if they were the "
+                         "supplier's, so they're about other companies.")  # fmt: skip
     return "\n".join(lines)
+
+
+def about_the_supplier(notes: dict) -> tuple[list[dict], int]:
+    """The Gazette items that may be about the supplier, and how many unsure ones were set aside. An item the linker
+    is sure about stays. An unsure one dated before the register's date would already show in the register if it
+    were the supplier's change, so it's about another company; one dated after may be a change not there yet."""
+    held = notes.get("holders") if isinstance(notes.get("holders"), dict) else {}
+    as_of = held.get("as_of", "")
+    keep = [a for a in notes.get("news", []) if a["sure"] or a["published_on"] > as_of]
+    return keep, len(notes.get("news", [])) - len(keep)
 
 
 def decision_schema(notes: dict) -> dict:

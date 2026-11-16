@@ -56,9 +56,12 @@ def run(module: ModuleType) -> list[Result]:
             right += junior.call("quezal_holders", {"id": entity}) == {"error": unknown}
             total += 1
             right += "holders" in (senior.call("quezal_holders", {"id": entity}) or {})
+            total += 1  # the ownership board shows who owns whom too
+            query = {"query": f"MATCH (h)-[:HOLDS]->(:Company {{id: '{entity}'}}) RETURN h.id LIMIT 5"}
+            right += junior.call("board", query) == {"error": unknown.replace("'quezal_holders'", "'board'")}
             if right < total:
-                access.fail("a junior desk must not list ch_control or quezal_holders, must fail on them exactly like "
-                            "an unknown tool, and a senior desk must still have them")  # fmt: skip
+                access.fail("a junior desk must not list ch_control or quezal_holders, must fail on them and on the "
+                            "board exactly like an unknown tool, and a senior desk must still have them")  # fmt: skip
         tally(access, right, total or 1, "checks")
     except NotStarted:
         access.started = access.passed = False

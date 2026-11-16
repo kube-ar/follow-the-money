@@ -15,6 +15,10 @@ reject or escalate. The compliance officer accepts the decision only if it follo
     desk.verdict()                              # what the officer decided, and whether it was right
 
 Every call is recorded in `desk.log`: the raw material of an execution graph (milestone d6).
+
+`board` asks the ownership board in Cypher: the graph GraphRAG milestones 3 and 4 build (trail.board). It's
+for planned agents (d4, d8), and needs Neo4j. `desk.tools(board=True)` offers it to a model too; by default
+the tools are the lookups, as an analyst at a bare desk has them.
 """
 
 from __future__ import annotations
@@ -134,7 +138,8 @@ class Desk:
 
     COSTS = {"policy": 0, "questionnaire": 0, "search": 1, "gleif_record": 1, "gleif_parent": 1, "ch_company": 1,
              "ch_control": 2, "quezal_company": 1, "quezal_holders": 2, "sanctions_search": 2, "watchlist_search": 2,
-             "gazette": 2, "decide": 0}  # fmt: skip
+             "gazette": 2, "board": 2, "decide": 0}  # fmt: skip
+    BOARD_ROWS = 50
 
     @property
     def regs(self) -> Registers:
@@ -142,7 +147,20 @@ class Desk:
 
     # ── Tool descriptions ─────────────────────────────────────────────────────
 
-    def tools(self) -> list[dict]:
+    def tools(self, board: bool = False) -> list[dict]:
+        """The desk's tools as JSON Schema descriptions. `board=True` adds the ownership board."""
+        tools = self._tools()
+        if board:
+            from .board import SCHEMA
+
+            tools.insert(-1, {"name": "board", "description": f"A read-only Cypher query over the ownership board, "
+                              f"the graph of the registers and the Gazette. End it with LIMIT (at most "
+                              f"{self.BOARD_ROWS}). 2 credits.\n{SCHEMA}", "parameters": {"type": "object", "properties": {
+                                  "query": {"type": "string"}, "params": {"type": "object"}},
+                                  "required": ["query"], "additionalProperties": False}})  # fmt: skip
+        return tools
+
+    def _tools(self) -> list[dict]:
         obj = lambda props, req: {"type": "object", "properties": props, "required": req, "additionalProperties": False}  # noqa: E731
         s = {"type": "string"}
         return [
@@ -334,6 +352,11 @@ class Desk:
         return [{"id": a.id, "published_on": a.published_on, "text": a.body}
                 for a in self.regs.quezal.gazette if k in key(a.body)][:MAX_ROWS]  # fmt: skip
 
+    def _board(self, query: str, params: dict | None = None) -> list[dict] | dict:
+        from .board import run
+
+        return run(self.regs, self.request.register, query, params, self.BOARD_ROWS)
+
     def _decide(self, decision: str, entity: str, reasons: list[str]) -> dict:
         # Check the shape before recording anything: a malformed decision goes back to the model as an
         # error and the screening goes on, instead of a broken decision that ends it.
@@ -347,7 +370,14 @@ class Desk:
     # ── The compliance officer ────────────────────────────────────────────────
 
     def consulted(self) -> set[str]:
-        return {TOOL_SOURCE[a.tool] for a in self.log if a.ok and a.tool in TOOL_SOURCE}
+        """The kinds of source the desk returned: by tool, and for the board, by what each query read."""
+        from .board import sources
+
+        found = {TOOL_SOURCE[a.tool] for a in self.log if a.ok and a.tool in TOOL_SOURCE}
+        for a in self.log:
+            if a.ok and a.tool == "board":
+                found |= sources(a.arguments.get("query", ""))
+        return found
 
     def cited(self) -> set[str]:
         return sources_cited((self.decision or {}).get("reasons", []))

@@ -13,7 +13,6 @@ VECTOR_GROUPS = ("213800LH1BZH3DI6G760", "549300LCJ1UJXHYBWI24", "353800V2V8PUY9
 
 L_SILOS = ("graphrag", "data-silos", "Data silos")
 L_GRAPH = ("graphrag", "what-is-a-graph", "What is a graph?")
-L_GRAPHRAG = ("graphrag", "what-is-graphrag", "What is GraphRAG?")
 L_VECTOR = ("graphrag", "knowledge-graph-vs-vector-database", "Knowledge graph vs vector database")
 
 
@@ -28,7 +27,7 @@ def run(module: ModuleType) -> list[Result]:
     regs = load()
     summary = Result("Every register is in the graph", L_SILOS)
     top = Result("The top of every chain", L_GRAPH)
-    grp = Result("Everything under a parent", L_GRAPHRAG)
+    grp = Result("Everything under a parent", L_GRAPH)
     loop = Result("Ownership loops", L_GRAPH)
     vector = Result("The vector search baseline", L_VECTOR)
     results = [summary, top, grp, loop, vector]

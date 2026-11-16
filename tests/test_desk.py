@@ -101,3 +101,30 @@ def test_an_agent_loop_on_a_scripted_model(monkeypatch):
     desk = ref.screen(request, get_llm("openrouter", "some/model"))
     assert desk.decision["decision"] == "approve" and desk.verdict()["correct"]
     assert ref.failures(desk) == []
+
+
+def test_a_malformed_decision_is_an_error_not_a_decision():
+    """Models sometimes send reasons as objects: the desk says so and the screening goes on."""
+    desk = Desk(load_requests("practice")[0])
+    got = desk.call("decide", {"decision": "approve", "entity": "", "reasons": [{"fact": "x", "source": "GLEIF"}]})
+    assert "error" in got
+    assert desk.decision is None
+    assert desk.verdict()["accepted"] is False
+
+
+@pytest.mark.parametrize(
+    ("reason", "kinds"),
+    [
+        ("UK Sanctions: no match.", {"list"}),
+        ("Designations searched: none is this company.", {"list"}),
+        ("A strange name for a leisure group.", set()),
+        ("GLEIF: its parents are registered at Companies House.", {"register"}),
+        ("The shareholders are known; the Gazette reports nothing.", {"register", "news"}),
+        ("The questionnaire is not evidence.", {"questionnaire"}),
+    ],
+)
+def test_sources_are_cited_by_whole_words(reason, kinds):
+    """A source counts when a reason names it as a word (plus an ending), not when its letters hide in another word."""
+    from trail.desk import sources_cited
+
+    assert sources_cited([reason]) == kinds

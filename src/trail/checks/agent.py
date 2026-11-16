@@ -5,18 +5,7 @@ from __future__ import annotations
 from collections.abc import Callable
 
 from ..requests import load_requests
-from .core import NotStarted, Result, attempt
-
-
-def needs_llm(r: Result):
-    from ..llm import LLMError, get_llm
-
-    try:
-        return get_llm()
-    except LLMError as e:
-        r.started = r.passed = False
-        r.notes.append(f"Needs an LLM: {e}. Then run `uv run trail llm`.")
-        return None
+from .core import NotStarted, Result, attempt, needs_llm
 
 
 def run_pack(r: Result, fn: Callable, pack: str, llm, *extra) -> list:

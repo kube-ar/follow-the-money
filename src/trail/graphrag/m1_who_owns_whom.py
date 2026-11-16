@@ -58,7 +58,9 @@ def group(graph: Any, lei: str) -> set[str]:
 
 
 def ownership_loops(graph: Any) -> list[list[str]]:
-    """Every loop in the ownership edges: [x, y, ..., z] where x is held by (or a child of) y, ..., and z of x.
+    """Every loop in the ownership edges, followed the way they point: [x, y, ..., z] where x is a child of y
+    (GLEIF: child → direct parent) or holds a stake in y (Quezal: holder → company), and so on, until z leads
+    back to x.
 
     Look at GLEIF's parent links and Quezal's stakes. Each loop once; any starting point is fine.
     """

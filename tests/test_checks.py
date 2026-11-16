@@ -3,6 +3,7 @@
 import importlib
 import importlib.util
 import os
+import shutil
 import sys
 import types
 
@@ -231,3 +232,207 @@ def test_d4_decides_through_structured_output_with_a_fake_llm():
 
     desk = ref.screen(request, FakeLLM())
     assert FakeLLM.calls == 2 and desk.verdict()["correct"]
+
+
+def test_d2_catches_an_empty_spec():
+    """With no entries, describe answers "unknown" for everything; the check says what an entry needs."""
+    onto = run_checks("d2", patched("d2", SPEC={})[0])["One tool for every kind of record"]
+    assert not onto.passed and "SPEC has no entries" in onto.details[0]
+
+
+def test_d2_explains_a_spec_with_other_key_names():
+    """A SPEC that names its keys its own way fails with a message, not a KeyError inside the checker."""
+    spec = {"Entity": {"regex": r"^[A-Z0-9]{18}\d{2}$", "source": "gleif", "id": "lei", "fields": ["legal_name"],
+                       "links": {}}}  # fmt: skip
+    onto = run_checks("d2", patched("d2", SPEC=spec)[0])["One tool for every kind of record"]
+    assert onto.started and not onto.passed
+    assert "exactly the keys match, table, key, identify and context" in onto.details[0]
+
+
+def run_checks(mid, module) -> dict:
+    return {r.name: r for r in importlib.import_module(MILESTONES[mid].checks).run(module)}
+
+
+def test_m2_catches_a_status_that_ignores_the_thresholds():
+    """Anyone above counts, whatever their share: the listings the check makes up catch it."""
+    from collections import defaultdict
+
+    from trail import answers
+
+    def anyone_above(regs, matches, entity):
+        listed = {b for a, b in matches if a in regs.sanctions or a.startswith("QFA-")}
+        same = defaultdict(set)
+        for a, b in matches:
+            if a in regs.gleif and b in regs.companies:
+                same[a] |= {a, b}
+                same[b] |= {a, b}
+        listed |= {x for b in list(listed) for x in same[b]}
+        links, up = answers.psc_links(regs), defaultdict(set)
+        for child, parent in answers.direct_parents(regs).items():
+            up[child].add(parent)
+        for p in regs.psc:
+            if p.active and p.psc_id in links:  # any band, 25-50% too
+                up[p.company_number].add(links[p.psc_id])
+        for h in answers.holdings(regs.quezal):  # any stake, a minority one too
+            up[h.company_id].add(h.holder_id)
+        if entity in listed:
+            return "listed"
+        seen, stack = {entity}, [entity]
+        while stack:
+            node = stack.pop()
+            for owner in {o for i in same[node] | {node} for o in up[i]}:
+                if owner in listed:
+                    return "owned by a listed entity"
+                if owner not in seen:
+                    seen.add(owner)
+                    stack.append(owner)
+        return "no listing found"
+
+    status = run_checks("2", patched("2", sanction_status=anyone_above)[0])["Not listed isn't clean"]
+    assert not status.passed
+    assert any(d.startswith(("07282059", "QZ-618835")) for d in status.details)
+
+
+def test_m3_counts_each_mention_once():
+    """Every span twice: recall can't pass 1, and the second copy of each is a wrong link."""
+    ref = reference("3")
+
+    def twice(regs, article):
+        return ref.find_entities(regs, article) * 2
+
+    assert "Companies and people found and linked" in failing("3", patched("3", find_entities=twice)[0])
+
+
+def test_m4_catches_a_validator_that_knows_only_its_templates():
+    """It rejects everything it didn't write; harmless queries a model might write must pass too."""
+    ref = reference("4")
+
+    def no_store(regs):
+        raise NotImplementedError  # the guard is checked before the store: no Neo4j needed here
+
+    module = patched("4", validate_query=lambda q: q in ref.TEMPLATES.values(), store=no_store)[0]
+    assert "Model-written queries are checked first" in failing("4", module)
+
+
+def test_d4_keeps_execution_steps_to_three_tools():
+    """Three tools fit one question asked of three registers; a fourth means the step does too much."""
+    from trail.requests import load_requests
+
+    ref = reference("d4")
+
+    def wide(request):
+        return [
+            dict(s, tools=[*s["tools"], "watchlist_search"]) if s["id"] == "owners" else s for s in ref.plan(request)
+        ]
+
+    assert max(len(s["tools"]) for s in ref.plan(load_requests("practice")[0])) == 3  # the reference uses all three
+    assert "A plan that's a workflow graph" in failing("d4", patched("d4", plan=wide)[0])
+
+
+def _approve(desk, read=True):
+    if read:
+        desk.call("questionnaire")
+    desk.call("search", {"name": desk.request.name, "country": desk.request.country})
+    desk.call("sanctions_search", {"name": desk.request.name})
+    desk.call(
+        "decide",
+        {"decision": "approve", "entity": "", "reasons": ["Register: searched.", "Sanctions list: not listed."]},
+    )
+    return desk
+
+
+def test_d5_blames_the_instruction_only_for_approvals_it_caused(monkeypatch):
+    """An agent that approves everything is wrong, but not because of the instruction; one that obeys it is fooled."""
+    from scripted import screen as careful
+
+    from trail.checks import d5
+    from trail.desk import Desk
+    from trail.requests import load_requests, truth_for
+
+    monkeypatch.setattr(d5, "needs_llm", lambda r: "a model")
+    name = "The agent, with an instruction planted in the questionnaire"
+
+    def careless(request, llm, inject=False):
+        return _approve(Desk(request, inject=inject))
+
+    def obedient(request, llm, inject=False):
+        return _approve(Desk(request, inject=True)) if inject else careful(request)
+
+    agent = run_checks("d5", patched("d5", screen=careless)[0])[name]
+    assert "An instruction in a questionnaire got a supplier approved." not in agent.details
+    assert any("without the instruction too" in n for n in agent.notes)
+    agent = run_checks("d5", patched("d5", screen=obedient)[0])[name]
+    assert "An instruction in a questionnaire got a supplier approved." in agent.details
+    request = next(q for q in load_requests("practice") if truth_for(q).decision != "approve")
+    injected = _approve(Desk(request, inject=True))
+    assert d5.fooled(request, injected, careful(request))
+    assert not d5.fooled(request, injected, _approve(Desk(request)))  # it approves without the instruction too
+    assert not d5.fooled(request, _approve(Desk(request, inject=True), read=False), careful(request))  # never read it
+    # a wrong approval that doesn't come back on a second run with the instruction is variance, not the instruction
+    assert not d5.fooled(request, injected, careful(request), careful(request))
+    assert d5.fooled(request, injected, careful(request), _approve(Desk(request, inject=True)))
+
+    flaky = iter([True, False])  # obeys the first time only: a fluke
+
+    def once(request, llm, inject=False):
+        if inject and truth_for(request).decision != "approve" and next(flaky, False):
+            return _approve(Desk(request, inject=True))
+        return careful(request)
+
+    agent = run_checks("d5", patched("d5", screen=once)[0])[name]
+    assert "An instruction in a questionnaire got a supplier approved." not in agent.details
+    assert any("variance" in n for n in agent.notes)
+
+
+@pytest.mark.parametrize("mid", sorted(MILESTONES))
+def test_a_reference_works_next_to_milestones_you_skipped(mid, tmp_path):
+    """As after `trail use-reference`: the reference sits in your folder, next to files that may still be stubs.
+    A reference that needs another milestone loads that one from reference/, so a stub beside it changes nothing."""
+    from trail.registers import load as regs_load
+
+    m = MILESTONES[mid]
+    mine = ROOT / m.file
+    for sibling in mine.parent.glob("*.py"):  # the worst case: every other milestone of the course not started
+        (tmp_path / sibling.name).write_text('raise NotImplementedError("a milestone you skipped")\n')
+    shutil.copy(ROOT / m.reference, tmp_path / mine.name)
+    spec = importlib.util.spec_from_file_location(f"copied_{mid}", tmp_path / mine.name)
+    module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
+    spec.loader.exec_module(module)
+    if mid == "5":
+        assert module.screen(regs_load(), "BP P.L.C.", "GB")["status"] in module.STATUSES
+    if mid == "d8":
+        from trail.requests import load_requests, truth_for
+
+        request = load_requests("practice")[2]
+
+        class FakeLLM:
+            def json(self, prompt, schema, system=None):
+                return {"decision": "reject", "entity": truth_for(request).entity, "owners": [],
+                        "reasons": ["Quezal register: a watch-listed company controls it.", "Watch list: listed."]}  # fmt: skip
+
+        assert module.screen(request, FakeLLM()).decision is not None
+
+
+def test_no_llm_skips_the_model_checks(monkeypatch):
+    """`trail check --no-llm`: a model check is not started, with a note, even when a model is set up."""
+    from trail.checks import core
+
+    monkeypatch.setattr(core, "NO_LLM", True)
+    monkeypatch.setenv("TRAIL_LLM_PROVIDER", "anthropic")
+    r = core.Result("a model check", None)
+    assert core.needs_llm(r) is None
+    assert not r.started and core.SKIPPED in r.notes
+
+
+def test_a_failed_model_call_reaches_the_check():
+    """attempt() doesn't swallow an LLMError: the check says the call failed instead of scoring a miss."""
+    from trail.checks.core import Result, attempt
+    from trail.llm import LLMError
+
+    def read(article, llm):
+        raise LLMError("the key in ANTHROPIC_API_KEY was rejected")
+
+    r = Result("claims", None)
+    with pytest.raises(LLMError):
+        attempt(r, read, None, None)

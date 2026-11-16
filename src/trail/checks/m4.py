@@ -9,7 +9,7 @@ import networkx as nx
 
 from .. import answers
 from ..registers import Registers, load
-from .core import NotStarted, Result, attempt, tally
+from .core import NotStarted, Result, attempt, needs_llm, tally
 
 L_DB = ("graphrag", "choosing-a-graph-database", "Graph database or PostgreSQL?")
 L_PATTERNS = ("graphrag", "graph-retrieval-patterns", "GraphRAG retrieval patterns")
@@ -26,6 +26,13 @@ BAD_QUERIES = [
     "MATCH (c:Company)-[:OWNS_YACHT]->(y) RETURN c LIMIT 5",
     "CALL dbms.components() YIELD name RETURN name LIMIT 1",
     "LOAD CSV FROM 'file:///etc/passwd' AS row RETURN row LIMIT 1",
+]
+# Read-only, ending in a LIMIT of at most 1000, and no label or relationship a store could lack: a validator must
+# let these through, not only its own templates.
+HARMLESS_QUERIES = [
+    "MATCH (n {id: 'QZ-877779'}) RETURN n.id AS id LIMIT 1",
+    "MATCH (a)-[r]->(b {id: '213800LH1BZH3DI6G760'}) RETURN a.id AS id, type(r) AS rel LIMIT 100",
+    "MATCH (n) RETURN n.id AS id ORDER BY id LIMIT 1000",
 ]
 
 
@@ -83,6 +90,12 @@ def run(module: ModuleType) -> list[Result]:
             right += ok
             if not ok:
                 guard.fail(f"let through: {query}")
+        for query in HARMLESS_QUERIES:
+            total += 1
+            ok = attempt(guard, module.validate_query, query) is True
+            right += ok
+            if not ok:
+                guard.fail(f"rejected a harmless query: {query}")
         for name, query in getattr(module, "TEMPLATES", {}).items():
             total += 1
             ok = attempt(guard, module.validate_query, query) is True
@@ -215,20 +228,17 @@ def _groups(module, regs, board, r: Result) -> None:
 
 
 QUESTIONS = [
-    ("Which companies hold shares directly in Quezal company {target}?", "target"),
+    ("Who holds shares directly in Quezal company {target}?", "target"),
     ("Which entities are direct GLEIF children of 213800LH1BZH3DI6G760?", "bp"),
     ("Which UK companies have 01003142 as a corporate owner?", "owned"),
 ]
 
 
 def _generated(module, regs, board, r: Result) -> None:
-    from ..llm import LLMError, get_llm
+    from ..llm import LLMError
 
-    try:
-        llm = get_llm()
-    except LLMError as e:
-        r.started = r.passed = False
-        r.notes.append(f"Needs an LLM: {e}. Then run `uv run trail llm`.")
+    llm = needs_llm(r)
+    if llm is None:
         return
     target = regs.quezal.truth["schemes"][0]["target"]
     links = answers.psc_links(regs)

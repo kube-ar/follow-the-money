@@ -5,7 +5,7 @@ from __future__ import annotations
 import json
 from typing import Any
 
-from trail.desk import DECISIONS, SOURCE_WORDS, Desk, Request
+from trail.desk import DECISIONS, Desk, Request, sources_cited
 
 KINDS = ("reasoning", "execution", "decision", "validation")
 PROBLEMS = ("bad-decision", "unknown-entity", "too-few-sources", "unconsulted-source", "questionnaire-cited",
@@ -20,13 +20,13 @@ def plan(request: Request) -> list[dict]:
     return [
         {"id": "frame", "kind": "reasoning", "tools": [], "needs": []},
         {"id": "identify", "kind": "execution", "tools": ["search"], "needs": ["frame"]},
-        {"id": "record", "kind": "execution", "tools": ["gleif_record", "quezal_company"], "needs": ["identify"]},
-        {"id": "owners", "kind": "execution", "tools": ["gleif_parent", "quezal_holders"], "needs": ["identify"]},
+        {"id": "record", "kind": "execution", "tools": ["gleif_record", "ch_company", "quezal_company"], "needs": ["identify"]},
+        {"id": "owners", "kind": "execution", "tools": ["gleif_parent", "ch_control", "quezal_holders"], "needs": ["identify"]},
         {"id": "lists", "kind": "execution", "tools": ["sanctions_search", "watchlist_search"], "needs": ["identify"]},
         {"id": "news", "kind": "execution", "tools": ["gazette"], "needs": ["identify"]},
         {"id": "decide", "kind": "decision", "tools": [], "needs": ["record", "owners", "lists", "news"]},
         {"id": "check", "kind": "validation", "tools": [], "needs": ["decide"]},
-    ]
+    ]  # fmt: skip
 
 
 def expand(steps: list[dict], owners: list[str]) -> list[dict]:
@@ -58,8 +58,7 @@ def validate_decision(desk: Desk, decision: dict) -> list[str]:
     entity = (decision.get("entity") or "").strip()
     if entity and entity not in regs.gleif and entity not in regs.companies and entity not in regs.quezal.companies:
         found.add("unknown-entity")
-    text = " ".join(decision.get("reasons", [])).lower()
-    cited = {kind for kind, words in SOURCE_WORDS.items() if any(w in text for w in words)}
+    cited = sources_cited(decision.get("reasons", []))
     if not {"register", "list"} <= cited:
         found.add("too-few-sources")
     if (cited - {"questionnaire"}) - desk.consulted():
@@ -110,6 +109,11 @@ def screen(request: Request, llm: Any) -> Desk:
                     parent = desk.call("gleif_parent", {"lei": entity})
                     notes["owners"] = parent
                     owners = [parent["direct_parent"]["name"]] if parent.get("direct_parent") else []
+                else:  # a UK company number: its corporate owners with more than half the shares
+                    rows = desk.call("ch_control", {"number": entity})
+                    notes["owners"] = rows
+                    owners = [o["name"] for o in rows if o["kind"] == "corporate"
+                              and (o["share_band"] or "").startswith(("50", "75"))] if isinstance(rows, list) else []  # fmt: skip
             elif step == "lists":
                 notes["lists"] = desk.call("sanctions_search", {"name": request.name}) + \
                     desk.call("watchlist_search", {"name": request.name})  # fmt: skip

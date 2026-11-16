@@ -6,7 +6,7 @@ import re
 from types import ModuleType
 
 from ..registers import load
-from .core import NotStarted, Result, attempt, tally
+from .core import NotStarted, Result, attempt, needs_llm, tally
 
 SENTENCE = re.compile(r"(?<=[.!?])\s+(?=[A-Z])")
 L_LEXICAL = ("graphrag", "lexical-graph", "Lexical graph")
@@ -57,12 +57,17 @@ def run(module: ModuleType) -> list[Result]:
             if got is None:
                 continue
             gold_total += len(gold)
+            used: set[int] = set()  # each gold mention counts once: a second span on it is a false positive
             for start, end, eid in got:
                 predicted += 1
-                hit = any(s < end and start < e and eid == who for s, e, who in gold)
-                correct += hit
-                if not hit and len(linking.details) < 5:
-                    linking.details.append(f"{a.id}: {a.body[start:end]!r} isn't {eid}")
+                on = [i for i, (s, e, who) in enumerate(gold) if s < end and start < e and eid == who]
+                hit = next((i for i in on if i not in used), None)
+                if hit is not None:
+                    used.add(hit)
+                    correct += 1
+                elif len(linking.details) < 5:
+                    why = "is linked twice: count each mention once" if on else f"isn't {eid}"
+                    linking.details.append(f"{a.id}: {a.body[start:end]!r} {why}")
         precision = correct / predicted if predicted else 0.0
         recall = correct / gold_total if gold_total else 0.0
         linking.score = f"precision {precision:.2f}, recall {recall:.2f} over {gold_total} mentions"
@@ -93,13 +98,10 @@ def run(module: ModuleType) -> list[Result]:
 
 
 def _claims(module, regs, r: Result) -> None:
-    from ..llm import LLMError, get_llm
+    from ..llm import LLMError
 
-    try:
-        llm = get_llm()
-    except LLMError as e:
-        r.started = r.passed = False
-        r.notes.append(f"Needs an LLM: {e}. Then run `uv run trail llm`.")
+    llm = needs_llm(r)
+    if llm is None:
         return
     q, truth = regs.quezal, regs.quezal.truth
     tp = fp = fn = 0

@@ -172,21 +172,26 @@ def owners_of(regs: Registers, entity: str) -> set[str]:
     return out
 
 
-def listed(regs: Registers) -> dict[str, str]:
-    """Entity id → the designation that lists it (UK Sanctions List or Quezal's watch list)."""
-    out = {}
-    for uid, lei in SANCTION_MATCHES.items():
-        for i in _same(regs).get(lei, {lei}):
+def listed(regs: Registers, matches: set[tuple[str, str]] | None = None) -> dict[str, str]:
+    """Entity id → the designation that lists it (UK Sanctions List or Quezal's watch list).
+
+    `matches`: (designation, entity) pairs to use instead of the hand-checked ones; other pairs are ignored."""
+    if matches is None:
+        pairs = [*SANCTION_MATCHES.items(), *((lid, cid) for lid, cid in watchlist_matches(regs.quezal).items() if cid)]
+    else:
+        pairs = sorted((a, b) for a, b in matches if a in regs.sanctions or a.startswith("QFA-"))
+    same, out = _same(regs), {}
+    for uid, eid in pairs:
+        for i in same.get(eid, {eid}):
             out[i] = uid
-    for lid, cid in watchlist_matches(regs.quezal).items():
-        if cid:
-            out[cid] = lid
     return out
 
 
-def sanction_status(regs: Registers, entity: str) -> str:
-    """listed · owned by a listed entity · no listing found. Never "clean": the lists are open-world."""
-    found = listed(regs)
+def sanction_status(regs: Registers, entity: str, matches: set[tuple[str, str]] | None = None) -> str:
+    """listed · owned by a listed entity · no listing found. Never "clean": the lists are open-world.
+
+    `matches`: designations to judge by instead of the hand-checked ones (the milestone 2 check makes some up)."""
+    found = listed(regs, matches)
     if entity in found:
         return "listed"
     seen, stack = {entity}, [entity]

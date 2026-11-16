@@ -15,7 +15,8 @@ Then:
 
 Claude goes through the official `anthropic` SDK. OpenAI, Fireworks and OpenRouter go through
 the `openai` SDK, pointed at each provider's OpenAI-compatible endpoint. `uv run trail llm`
-checks your setup with two tiny calls.
+checks your setup with a few tiny calls: a text answer, a JSON answer and one tool call through
+`Conversation` (the agent milestones need a model that calls tools).
 """
 
 from __future__ import annotations
@@ -32,6 +33,10 @@ from .registers import ROOT
 
 class LLMError(RuntimeError):
     """Anything that stops a call: setup, credentials, the provider, or an answer that isn't usable."""
+
+
+class Truncated(LLMError):
+    """The answer hit the length limit before it finished."""
 
 
 @dataclass(frozen=True)
@@ -60,7 +65,15 @@ CLAUDE_FALLBACKS = {"claude-fable-5-2", "claude-fable-5-1", "claude-opus-5-5", "
 MAX_TOKENS = 16000
 
 
+_env_loaded = False
+
+
 def _load_env() -> None:
+    """Read .env once per process, so a variable you emptied (KEY=) stays empty."""
+    global _env_loaded
+    if _env_loaded:
+        return
+    _env_loaded = True
     try:
         from dotenv import load_dotenv
     except ImportError:  # pragma: no cover
@@ -79,6 +92,10 @@ class Usage:
     cached: int = 0  # answers read from .trail-cache instead of calling the provider
     input_tokens: int = 0
     output_tokens: int = 0
+
+
+# Everything this process asked of any model, for the line `check` prints at the end.
+SESSION = Usage()
 
 
 @dataclass
@@ -127,11 +144,13 @@ class LLM:
         path = ROOT / ".trail-cache" / "llm" / f"{key}.json"
         if use_cache and path.exists():
             self.usage.cached += 1
+            SESSION.cached += 1
             return json.loads(path.read_text(encoding="utf-8"))["answer"]
-        if self.provider.name == "anthropic":
-            answer = self._claude(prompt, system, schema)
-        else:
-            answer = self._openai_compatible(prompt, system, schema)
+        call = self._claude if self.provider.name == "anthropic" else self._openai_compatible
+        try:
+            answer = call(prompt, system, schema)
+        except Truncated:  # a reasoning model sometimes thinks past the limit; a second try usually finishes
+            answer = call(prompt, system, schema)
         if use_cache:
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(json.dumps({"model": self.model, "answer": answer}), encoding="utf-8")
@@ -181,7 +200,7 @@ class LLM:
         if response.stop_reason == "refusal":
             raise LLMError(f"{self}: the model declined this request")
         if response.stop_reason == "max_tokens":
-            raise LLMError(f"{self}: the answer hit the {MAX_TOKENS}-token limit before it finished")
+            raise Truncated(f"{self}: the answer hit the {MAX_TOKENS}-token limit before it finished")
         return "".join(block.text for block in response.content if block.type == "text")
 
     def _openai_compatible(self, prompt: str, system: str | None, schema: dict | None) -> str:
@@ -231,15 +250,16 @@ class LLM:
             self._count(response.usage.prompt_tokens, response.usage.completion_tokens)
         choice = response.choices[0]
         if choice.finish_reason == "length":
-            raise LLMError(f"{self}: the answer was cut off at the model's length limit")
+            raise Truncated(f"{self}: the answer was cut off at the model's length limit")
         if getattr(choice.message, "refusal", None):
             raise LLMError(f"{self}: the model declined this request")
         return choice.message.content or ""
 
     def _count(self, input_tokens: int | None, output_tokens: int | None) -> None:
-        self.usage.calls += 1
-        self.usage.input_tokens += input_tokens or 0
-        self.usage.output_tokens += output_tokens or 0
+        for u in (self.usage, SESSION):
+            u.calls += 1
+            u.input_tokens += input_tokens or 0
+            u.output_tokens += output_tokens or 0
 
 
 def _strip_fences(text: str) -> str:

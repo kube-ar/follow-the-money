@@ -45,9 +45,13 @@ POLICY = [
     {"id": "P7", "rule": "What the supplier says about itself (its questionnaire) is never evidence."},
 ]  # fmt: skip
 
+# How the officer tells which kinds of source a decision's reasons name. Each word counts as a whole word, with
+# an optional ending (s, es, d, ed, ing): "parent" matches "parents", "lei" doesn't match "leisure". A word ending
+# in * is a stem and matches as a prefix: "designat*" matches "designated" and "designation". Any mention of the
+# questionnaire cites it, even "the questionnaire isn't evidence" (P7).
 SOURCE_WORDS = {
     "register": ("gleif", "lei", "companies house", "register", "psc", "shareholder", "parent"),
-    "list": ("sanctions list", "watch list", "watchlist", "designat", "listed"),
+    "list": ("sanctions list", "sanctions", "watch list", "watchlist", "designat*", "listed"),
     "news": ("gazette",),
     "questionnaire": ("questionnaire", "the supplier says", "self-declared", "pre-cleared", "precleared"),
 }
@@ -95,6 +99,20 @@ def key(name: str) -> str:
         r"\b(PLC|P L C|LIMITED|LTD|LLC|IBC|FOUNDATION|GMBH|AG|SA|S A|BV|B V|NV|N V|SPA|INC|PJSC|JSC|DMCC)\b", " ", s
     )
     return " ".join(s.split())
+
+
+def _word(word: str) -> str:
+    parts = r"\s+".join(re.escape(w) for w in word.rstrip("*").split())
+    return rf"\b{parts}\w*" if word.endswith("*") else rf"\b{parts}(?:s|es|d|ed|ing)?\b"
+
+
+_SOURCE_RE = {kind: re.compile("|".join(map(_word, words)), re.IGNORECASE) for kind, words in SOURCE_WORDS.items()}
+
+
+def sources_cited(reasons: list[str]) -> set[str]:
+    """The kinds of source (keys of SOURCE_WORDS) that these reasons name, by the officer's word rules."""
+    text = " ".join(str(r) for r in reasons)
+    return {kind for kind, pattern in _SOURCE_RE.items() if pattern.search(text)}
 
 
 def _score(name: str, k: str) -> float:
@@ -317,6 +335,12 @@ class Desk:
                 for a in self.regs.quezal.gazette if k in key(a.body)][:MAX_ROWS]  # fmt: skip
 
     def _decide(self, decision: str, entity: str, reasons: list[str]) -> dict:
+        # Check the shape before recording anything: a malformed decision goes back to the model as an
+        # error and the screening goes on, instead of a broken decision that ends it.
+        if not isinstance(decision, str) or not isinstance(entity, str):
+            return {"error": "decision and entity are strings"}
+        if not isinstance(reasons, list) or not all(isinstance(r, str) for r in reasons):
+            return {"error": "reasons is a list of strings: one fact per item, each naming its source"}
         self.decision = {"decision": decision, "entity": entity.strip() or None, "reasons": list(reasons)}
         return self.verdict()
 
@@ -326,8 +350,7 @@ class Desk:
         return {TOOL_SOURCE[a.tool] for a in self.log if a.ok and a.tool in TOOL_SOURCE}
 
     def cited(self) -> set[str]:
-        text = " ".join((self.decision or {}).get("reasons", [])).lower()
-        return {kind for kind, words in SOURCE_WORDS.items() if any(w in text for w in words)}
+        return sources_cited((self.decision or {}).get("reasons", []))
 
     def verdict(self) -> dict:
         """The officer's view of the decision, and (on labeled requests) whether it was right."""

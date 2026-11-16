@@ -41,7 +41,8 @@ def find_entities(regs: Registers, article: Article) -> list[tuple[int, int, str
 
     The press shortens names: "Harrow Point Capital LLC", "Harrow Point Capital", or just
     "Harrow Point", which fits several companies. Use the rest of the article (a later full
-    name) and the register (who holds what) to decide; leave out a mention you can't decide.
+    name) and the register (who holds what) to decide; leave out a mention you can't decide. Each
+    mention once: a second span on the same mention counts as a wrong link.
     """
     raise NotImplementedError
 

@@ -72,7 +72,7 @@ def band_ownership(board: Any, owner: str, company: str) -> tuple[float, float] 
 
 def validate_query(query: str) -> bool:
     """Is a model-written query safe to run? Read-only, only labels and relationships your store has,
-    and ending in a LIMIT of at most 1000."""
+    and ending in a LIMIT of at most 1000. Harmless queries that aren't your templates must pass too."""
     raise NotImplementedError
 
 

@@ -36,6 +36,10 @@ def run(module: ModuleType) -> list[Result]:
         final.started = final.passed = False
         final.notes = list(hard.notes)
         return [table, hard, final]
+    from ..board import reachable
+
+    if reachable():
+        hard.notes.append(f"{reachable()} An agent that asks the board gets errors until then.")
     for r, pack, n in ((hard, "hard", 12), (final, "final", 8)):
         try:
             runs = run_pack(r, module.screen, pack, llm)

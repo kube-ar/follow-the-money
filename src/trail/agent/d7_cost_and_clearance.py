@@ -15,7 +15,7 @@ from typing import Any
 
 from trail.desk import Desk
 
-RESTRICTED = {"junior": {"ch_control", "quezal_holders"}, "senior": set()}
+RESTRICTED = {"junior": {"ch_control", "quezal_holders", "board"}, "senior": set()}
 
 
 def route_model(step: str, bars: dict[str, float], models: dict[str, tuple[float, float]]) -> str:

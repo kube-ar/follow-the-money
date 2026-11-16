@@ -6,7 +6,7 @@ from typing import Any
 
 from trail.desk import Desk
 
-RESTRICTED = {"junior": {"ch_control", "quezal_holders"}, "senior": set()}
+RESTRICTED = {"junior": {"ch_control", "quezal_holders", "board"}, "senior": set()}
 OWNERSHIP = ("gleif_parent", "ch_control", "quezal_holders")
 
 

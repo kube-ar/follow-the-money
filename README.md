@@ -33,18 +33,20 @@ agent that doesn't get the registers. It gets a request (a supplier's name as so
 country, and the supplier's own questionnaire) and works it at the compliance desk (`trail.desk`),
 where every lookup costs credits. It decides approve, reject or escalate, and the compliance officer
 accepts the decision only if it follows the risk policy. The agent part stands on its own: it needs no
-code from the GraphRAG milestones and no Neo4j.
+code from the GraphRAG milestones. The planned agents (d4, d8) ask the ownership board, the GraphRAG part's
+graph, through the desk's `board` tool; the desk loads it with the course's own solutions, and it needs
+Neo4j.
 
 | # | Milestone | Course chapter | Needs |
 |---|---|---|---|
 | d1 | [The first screening](https://kube.ar/agentic-graphrag/project/follow-the-money/the-first-screening): a baseline agent, and its failures named | Agentic GraphRAG · Overview | a model (the last check) |
 | d2 | [The risk policy](https://kube.ar/agentic-graphrag/project/follow-the-money/the-risk-policy): rules in a graph, one `describe`, near-miss designations | What the agent knows | a model (the last check) |
 | d3 | [What we cleared before](https://kube.ar/agentic-graphrag/project/follow-the-money/what-we-cleared-before): a memory with two dates, stale approvals | Agent memory | a model (the last check) |
-| d4 | [One branch per owner](https://kube.ar/agentic-graphrag/project/follow-the-money/one-branch-per-owner): a workflow graph, a fan-out per owner, meaning checks | How the agent acts | a model (the last check) |
+| d4 | [One branch per owner](https://kube.ar/agentic-graphrag/project/follow-the-money/one-branch-per-owner): a workflow graph, a fan-out per owner, meaning checks | How the agent acts | Neo4j, and a model (the last check) |
 | d5 | [The registry desk](https://kube.ar/agentic-graphrag/project/follow-the-money/the-registry-desk): 55 tools, retrieval, chaining by type, a planted instruction | Agent tools | a model (the last check) |
 | d6 | [Decision review](https://kube.ar/agentic-graphrag/project/follow-the-money/decision-review): execution graph, diagnosis, safe shipping | Evaluation and self-improvement | Python only |
 | d7 | [Cost and clearance](https://kube.ar/agentic-graphrag/project/follow-the-money/cost-and-clearance): routing, cost per correct decision, access, audit, erasure | Running in production | Python only |
-| d8 | [The final batch](https://kube.ar/agentic-graphrag/project/follow-the-money/the-final-batch): your best agent on the hard pack and a hidden batch, and an ablation | Putting it together | a model (two checks) |
+| d8 | [The final batch](https://kube.ar/agentic-graphrag/project/follow-the-money/the-final-batch): your best agent on the hard pack and a hidden batch, and an ablation | Putting it together | Neo4j, and a model (two checks) |
 
 `uv run trail requests` lists the request packs: `practice` (6), `standard` (12) and `hard` (12),
 with the decision the policy calls for, and `final` (8), whose decisions are stored only as hashes.
@@ -96,7 +98,7 @@ call the provider. Conversations with tools aren't cached: every agent run is a 
 call a model (they show as not started, with a note), so you don't pay for agent runs while you
 fix a pure function. The milestone is complete once you run it without the flag.
 
-### Neo4j, for milestone 4
+### Neo4j, for milestone 4 and the planned agents (d4, d8)
 
 ```sh
 docker compose up -d     # Docker must be running; give Neo4j about 20 seconds to start
